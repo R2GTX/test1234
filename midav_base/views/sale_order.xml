@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="view_order_form_midav">
+            <field name="name">sale.order.form.midav</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="priority" eval="20"/>
+            <field name="arch" type="xml">
+                <div name="button_box" position="inside">
+                    <button type="object" class="oe_stat_button" icon="fa-pencil-square-o" name="action_view_sale_pickings" >
+                        <div class="o_form_field o_stat_info">
+                            <span class="o_stat_value">
+                                <field name="nb_sale_pickings"/>
+                            </span>
+                            <span class="o_stat_text">Sale pickings</span>
+                        </div>
+                    </button>
+                </div>
+                <xpath expr="//notebook" position="before">
+                    <group name="midav_spec">
+                        <group>
+                            <field name="ref_po"/>
+                            <field name="commodity_destination"/>
+                        </group>
+                        <group>
+                            <field name="bank_id" domain="[('company_id', '=', company_id)]" options="{'no_create': True, 'no_edit': True}"/>
+                            <field name="payment_mode_id"  options="{'no_create': True, 'no_edit': True}"
+                            domain="[('type','in',['cash','bank']),('company_id', '=', company_id)]"/>
+                        </group>
+                    </group>
+                </xpath>
+                <xpath expr="//notebook//field[@name='company_id']" position="replace">
+                </xpath>
+                <xpath expr="//notebook//field[@name='user_id']" position="after">
+                    <field name="incoterm_id"/>
+                </xpath>
+                <xpath expr="//notebook/page[1]//tree/field[@name='price_unit']" position="replace">
+                    <field name="price_unit" attrs="{'readonly': [('qty_invoiced', '&gt;', 0)]}"/>
+                </xpath>
+                <xpath expr="//notebook/page[1]//tree/field[@name='price_subtotal']" position="after">
+                    <button name="update_name" type="object" class="fa fa-refresh"/>
+                </xpath>
+
+                <xpath expr="//sheet/group//field[@name='pricelist_id']" position="after">
+                    <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                </xpath>
+
+                <xpath expr="//notebook//group[@name='sale_total']" position="after">
+                    <div class="oe_left oe_inline">
+                        <label for="total_amount_letter"/>:
+                        <field name="total_amount_letter"/>
+                    </div>
+                </xpath>
+
+                <xpath expr="//group[@name='technical']" position="before">
+                    <group name="port_number" string="Port Number">
+                                    <field name="nb_port"/>
+                                    <field name="origin_product"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//field[@name='order_line']//tree//field[@name='price_subtotal']" position="before">
+                    <field name="id" invisible="1"/>
+                    <field name="attachment_ids"
+                           domain="[('res_id', '=', id),('res_model', '=', 'sale.order.line')]"
+                                            context="{'default_company_id':parent.company_id,'default_res_id': id,'default_res_model': 'sale.order.line'}"
+                                            widget="many2many_binary"/>
+                </xpath>
+
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

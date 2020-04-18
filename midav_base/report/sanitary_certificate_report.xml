@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="sanitary_report_document">
+            <t t-call="web.basic_layout">
+                <t t-set="o" t-value="o.with_context({'lang':o.sale_order_id.partner_id.lang})"/>
+                <div t-if="o.state == 'improper_quality'" class="page">
+                    <t t-call="midav_base.midav_non_conforme_page"/>
+                </div>
+                <div t-if="o.state != 'improper_quality'" class="page">
+                    <style>
+                        .vertical-text-amh {
+                        float:left;
+                        width:500px;
+                        height:20px;
+                        margin-left:-250px;
+                        margin-top:120px;
+                        font-size:1.0em;
+                        font-weight:bold;
+                        -webkit-transform: rotate(-90deg);
+                        -moz-transform: rotate(-90deg);
+                        -ms-transform: rotate(-90deg);
+                        -o-transform: rotate(-90deg);
+                        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+                        }
+                        .background-img{
+                        background-image:url("midav_base/static/src/img/line.png");
+                        background-repeat: no-repeat;
+                        background-size: 100% 100%;
+                        }
+                        .full-text-my{
+                        font-size:14px;
+                        }
+                        .full-text-my-bold{
+                        font-size:16px;
+                        }
+                        td{
+                        border-color: black;
+                        font-size:10px;
+                        }
+                        th{
+                        font-size:10px;
+                        }
+                        body{
+                        font-size:1.0em;
+                        }
+                    </style>
+                    <div class="text-center header" style="text-transform: capitalize;max-height:40px;">
+                        Kingdom Of Morocco
+                        <br/>
+                        National Office Of Sanitary Security Of Food Products
+                        <br/>
+                        Provincial Veterinary Service Of Safi
+                        <br/>
+                        <center>
+                            <div style="width:30%;height:1px;background-color:black;"/>
+                        </center>
+                        <br/>
+                    </div>
+                    <center class="text-center"
+                            style="color:gray;font-size:2.1em;font-weight:bold;font-family:Jazz LET, fantasy;">
+                        ￼￼￼￼￼￼Additional sanitary certificate to
+                        <br/>
+                        Health Certificate
+                    </center>
+                    <center>
+                        <p style="color:#0D83B6; font-weight:bold; font-size:1.6em; font-family:sans-serif;">
+                            N°
+                            MA &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/52
+                            <!--span t-esc="o.num_certificate"/-->
+                        </p>
+                    </center>
+                    <br/>
+                    <div>
+                        <strong style="font-weight:bold; font-size:1.4em;">Identification of products :</strong>
+                        <br/>
+                        <strong style="font-weight:bold; font-size:1.2em;">- Commercial description :</strong>
+                        <br/>
+                        <t t-foreach="o.get_unique_desc_commodity()[0]" t-as="comod">
+                            <span t-esc="comod"/>
+                            <br/>
+                        </t>
+                        <strong style="font-weight:bold; font-size:1.2em;">- Type of packaging :</strong>
+                        <br/>
+                        <span t-esc="o.packaging_type_id.name"/>
+                        <br/>
+                        <strong style="font-weight:bold; font-size:1.2em;">Number of packages :</strong>
+                        <br/>
+                            <span t-esc="o.get_unique_number_of_packages()[0]"/>
+                            <br/>
+
+                        <strong style="font-weight:bold; font-size:1.2em;">- Net weight:</strong>
+                        <br/>
+                        <span t-esc="'{:.2f}'.format(o.total_weights()[1])"/>
+                        Kg
+
+                    </div>
+                    <br/>
+                    <br/>
+                    <t t-set="pn_tot" t-value="0"/>
+                    <t t-set="pne_tot" t-value="0"/>
+                    <table class="table table-bordered">
+                        <thead>
+                            <th>Production codes</th>
+                            <th>Nature of commodity</th>
+                            <th>Type of process</th>
+                            <th>Species</th>
+                            <th>Plant agreement</th>
+                            <th>Number of packages</th>
+                            <th>Net weight (Kg)</th>
+                            <th>Drained weight (Kg)</th>
+
+                        </thead>
+                        <!--<t t-foreach="o.sort_sale_picking_line_ids()" t-as="line">
+                            <tr>
+                                <td>&#160;
+                                    <span t-esc="line.lot"/>
+                                </td>
+                                <td>&#160;<t t-if="line.product_id.description_commodity_id">
+                                    Wild
+                                    <span t-esc="line.product_id.description_commodity_id.name"/>
+                                </t>
+                                </td>
+                                <td>&#160;<span t-esc="o.process_type"/>
+                                </td>
+                                <td>&#160;<span t-esc="line.product_id.name_sci.name"/>
+                                </td>
+                                <td>&#160;<span t-esc="o.sale_order_id.company_id.approval"/>
+                                </td>
+                                <td>&#160;<span t-esc="line.nbr_carton"/>
+                                </td>
+                                <td>&#160;<span t-esc="line.pn"/>
+                                </td>
+                                <td>&#160;<span t-esc="line.pne"/>
+                                </td>
+
+                            </tr>
+                        </t>-->
+                        <t t-foreach="o.group_by_shcode4()" t-as="lines">
+                                <t t-set="nb_tot" t-value="0"/>
+                                <!--tr t-foreach="lines" t-as="line">
+
+
+                                    <td >
+                                        <span t-if="line.lot_code_finale" t-field="line.lot_code_finale"/>
+                                    </td>
+
+                                    <td >
+
+                                        <span>Wild </span>
+                                        <span t-field="line.product_id.description_commodity_id"/>
+                                    </td>
+                                    <td>&#160;
+                                        <span t-esc="o.process_type"/>
+                                    </td>
+
+                                    <td>&#160;
+                                        <span t-esc="line.product_id.name_sci.name"/>
+                                    </td>
+
+                                    <td>
+                                        <span t-field="o.sale_order_id.company_id.approval"/>
+                                    </td>
+
+                                    <td>
+                                        <span t-field="line.nbr_carton"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.pn"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.pne"/>
+                                    </td>
+                                </tr-->
+
+                            <t t-set="nb_tot" t-value="0"/>
+                                <tr t-foreach="lines" t-as="line">
+
+                                    <t t-if="line[3]>0">
+                                        <t t-set="pn_tot" t-value="pn_tot+line[4]"/>
+                                        <t t-set="pne_tot" t-value="pne_tot+line[5]"/>
+                                        <td >
+                                        <span t-esc="line[0]"/>
+                                        </td>
+
+                                        <td >
+
+                                            <span>Wild </span>
+                                            <span t-esc="line[1]"/>
+                                        </td>
+                                        <td>&#160;
+                                            <span t-esc="o.process_type"/>
+                                        </td>
+
+                                        <td>&#160;
+                                            <span t-esc="line[2]"/>
+                                        </td>
+
+                                        <td>
+                                            <span t-field="o.sale_order_id.company_id.approval"/>
+                                        </td>
+
+                                        <td>
+                                            <span t-esc="line[3]"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="'{:.2f}'.format(line[4])"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="'{:.2f}'.format(line[5])"/>
+                                        </td>
+                                        </t>
+                                </tr>
+
+                            </t>
+                        <tr>
+                            <td colspan="4">&#160;</td>
+                            <td>&#160;TOTAL</td>
+                            <td>&#160;<span t-esc="int(o.nb_colis or 0)"/>
+                            </td>
+                            <!--td>&#160;<span t-esc="'%.2f'%o.net_weight"/>aa
+                            </td>
+                            <td>&#160;<span t-esc="'%.2f'%o.pne_weight"/>
+                            </td-->
+                            <td>&#160;<span t-esc="'{:.2f}'.format(pn_tot)"/>
+                            </td>
+                            <td>&#160;<span t-esc="'{:.2f}'.format(pne_tot)"/>
+                            </td>
+
+                        </tr>
+                    </table>
+
+                    <div class="row">
+                        <div class="col-xs-4 pull-right">
+                            Safi, On:<br/><br/><br/>
+                            Official veterinary <br/><br/>
+                            Stamp &amp; Signature
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="sanitary_certificate_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="midav_base.sanitary_report_document" t-lang="o.sale_order_id.partner_id.lang"/>
+                </t>
+            </t>
+
+        </template>
+
+        <report id="action_report_sanitary_certificate"
+                model="midav.sale.picking"
+                name="midav_base.sanitary_certificate_report"
+                file="midav_base.sanitary_certificate_report"
+                string="Additional SH to health certificate"
+                report_type="qweb-pdf"
+                print_report_name="'Sanitary_certificate_to_HCertif - %s' % (object.name)"
+        />
+        <!-- paperformat="midav_base.paperformat_certificat_sanitaire"/-->
+
+
+    </data>
+</odoo>

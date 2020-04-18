@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="midav_base.report_order_preparation_document">
+        <t  t-if="doc.state == 'improper_quality'" t-call="web.basic_layout">
+                <div  class="page">
+                    <t t-call="midav_base.midav_non_conforme_page"/>
+                </div>
+            </t>
+        <t t-if="doc.state != 'improper_quality'" t-call="web.external_layout">
+            <t t-set="doc" t-value="doc.with_context({'lang':doc.sale_order_id.user_id.lang})"/>
+            <div  class="page">
+
+                <div class="row" id="informations">
+                    <div class="col-xs-12">
+                        <div class="col-xs-3">
+                            <strong>Order Number:</strong>
+                            <p t-field="doc.name"/>
+                        </div>
+                        <div class="col-xs-3">
+                            <strong>Date:</strong>
+                            <p t-field="doc.date"/>
+                        </div>
+                        <div class="col-xs-3">
+                            <strong>Sale Order:</strong>
+                            <p t-field="doc.sale_order_id"/>
+                        </div>
+                        <div class="col-xs-3">
+                            <strong>Markings:</strong>
+                            <p t-field="doc.marquage_or"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-6">
+                            <strong>Quality Note:</strong>
+                            <p t-field="doc.quality_notes"/>
+                        </div>
+                        <div class="col-xs-6">
+                            <strong>Customer :</strong>
+                            <p t-field="doc.client_id.name"/>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 style="text-align : center;">Preparation Order and inventory tracking of finished products</h2>
+                </div>
+                <table class="table table-bordered ">
+                    <thead style="text-align:center;">
+                        <tr>
+                            <th>
+                                <strong>Product</strong>
+                            </th>
+                            <th>
+                                <strong>Lot Number</strong>
+                            </th>
+                            <th>
+                                <strong>Moule</strong>
+                            </th>
+
+                            <th>
+                                <strong>Production Date</strong>
+                            </th>
+                            <th>
+                                <strong>Lapsing Date</strong>
+                            </th>
+                            <th>
+                                <strong>Qunatity to prepare</strong>
+                            </th>
+                            <th>
+                                <strong>Entered Quantity</strong>
+                            </th>
+                            <th>
+                                <strong>Exported Quantity</strong>
+                            </th>
+                            <th>
+                                <strong>Unit of measure</strong>
+                            </th>
+                            <th>
+                                <strong>Carton number</strong>
+                            </th>
+                            <th>
+                                <strong>Unit of condition</strong>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <t t-set="total_qty_to_prepare" t-value="0"/>
+                        <t t-set="total_entred_qty" t-value="0"/>
+                        <t t-set="total_exported_qty" t-value="0"/>
+                        <t t-set="total_carton" t-value="0"/>
+
+                        <t t-foreach="doc.sale_picking_line_ids" t-as="o">
+
+                            <tr t-if="o.qty_todo>0">
+                                <td>
+                                    <span t-esc="o.product_id.default_code"/>
+                                </td>
+                                <td>
+                                    <span t-field="o.lot"/>
+
+                                </td>
+                                <td>
+                                    <span t-field="o.mould"/>
+
+                                </td>
+
+                                <td>
+                                    <span t-field="o.production_date"/>
+                                </td>
+                                <td>
+                                    <span t-field="o.lapsing_date"/>
+                                </td>
+                                <td>
+                                    <span t-field="o.qty_todo"/>
+                                    <t t-set="total_qty_to_prepare" t-value="total_qty_to_prepare+o.qty_todo"/>
+                                </td>
+                                <td>
+                                    <span t-field="o.qty_enter"/>
+                                    <t t-set="total_entred_qty" t-value="total_entred_qty+o.qty_enter"/>
+                                </td>
+                                <td>
+                                    <span t-field="o.qty_done"/>
+                                    <t t-set="total_exported_qty" t-value="total_exported_qty+o.qty_done"/>
+                                </td>
+                                <td>
+                                    <span t-field="o.uom_id"/>
+                                </td>
+                                <td style="background-color:#EEEEEE">
+                                    <span t-field="o.nbr_carton"/>
+                                    <t t-set="total_carton" t-value="total_carton+o.nbr_carton"/>
+                                </td>
+                                <td style="background-color:#FFFFFF">
+                                    <span t-field="o.uom_packing_id"/>
+                                </td>
+                            </tr>
+                        </t>
+                        <tr>
+                            <td colspan="5" class="text-right"><strong>Somme</strong></td>
+                            <td t-esc="total_qty_to_prepare"/>
+                            <td t-esc="total_entred_qty"/>
+                            <td t-esc="total_exported_qty"/>
+                            <td></td>
+                            <td style="background-color:#EEEEEE" t-esc="total_carton"/>
+                            <td style="background-color:#FFFFFF"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+    <template id="report_order_preparation">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="midav_base.report_order_preparation_document"/>
+        </t>
+    </template>
+
+    <report
+            string="Order preparation report"
+            id="action_report_order_preparation"
+            model="midav.sale.picking"
+            report_type="qweb-pdf"
+            name="midav_base.report_order_preparation"
+            file="midav_base.report_order_preparation"
+    />
+</odoo>

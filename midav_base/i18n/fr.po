@@ -1,0 +1,4383 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* midav_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-11 10:07+0000\n"
+"PO-Revision-Date: 2019-02-11 10:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: midav_base
+#: model:res.groups,name:midav_base.midav_quality
+msgid " Quality Validation "
+msgstr " Validation de qualité "
+
+#. module: midav_base
+#: model:res.groups,name:midav_base.midav_operattion_line_manager
+msgid " Sale Operation Line  Manager"
+msgstr " Gestionnaire des lignes d'opérations"
+
+#. module: midav_base
+#: model:res.groups,name:midav_base.midav_operation_line_user
+msgid " Sale Operation Line  User"
+msgstr " Utilisateur des lignes d'opérations"
+
+#. module: midav_base
+#: model:res.groups,name:midav_base.midav_operattion_manager
+msgid " Sale Operation Manager"
+msgstr " Gestionnaire des opérations de préparations"
+
+#. module: midav_base
+#: model:res.groups,name:midav_base.midav_operation_user
+msgid " Sale Operation User"
+msgstr " Utilisateur des opérations de préparations"
+
+#. module: midav_base
+#: model:res.groups,name:midav_base.midav_picking_line_manager
+msgid " Sale picking Line Manager"
+msgstr "Gestionnaire des lignes d'ordre de préparation"
+
+#. module: midav_base
+#: model:res.groups,name:midav_base.midav_picking_line_user
+msgid " Sale picking Line User"
+msgstr " Sale picking Line User"
+
+#. module: midav_base
+#: model:res.groups,name:midav_base.midav_picking_manager
+msgid " Sale picking Manager"
+msgstr " Sale picking Manager"
+
+#. module: midav_base
+#: model:res.groups,name:midav_base.midav_picking_user
+msgid " Sale picking User"
+msgstr " Sale picking User"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+#: model:ir.ui.view,arch_db:midav_base.report_invoice_layouted_midav
+msgid "&amp;bull;"
+msgstr "&amp;bull;"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "&amp;nbsp;"
+msgstr "&amp;nbsp;"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+msgid "&amp;nbsp;\n"
+"                                                    <span>on</span>"
+msgstr "&amp;nbsp;\n"
+"                                                    <span>on</span>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "&amp;nbsp;&amp;nbsp;"
+msgstr "&amp;nbsp;&amp;nbsp;"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "&amp;nbsp;&amp;nbsp;\n"
+"                                                    Dimensions:"
+msgstr "&amp;nbsp;&amp;nbsp;\n"
+"                                                    Dimensions:"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "&amp;nbsp;&amp;nbsp;&amp;nbsp;"
+msgstr "&amp;nbsp;&amp;nbsp;&amp;nbsp;"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;"
+msgstr "&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "&amp;nbsp;<span>on</span>&amp;nbsp;"
+msgstr "&amp;nbsp;<span>sur</span>&amp;nbsp;"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_custom_layout_footer
+msgid ")\n"
+"                    - Tel.:"
+msgstr ")\n"
+"                    - Tel.:"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid ", On"
+msgstr ", Le"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid ",&amp;nbsp;"
+msgstr ",&amp;nbsp;"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "-\n"
+"                                AG"
+msgstr "-\n"
+"                                AG"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "- AGR :"
+msgstr "- AGR :"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "- Date de sequence :"
+msgstr "- Date de sequence :"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_custom_layout_footer
+msgid "- Fax 212-(0) 524.46.14.15\n"
+"                    - Email:"
+msgstr "- Fax 212-(0) 524.46.14.15\n"
+"                    - Email:"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "- Navire :"
+msgstr "- Navire :"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "- N° Booking :"
+msgstr "- N° Booking :"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "- N° Escale :"
+msgstr "- N° Escale :"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "- TRANSIT ORDER -"
+msgstr "- ORDRE DE TRANSIT -"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "-&amp;nbsp;"
+msgstr "-&amp;nbsp;"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "/&amp;nbsp;"
+msgstr "/&amp;nbsp;"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1 : Place of origin : name and address of the\n"
+"                                            dispatch\n"
+"                                            establishment"
+msgstr "1 : Place of origin : name and address of the\n"
+"                                            dispatch\n"
+"                                            establishment"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.1. Consignor\n"
+"                                    <br/>\n"
+"                                    <br/>"
+msgstr "1.1. Consignor\n"
+"                                    <br/>\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.10."
+msgstr "1.10."
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.11. Place of origin\n"
+"                                    <br/>\n"
+"                                    <br/>"
+msgstr "1.11. Place of origin\n"
+"                                    <br/>\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.12."
+msgstr "1.12."
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.13. Place of loading"
+msgstr "1.13. Place of loading"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.14. Date of departure:"
+msgstr "1.14. Date of departure:"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.15. Means of transport\n"
+"                                    <br/>"
+msgstr "1.15. Means of transport\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.16. Entry BIP in EU\n"
+"                                    <br/>"
+msgstr "1.16. Entry BIP in EU\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.17."
+msgstr "1.17."
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.18. Description of commodity\n"
+"                                    <br/>\n"
+"                                    <br/>"
+msgstr "1.18. Description of commodity\n"
+"                                    <br/>\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.19. Commodity Code (HS code)\n"
+"                                    <br/>"
+msgstr "1.19. Commodity Code (HS code)\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.2. Certificate reference number\n"
+"                                    <br/>"
+msgstr "1.2. Certificate reference number\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.2.a."
+msgstr "1.2.a."
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.20. Quantity"
+msgstr "1.20. Quantité "
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.21. Temperature of product\n"
+"                                    <br/>"
+msgstr "1.21. Temperature of product\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.22. Number of packages\n"
+"                                    <br/>"
+msgstr "1.22. Number of packages\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.23. Seal / container number\n"
+"                                    <br/>"
+msgstr "1.23. Seal / container number\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.24. Type of packaging\n"
+"                                    <br/>"
+msgstr "1.24. Type of packaging\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.25. Commodity certified for :\n"
+"                                    <br/>\n"
+"                                    Human consumption"
+msgstr "1.25. Commodity certified for :\n"
+"                                    <br/>\n"
+"                                    Human consumption"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.26."
+msgstr "1.26."
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.27. For import or admission into EU"
+msgstr "1.27. For import or admission into EU"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.28. Identification of commodities\n"
+"                                    <br/>"
+msgstr "1.28. Identification of commodities\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.3. Central Competent Authority\n"
+"                                    <br/>\n"
+"                                    <strong>\n"
+"                                         \n"
+"                                        <span>ONSSA</span>\n"
+"                                    </strong>"
+msgstr "1.3. Central Competent Authority\n"
+"                                    <br/>\n"
+"                                    <strong>\n"
+"                                         \n"
+"                                        <span>ONSSA</span>\n"
+"                                    </strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.4. Local Competent Authority\n"
+"                                    <br/>\n"
+"                                    <strong>\n"
+"                                         \n"
+"                                        <span>SERVICE VETERINAIRE PROVINCIAL DE SAFI</span>\n"
+"                                    </strong>"
+msgstr "1.4. Local Competent Authority\n"
+"                                    <br/>\n"
+"                                    <strong>\n"
+"                                         \n"
+"                                        <span>SERVICE VETERINAIRE PROVINCIAL DE SAFI</span>\n"
+"                                    </strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.5. Consignee\n"
+"                                    <br/>\n"
+"                                    <br/>"
+msgstr "1.5. Consignee\n"
+"                                    <br/>\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.6."
+msgstr "1.6."
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.7. Country origin\n"
+"                                    <span style=\"margin-left:10px;\">ISO Code</span>"
+msgstr "1.7. Country origin\n"
+"                                    <span style=\"margin-left:10px;\">ISO Code</span>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.8. Region of origin\n"
+"                                    <span style=\"margin-left:10px;\">Code</span>"
+msgstr "1.8. Region of origin\n"
+"                                    <span style=\"margin-left:10px;\">Code</span>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "1.9. Country of destination\n"
+"                                    <br/>"
+msgstr "1.9. Country of destination\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "1°)\n"
+"                            <u>PREPARATION ACCORDING TO FOOD REGULATIONS:</u>\n"
+"                            <br/>\n"
+"                                        \n"
+"                            \"The tins have been processed in a canning factory regularly visited by the veterinary\n"
+"                            services, they\n"
+"                            judged in a good state of preservation and fitted to human consumption as no chemical or\n"
+"                            coloring product has been added to them\".\n"
+"                            <br/>\n"
+"                                        \n"
+"                            2°)\n"
+"                            <u>THE SELLING OF THIS PRODUCT HAS BEEN AUTHORIZED IN MOROCCO:</u>\n"
+"                            <br/>\n"
+"                                        \n"
+"                            \"This product has been maid from irreprochable raw material,\n"
+"                            <u>It has been processed and sterilized\n"
+"                                under good sanitary conditions and suited for human consumption\".\n"
+"                            </u>\n"
+"                            <br/>\n"
+"                                        \n"
+"                            <u>NATURE OF CANS</u>\n"
+"                            (canned products and canning methods):\n"
+"                            <br/>"
+msgstr "1°)\n"
+"                            <u>PREPARATION ACCORDING TO FOOD REGULATIONS:</u>\n"
+"                            <br/>\n"
+"                                        \n"
+"                            \"The tins have been processed in a canning factory regularly visited by the veterinary\n"
+"                            services, they\n"
+"                            judged in a good state of preservation and fitted to human consumption as no chemical or\n"
+"                            coloring product has been added to them\".\n"
+"                            <br/>\n"
+"                                        \n"
+"                            2°)\n"
+"                            <u>THE SELLING OF THIS PRODUCT HAS BEEN AUTHORIZED IN MOROCCO:</u>\n"
+"                            <br/>\n"
+"                                        \n"
+"                            \"This product has been maid from irreprochable raw material,\n"
+"                            <u>It has been processed and sterilized\n"
+"                                under good sanitary conditions and suited for human consumption\".\n"
+"                            </u>\n"
+"                            <br/>\n"
+"                                        \n"
+"                            <u>NATURE OF CANS</u>\n"
+"                            (canned products and canning methods):\n"
+"                            <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid ":Region of origin: For frozen or processed bivalve\n"
+"                                            molluscs, indicate the production area"
+msgstr ":Region of origin: For frozen or processed bivalve\n"
+"                                            molluscs, indicate the production area"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "<br/>\n"
+"\n"
+"                        <strong style=\"font-weight:bold; font-size:1.2em;\">- Net weight:</strong>\n"
+"                        <br/>"
+msgstr "<br/>\n"
+"\n"
+"                        <strong style=\"font-weight:bold; font-size:1.2em;\">- Net weight:</strong>\n"
+"                        <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "<br/>\n"
+"                                    <br/>\n"
+"                                    <strong class=\"pull-right\" style=\"margin-right:5%;\">SEE ADDITIONAL CERTIFICATE\n"
+"                                    </strong>"
+msgstr "<br/>\n"
+"                                    <br/>\n"
+"                                    <strong class=\"pull-right\" style=\"margin-right:5%;\">SEE ADDITIONAL CERTIFICATE\n"
+"                                    </strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<br/>\n"
+"                                IBAN N°:"
+msgstr "<br/>\n"
+"                                IBAN N°:"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<br/>\n"
+"                                SWIFT:"
+msgstr "<br/>\n"
+"                                SWIFT:"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "<br/>\n"
+"                        <strong style=\"font-weight:bold; font-size:1.2em;\">Number of packages :</strong>\n"
+"                        <br/>"
+msgstr "<br/>\n"
+"                        <strong style=\"font-weight:bold; font-size:1.2em;\">Number of packages :</strong>\n"
+"                        <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<br/>email:"
+msgstr "<br/>email:"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<br/>mobile:"
+msgstr "<br/>mobile:"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "<span class=\"o_stat_text\">Sale operations</span>"
+msgstr "<span class=\"o_stat_text\"> Opération de préparation</span>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_order_form_midav
+msgid "<span class=\"o_stat_text\">Sale pickings</span>"
+msgstr "<span class=\"o_stat_text\">Ordre de préparartion</span>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<span style=\"color: blue;\">Pro-Forma Invoice #</span>"
+msgstr "<span style=\"color: blue;\">Pro-Forma Invoice #</span>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "<span style=\"font-size:13px;\">Gross weight/Kgs:</span>"
+msgstr "<span style=\"font-size:13px;\">Gross weight/Kgs:</span>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "<span style=\"font-size:13px;\">Net weight/Kgs:</span>"
+msgstr "<span style=\"font-size:13px;\">Net weight/Kgs:</span>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+msgid "<span>FREE AD ITEMS for our brand SAFI :</span>"
+msgstr "<span>FREE AD ITEMS for our brand SAFI :</span>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_external_layout_standard
+msgid "<span>N° Agreement : </span>"
+msgstr "<span>N° Agreement : </span>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+#: model:ir.ui.view,arch_db:midav_base.midav_custom_layout_header
+msgid "<span>N° Agreement :</span>"
+msgstr "<span>N° Agreement :</span>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_external_layout_standard
+msgid "<span>N° FCE-FDA : </span>"
+msgstr "<span>N° FCE-FDA : </span>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+#: model:ir.ui.view,arch_db:midav_base.midav_custom_layout_header
+msgid "<span>N° FCE-FDA :</span>"
+msgstr "<span>N° FCE-FDA :</span>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<span>Ref client :</span>"
+msgstr "<span>Ref client :</span>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "<span>Wild </span>"
+msgstr "<span>Wild </span>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "<strong class=\"full-text-my-bold\">\n"
+"                                        II.1. (1) Public health attestation\n"
+"                                    </strong>\n"
+"                                    <br/>\n"
+"                                    <br/>"
+msgstr "<strong class=\"full-text-my-bold\">\n"
+"                                        II.1. (1) Public health attestation\n"
+"                                    </strong>\n"
+"                                    <br/>\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "<strong class=\"full-text-my-bold\">\n"
+"                                        II.2. (2) (4) Animal health attestation for fish and crustaceans of\n"
+"                                        aquaculture origin\n"
+"                                    </strong>\n"
+"                                    <br/>\n"
+"                                    <br/>\n"
+"                                    <strong class=\"full-text-my-bold\">\n"
+"                                        II.2.1. (3) (4) [Requirements for susceptible species to Epizootic\n"
+"                                        haematopoietic necrosis (EHN), Taura syndrome and Yellowhead disease\n"
+"                                    </strong>\n"
+"                                    <br/>"
+msgstr "<strong class=\"full-text-my-bold\">\n"
+"                                        II.2. (2) (4) Animal health attestation for fish and crustaceans of\n"
+"                                        aquaculture origin\n"
+"                                    </strong>\n"
+"                                    <br/>\n"
+"                                    <br/>\n"
+"                                    <strong class=\"full-text-my-bold\">\n"
+"                                        II.2.1. (3) (4) [Requirements for susceptible species to Epizootic\n"
+"                                        haematopoietic necrosis (EHN), Taura syndrome and Yellowhead disease\n"
+"                                    </strong>\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "<strong style=\"font-size:0.8em;\"><u>BRAND :</u></strong>"
+msgstr "<strong style=\"font-size:0.8em;\"><u>BRAND :</u></strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "<strong style=\"font-size:0.8em;\"><u>BUYER :</u></strong>"
+msgstr "<strong style=\"font-size:0.8em;\"><u>BUYER :</u></strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "<strong style=\"font-size:0.8em;\"><u>GOING TO :</u></strong>"
+msgstr "<strong style=\"font-size:0.8em;\"><u>GOING TO :</u></strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "<strong style=\"font-size:0.8em;\"><u>MEANS OF TRANSPORT </u></strong>"
+msgstr "<strong style=\"font-size:0.8em;\"><u>MEANS OF TRANSPORT </u></strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "<strong style=\"font-size:0.8em;\"><u>SENDERS :</u></strong>"
+msgstr "<strong style=\"font-size:0.8em;\"><u>SENDERS :</u></strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "<strong style=\"font-size:0.8em;\"><u>SENDING SPOT :</u></strong>"
+msgstr "<strong style=\"font-size:0.8em;\"><u>SENDING SPOT :</u></strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "<strong style=\"font-size:0.8em;\"><u>TOTAL GROSS WEIGHT :</u></strong>"
+msgstr "<strong style=\"font-size:0.8em;\"><u>TOTAL GROSS WEIGHT :</u></strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "<strong style=\"font-size:0.8em;\"><u>TOTAL NET WEIGHT :</u></strong>"
+msgstr "<strong style=\"font-size:0.8em;\"><u>TOTAL NET WEIGHT :</u></strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "<strong style=\"font-size:0.8em;\"><u>TOTAL QUANTITY :</u></strong>"
+msgstr "<strong style=\"font-size:0.8em;\"><u>TOTAL QUANTITY :</u></strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "<strong style=\"font-weight:bold; font-size:1.2em;\">- Type of packaging :</strong>\n"
+"                        <br/>"
+msgstr "<strong style=\"font-weight:bold; font-size:1.2em;\">- Type of packaging :</strong>\n"
+"                        <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "<strong style=\"font-weight:bold; font-size:1.4em;\">Identification of products :</strong>\n"
+"                        <br/>\n"
+"                        <strong style=\"font-weight:bold; font-size:1.2em;\">- Commercial description :</strong>\n"
+"                        <br/>"
+msgstr "<strong style=\"font-weight:bold; font-size:1.4em;\">Identification of products :</strong>\n"
+"                        <br/>\n"
+"                        <strong style=\"font-weight:bold; font-size:1.2em;\">- Commercial description :</strong>\n"
+"                        <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "<strong style=\"font-weight:bold;font-size:0.9em;\">Conserved by appertisation</strong>"
+msgstr "<strong style=\"font-weight:bold;font-size:0.9em;\">Conserved by appertisation</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "<strong>\n"
+"                                        II. Health attestation\n"
+"                                    </strong>"
+msgstr "<strong>\n"
+"                                        II. Health attestation\n"
+"                                    </strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "<strong>\n"
+"                                        II. Health information\n"
+"                                    </strong>"
+msgstr "<strong>\n"
+"                                        II. Health information\n"
+"                                    </strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.report_invoice_layouted_midav
+msgid "<strong>&amp;nbsp;&amp;nbsp; Dimensions:</strong>&amp;nbsp;"
+msgstr "<strong>&amp;nbsp;&amp;nbsp; Dimensions:</strong>&amp;nbsp;"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<strong>BANK:</strong>"
+msgstr "<strong>Banque:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>BRAND</strong>"
+msgstr "<strong>BRAND</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<strong>Beneficiary:</strong>\n"
+"                                <br/>"
+msgstr "<strong>Bénéficiaire:</strong>\n"
+"                        <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+msgid "<strong>Beneficiary:</strong>\n"
+"                            <br/>"
+msgstr "<strong>Bénéficiaire:</strong>\n"
+"                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>CLIENT LOT CODE</strong>"
+msgstr "<strong>CLIENT LOT CODE</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Carton number</strong>"
+msgstr "<strong>Carton number</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+#: model:ir.ui.view,arch_db:midav_base.report_invoice_layouted_midav
+msgid "<strong>Code Barre:</strong>"
+msgstr "<strong>Code Barre:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+#: model:ir.ui.view,arch_db:midav_base.report_invoice_layouted_midav
+msgid "<strong>Code SH:</strong>"
+msgstr "<strong>Code SH:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<strong>Commodity Destination:</strong>"
+msgstr "<strong>Destination de marchandise</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+msgid "<strong>Customer Code:</strong>"
+msgstr "<strong>Numéro de client :</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<strong>Date Ordered:</strong>"
+msgstr "<strong>Date de commande :</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Date:</strong>"
+msgstr "<strong>Date :</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+msgid "<strong>Description:</strong>"
+msgstr "<strong>Description :</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>Destination:</strong>"
+msgstr "<strong>Destination:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<strong>Dimensions:</strong>&amp;nbsp;"
+msgstr "<strong>Dimensions:</strong>&amp;nbsp;"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>Drained Weight</strong>"
+msgstr "<strong>Drained Weight</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<strong>Emission Date:</strong>"
+msgstr "<strong>Date d'émission:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Entered Quantity</strong>"
+msgstr "<strong>Entered Quantity</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>Expiry Date</strong>"
+msgstr "<strong>Expiry Date</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Exported Quantity</strong>"
+msgstr "<strong>Exported Quantity</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>FABRICATION CODES:</strong>"
+msgstr "<strong>FABRICATION CODES:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<strong>FCE-FCD N°:</strong>"
+msgstr "<strong>FCE-FCD N°:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>FORMAT</strong>"
+msgstr "<strong>FORMAT</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>GTIN (GENCOD)</strong>"
+msgstr "<strong>GTIN (GENCOD)</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>Gross Weight</strong>"
+msgstr "<strong>Poids Brut:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<strong>HAS ADOPTED THIS PROFORMA INVOICE AT THE SUM OF : </strong>"
+msgstr "<strong>ARRETE LA PRESENTE FACTURE PROFORMA A LA SOMME DE : </strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<strong>Incoterm /Port:</strong>"
+msgstr "<strong>Incoterm /Port:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+msgid "<strong>Invoice Date:</strong>"
+msgstr "<strong>Date de la facture :</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>LOT CODE</strong>"
+msgstr "<strong>LOT CODE</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Lapsing Date</strong>"
+msgstr "<strong>Date Péremption</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Lot Number</strong>"
+msgstr "<strong>Lot Number</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>MOULD</strong>"
+msgstr "<strong>MOULD</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Markings:</strong>"
+msgstr "<strong>Markings:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>Merchandise:</strong>"
+msgstr "<strong>Marchandises:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Moule</strong>"
+msgstr "<strong>Moule</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>Net Weight</strong>"
+msgstr "<strong>Poids Net:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "<strong>Notes</strong>"
+msgstr "<strong>Notes</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>Notre réference :</strong>"
+msgstr "<strong>Notre réference :</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>N° Agreement/FCE-FDA :</strong>"
+msgstr "<strong>N° Agreement/FCE-FDA :</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Order Number:</strong>"
+msgstr "<strong>Order Number:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_non_conforme_page
+msgid "<strong>Ordre de preparation\n"
+"                            <br/>\n"
+"                            non conforme\n"
+"                            <span/>\n"
+"                        </strong>"
+msgstr "<strong>Ordre de preparation\n"
+"                            <br/>\n"
+"                            non conforme\n"
+"                            <span/>\n"
+"                        </strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>PROD Date</strong>"
+msgstr "<strong>PROD Date</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>PRODUCT</strong>"
+msgstr "<strong>PRODUCT</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "<strong>Partie I :</strong>"
+msgstr "<strong>Partie I :</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "<strong>Partie II :</strong>"
+msgstr "<strong>Partie II :</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<strong>Payment Terms:</strong>"
+msgstr "<strong>Conditions de paiement :</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<strong>Product origin:</strong>"
+msgstr "<strong>origine du produit :</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Product</strong>"
+msgstr "<strong>Article</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Production Date</strong>"
+msgstr "<strong>Date Production</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Quality Note:</strong>"
+msgstr "<strong>Quality Note:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>Quantity UVC</strong>"
+msgstr "<strong>Quantité</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Qunatity to prepare</strong>"
+msgstr "<strong>Qunatity to prepare</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<strong>Quotation date:</strong>"
+msgstr "<strong>Date de devis:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>Record N°:</strong>"
+msgstr "<strong>N° Dossier: </strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+msgid "<strong>Reference PI:</strong>"
+msgstr "<strong>Reference PI:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>Référence :</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>SEALS N°</strong>"
+msgstr "<strong>SEALS N°</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>SH CODE</strong>"
+msgstr "<strong>SH CODE</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+#: model:ir.ui.view,arch_db:midav_base.report_invoice_layouted_midav
+msgid "<strong>SID:</strong>&amp;nbsp;"
+msgstr "<strong>SID:</strong>&amp;nbsp;"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>SUB TOTAL</strong>"
+msgstr "<strong>SUB TOTAL</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Sale Order:</strong>"
+msgstr "<strong>Sale Order:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "<strong>See Bill of Lading</strong>"
+msgstr "<strong>See Bill of Lading</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Somme</strong>"
+msgstr "<strong>Somme</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<strong>Subtotal :</strong>"
+msgstr "<strong>Sous-total :</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_invoice_layouted_midav
+msgid "<strong>Subtotal:</strong>"
+msgstr "<strong>Sous-total :</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+msgid "<strong>Subtotal</strong>"
+msgstr "<strong>Sous-total</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>T/C N°</strong>"
+msgstr "<strong>T/C N°</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "<strong>TOTAL</strong>"
+msgstr "<strong>TOTAL</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<strong>Total Quantity</strong>"
+msgstr "<strong>Quantité Total</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+msgid "<strong>Total</strong>"
+msgstr "<strong>Total</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "<strong>Transporter:</strong>"
+msgstr "<strong>Transporteur: </strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Unit of condition</strong>"
+msgstr "<strong>Unit of condition</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "<strong>Unit of measure</strong>"
+msgstr "<strong>Unit of measure</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "<strong>Validity Date:</strong>"
+msgstr "<strong>Date de validité:</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<strong>Votre réference :</strong>"
+msgstr "<strong>Votre réference :</strong>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "<u>Documents put to us</u>"
+msgstr "<u>Documents à nous remettres</u>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "<u>HEALTH CERTIFICATE</u>"
+msgstr "<u>CERTIFICAT SANTITAIRE</u>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<u>LISTE DE COLISAGE</u>"
+msgstr "<u>PACKING LIST</u>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "<u>MANUFACTURER/PRODUCER</u>\n"
+"                            :"
+msgstr "<u>MANUFACTURER/PRODUCER</u>\n"
+"                            :"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "<u>PACKING LIST</u>"
+msgstr "<u>LISTE DE COLISAGE</u>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "<u>PACKING LIST</u>\n"
+"                            :"
+msgstr "<u>PACKING LIST</u>\n"
+"                            :"
+
+#. module: midav_base
+#: model:ir.actions.act_window,name:midav_base.midav_invoice_action
+msgid "Account invoices"
+msgstr "Factures"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_stock_incoterms_active
+msgid "Active"
+msgstr "Actif/ve"
+
+#. module: midav_base
+#: model:ir.actions.report,name:midav_base.action_report_sanitary_certificate
+msgid "Additional SH to health certificate"
+msgstr "Additional SH to health certificate"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Address"
+msgstr "Adresse"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "Adresses"
+msgstr "Adresses"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+#: selection:midav.sale.picking,means_of_conveyance:0
+msgid "Aeroplane"
+msgstr "Aeroplane"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_configuration_form_midav_view
+msgid "Afficher SH code"
+msgstr "Afficher SH code"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_configuration_form_midav_view
+msgid "Afficher la ligne"
+msgstr "Afficher la ligne"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "Agreement"
+msgstr "Agreement"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+#: selection:midav.sale.picking,product_temperature:0
+msgid "Ambient"
+msgstr "Ambient"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "Amount"
+msgstr "Montant"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Approval nbr of\n"
+"                                            establishment"
+msgstr "Approval nbr of\n"
+"                                            establishment"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Approval number"
+msgstr "Approval number"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_sale_order_line_attachment_ids
+msgid "Attachment"
+msgstr "Attachment"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:655
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_attachements
+#, python-format
+msgid "Attachments"
+msgstr "Pièces jointes"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "BILLING N°"
+msgstr "N° FACTURE"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "BOXES"
+msgstr "BOXES"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:761
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_back_sale_operation_id
+#, python-format
+msgid "Back sale operation"
+msgstr "Retour opération de préparation"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:869
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_qty_big_dots
+#, python-format
+msgid "Big dots"
+msgstr "Grand picots"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_bill_of_lading
+msgid "Bill of Lading"
+msgstr "Bill of Lading"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "Billing"
+msgstr "Facturer"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:680
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_blanket
+#, python-format
+msgid "Blanket"
+msgstr "Couverture"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_board_port
+msgid "Board Port"
+msgstr "Port d'embarquement"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "Boarding port"
+msgstr "Port d'embarquement"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Box reference I.1"
+msgstr "Box reference I.1"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Box reference I.2"
+msgstr "Box reference I.2"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Box reference I.8"
+msgstr "Box reference I.8"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:114
+#: code:addons/midav_base/models/products.py:33
+#: model:ir.actions.act_window,name:midav_base.midav_brand_action
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_brand_certificate
+#: model:ir.model.fields,field_description:midav_base.field_product_product_brand
+#: model:ir.model.fields,field_description:midav_base.field_product_template_brand
+#: model:ir.ui.menu,name:midav_base.menu_brand_act
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+#, python-format
+msgid "Brand"
+msgstr "Marque"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_brand_form_view
+#: model:ir.ui.view,arch_db:midav_base.midav_brand_tree
+msgid "Brands"
+msgstr "Marques"
+
+#. module: midav_base
+#: model:ir.model.fields,help:midav_base.field_stock_incoterms_active
+msgid "By unchecking the active field, you may hide an INCOTERM you will not use."
+msgstr "En décochant le champ actif, vous pouvez cacher un INCOTERM que vous n'utilisez pas."
+
+#. module: midav_base
+#: model:stock.incoterms,name:midav_base.incoterm_CIP_midav
+msgid "CARRIAGE AND INSURANCE PAID TO"
+msgstr "TRANSPORT ET ASSURANCE PAYÉS À"
+
+#. module: midav_base
+#: model:stock.incoterms,name:midav_base.incoterm_CPT_midav
+msgid "CARRIAGE PAID TO"
+msgstr "TRANSPORT PAYÉ À"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "CHARGER"
+msgstr "CHARGEUR"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "CONSIGNEE"
+msgstr "CONSIGNÉE"
+
+#. module: midav_base
+#: model:stock.incoterms,name:midav_base.incoterm_CFR_midav
+msgid "COST AND FREIGHT"
+msgstr "COÛT ET FRET"
+
+#. module: midav_base
+#: model:stock.incoterms,name:midav_base.incoterm_CIF_midav
+msgid "COST, INSURANCE AND FREIGHT"
+msgstr "COÛT, ASSURANCE ET FRET"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:868
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_qty_cambered
+#, python-format
+msgid "Cambered quantity"
+msgstr "Quantité bombée"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:769
+#: code:addons/midav_base/models/midav_sale.py:886
+#: selection:midav.sale.operation,state:0
+#: selection:midav.sale.operation.line,state:0
+#, python-format
+msgid "Canceled"
+msgstr "Annulé"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:23
+#: model:ir.actions.act_window,name:midav_base.midav_cans_action
+#: model:ir.model.fields,field_description:midav_base.field_product_product_cans
+#: model:ir.model.fields,field_description:midav_base.field_product_template_cans
+#: model:ir.ui.menu,name:midav_base.menu_cans_act
+#, python-format
+msgid "Cans"
+msgstr "Cans"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:29
+#: model:ir.actions.act_window,name:midav_base.midav_cartons_action
+#: model:ir.model.fields,field_description:midav_base.field_product_product_midav_cartons_id
+#: model:ir.model.fields,field_description:midav_base.field_product_template_midav_cartons_id
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+#: model:ir.ui.view,arch_db:midav_base.midav_cartons_form_view
+#: model:ir.ui.view,arch_db:midav_base.midav_cartons_tree
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+#, python-format
+msgid "Cartons"
+msgstr "Carton"
+
+#. module: midav_base
+#: model:ir.actions.act_window,name:midav_base.midav_cases_action
+#: model:ir.ui.view,arch_db:midav_base.midav_cases_form_view
+#: model:ir.ui.view,arch_db:midav_base.midav_cases_tree
+msgid "Cases"
+msgstr "Case"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:91
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_charger
+#, python-format
+msgid "Charger"
+msgstr "Chargeur"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+#: selection:midav.sale.picking,product_temperature:0
+msgid "Chilled"
+msgstr "Chilled"
+
+#. module: midav_base
+#: model:ir.actions.act_window,help:midav_base.midav_brand_action
+msgid "Click to add Brands."
+msgstr "Cliquer pour ajouter une marque."
+
+#. module: midav_base
+#: model:ir.actions.act_window,help:midav_base.midav_cartons_action
+msgid "Click to add Cartons."
+msgstr "Cliquer pour ajouter Cartons."
+
+#. module: midav_base
+#: model:ir.actions.act_window,help:midav_base.midav_cases_action
+msgid "Click to add Cases"
+msgstr "Cliquer pour ajouter Cases"
+
+#. module: midav_base
+#: model:ir.actions.act_window,help:midav_base.midav_description_commodity_action
+msgid "Click to add Description of commodity ."
+msgstr "Click to add Description of commodity ."
+
+#. module: midav_base
+#: model:ir.actions.act_window,help:midav_base.midav_fish_action
+msgid "Click to add Fish."
+msgstr "Cliquer pour ajouter poissons."
+
+#. module: midav_base
+#: model:ir.actions.act_window,help:midav_base.midav_jutage_action
+msgid "Click to add Jutage"
+msgstr "Cliquer pour ajouter Jutage"
+
+#. module: midav_base
+#: model:ir.actions.act_window,help:midav_base.midav_packaging_type_action
+msgid "Click to add Packaging Type ."
+msgstr "Click to add Packaging Type ."
+
+#. module: midav_base
+#: model:ir.actions.act_window,help:midav_base.midav_sead_tc_action
+msgid "Click to add SEAD / TC ."
+msgstr "Cliquer pour ajouter SEAL / TC ."
+
+#. module: midav_base
+#: model:ir.actions.act_window,help:midav_base.midav_stickers_barq_action
+msgid "Click to add Stickers/Barq."
+msgstr "Cliquer pour ajouter  Stickers/Barq."
+
+#. module: midav_base
+#: model:ir.actions.act_window,help:midav_base.midav_stickers_btes_action
+msgid "Click to add Stickers/Btes."
+msgstr "Cliquer pour ajouter Stickers/Btes."
+
+#. module: midav_base
+#: model:ir.actions.act_window,help:midav_base.midav_tag_action
+msgid "Click to add Tag."
+msgstr "Cliquer pour ajouter étiquettes."
+
+#. module: midav_base
+#: model:ir.actions.act_window,help:midav_base.midav_empty_cans_action
+msgid "Click to add empty.cans."
+msgstr "Cliquer pour ajouter préparation Boites vides"
+
+#. module: midav_base
+#: model:ir.actions.act_window,help:midav_base.midav_preparation_action
+msgid "Click to add preparation"
+msgstr "Cliquer pour ajouter préparation"
+
+#. module: midav_base
+#: model:ir.actions.act_window,help:midav_base.action_invoice_customer_tree1
+msgid "Click to create a customer invoice."
+msgstr "Cliquez pour créer une facture client."
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:64
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_client_id
+#, python-format
+msgid "Client"
+msgstr "Client"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_brand_code
+#: model:ir.model.fields,field_description:midav_base.field_midav_cartons_code
+#: model:ir.model.fields,field_description:midav_base.field_midav_cases_code
+#: model:ir.model.fields,field_description:midav_base.field_midav_description_commodity_code
+#: model:ir.model.fields,field_description:midav_base.field_midav_empty_cans_code
+#: model:ir.model.fields,field_description:midav_base.field_midav_fish_code
+#: model:ir.model.fields,field_description:midav_base.field_midav_jutage_code
+#: model:ir.model.fields,field_description:midav_base.field_midav_packaging_type_code
+#: model:ir.model.fields,field_description:midav_base.field_midav_preparation_code
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_barq_code
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_btes_code
+#: model:ir.model.fields,field_description:midav_base.field_midav_tag_code
+#: model:ir.model.fields,field_description:midav_base.field_stock_incoterms_code
+msgid "Code"
+msgstr "Code"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_codification_1
+msgid "Code 1"
+msgstr "Code 1"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_codification_2
+msgid "Code 2"
+msgstr "Code 2"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_codification_3
+msgid "Code 3"
+msgstr "Code 3"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_codification_4
+msgid "Code 4"
+msgstr "Code 4"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_layout_category.py:25
+#: model:ir.model.fields,field_description:midav_base.field_sale_layout_category_code_barre_pro_format_usa
+#, python-format
+msgid "Code Barre USA"
+msgstr "Code Barre USA"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:20
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_sh_code
+#: model:ir.model.fields,field_description:midav_base.field_product_product_code_sh
+#: model:ir.model.fields,field_description:midav_base.field_product_template_code_sh
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+#, python-format
+msgid "Code SH"
+msgstr "Code SH"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "Codification"
+msgstr "Codification"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_order.py:70
+#: model:ir.model.fields,field_description:midav_base.field_sale_order_commodity_destination
+#, python-format
+msgid "Commodity Destination"
+msgstr "Destination de marchandise"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:55
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_commodity_nature
+#, python-format
+msgid "Commodity Nature"
+msgstr "Nature des marchandises"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_products.py:11
+#: code:addons/midav_base/models/midav_products.py:22
+#: code:addons/midav_base/models/midav_products.py:33
+#: code:addons/midav_base/models/midav_products.py:44
+#: code:addons/midav_base/models/midav_products.py:55
+#: code:addons/midav_base/models/midav_products.py:67
+#: code:addons/midav_base/models/midav_products.py:78
+#: code:addons/midav_base/models/midav_products.py:90
+#: code:addons/midav_base/models/midav_products.py:102
+#: code:addons/midav_base/models/midav_products.py:113
+#: code:addons/midav_base/models/midav_sale.py:19
+#: code:addons/midav_base/models/midav_sale.py:687
+#: code:addons/midav_base/models/midav_sale.py:764
+#: code:addons/midav_base/models/midav_sale.py:879
+#: code:addons/midav_base/models/midav_sale.py:943
+#: code:addons/midav_base/models/midav_sale.py:950
+#: model:ir.model.fields,field_description:midav_base.field_midav_brand_company_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_cartons_company_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_cases_company_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_empty_cans_company_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_fish_company_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_jutage_company_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_mould_company_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_packaging_type_company_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_preparation_company_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_company_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_company_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_company_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_company_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_sead_tc_company_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_barq_company_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_btes_company_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_tag_company_id
+#, python-format
+msgid "Company"
+msgstr "Société"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:671
+#: code:addons/midav_base/models/midav_sale.py:880
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_uom_packing_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_uom_packing_id
+#, python-format
+msgid "Conditioning unit"
+msgstr "Unité de Conditionement"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "Connaissement"
+msgstr "Connaissement"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:92
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_consignee
+#, python-format
+msgid "Consignee"
+msgstr "Consignataire"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_contact_ids
+msgid "Contact"
+msgstr "Contact"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Container number :"
+msgstr "Container number :"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_layout_category.py:10
+#: model:ir.model.fields,field_description:midav_base.field_sale_layout_category_count_qty
+#, python-format
+msgid "Count Quantity"
+msgstr "Count Quantity"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_res_country
+#: model:ir.ui.menu,name:midav_base.midav_localization_country
+msgid "Country"
+msgstr "Pays"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Country: Morocco"
+msgstr "Country: Morocco"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_brand_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_cans_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_cartons_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_cases_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_description_commodity_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_document_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_empty_cans_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_fish_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_jutage_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_lading_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_mould_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_packaging_type_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_preparation_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_sead_tc_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_barq_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_btes_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_tag_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_scientific_name_create_uid
+#: model:ir.model.fields,field_description:midav_base.field_sh_code_create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_brand_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_cans_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_cartons_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_cases_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_description_commodity_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_document_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_empty_cans_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_fish_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_jutage_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_lading_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_mould_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_packaging_type_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_preparation_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_sead_tc_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_barq_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_btes_create_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_tag_create_date
+#: model:ir.model.fields,field_description:midav_base.field_scientific_name_create_date
+#: model:ir.model.fields,field_description:midav_base.field_sh_code_create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_order.py:69
+#: model:ir.model.fields,field_description:midav_base.field_sale_order_bank_id
+#, python-format
+msgid "Customer Bank"
+msgstr "Banque client"
+
+#. module: midav_base
+#: model:ir.actions.act_window,name:midav_base.action_invoice_customer_tree1
+msgid "Customer Invoices"
+msgstr "Factures clients"
+
+#. module: midav_base
+#: model:stock.incoterms,name:midav_base.incoterm_DAF_midav
+msgid "DELIVERED AT FRONTIER"
+msgstr "RENDU À LA FRONTIÈRE"
+
+#. module: midav_base
+#: model:stock.incoterms,name:midav_base.incoterm_DAP_midav
+msgid "DELIVERED AT PLACE"
+msgstr "RENDU AU LIEU DE DESTINATION"
+
+#. module: midav_base
+#: model:stock.incoterms,name:midav_base.incoterm_DAT_midav
+msgid "DELIVERED AT TERMINAL"
+msgstr "RENDU AU TERMINAL"
+
+#. module: midav_base
+#: model:stock.incoterms,name:midav_base.incoterm_DDP_midav
+msgid "DELIVERED DUTY PAID"
+msgstr "RENDU DROITS ACQUITTÉS"
+
+#. module: midav_base
+#: model:stock.incoterms,name:midav_base.incoterm_DDU_midav
+msgid "DELIVERED DUTY UNPAID"
+msgstr "RENDU DROITS NON ACQUITTÉS"
+
+#. module: midav_base
+#: model:stock.incoterms,name:midav_base.incoterm_DEQ_midav
+msgid "DELIVERED EX QUAY"
+msgstr "RENDU À QUAI"
+
+#. module: midav_base
+#: model:stock.incoterms,name:midav_base.incoterm_DES_midav
+msgid "DELIVERED EX SHIP"
+msgstr "RENDU EX SHIP"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "DRAINED WEIGHT"
+msgstr "DRAINED WEIGHT"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:60
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_date_transit
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+#, python-format
+msgid "Date"
+msgstr "Date "
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Date :"
+msgstr "Date :"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:52
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_departure_date
+#, python-format
+msgid "Date departure"
+msgstr "Date departure"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:758
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_date
+#, python-format
+msgid "Date preparation"
+msgstr "Date préparation"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:875
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_default_polish
+#, python-format
+msgid "Default Polish"
+msgstr "Détachement de vernis"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:867
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_qty_seam
+#, python-format
+msgid "Defect of seam"
+msgstr "Défaut de serti"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:865
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_qty_dented
+#, python-format
+msgid "Dented quantity"
+msgstr "Quantité cabossées"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+#: model:ir.ui.view,arch_db:midav_base.report_invoice_layouted_midav
+msgid "Description"
+msgstr "Description"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:36
+#: model:ir.actions.act_window,name:midav_base.midav_description_commodity_action
+#: model:ir.model.fields,field_description:midav_base.field_product_product_description_commodity_id
+#: model:ir.model.fields,field_description:midav_base.field_product_template_description_commodity_id
+#: model:ir.ui.menu,name:midav_base.menu_midav_description_commodity_act
+#: model:ir.ui.view,arch_db:midav_base.midav_description_commodity_form_view
+#: model:ir.ui.view,arch_db:midav_base.midav_description_commodity_tree_view
+#, python-format
+msgid "Description of commodity"
+msgstr "Destination de marchandise"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:970
+#: model:ir.model.fields,field_description:midav_base.field_midav_brand_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_cartons_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_cases_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_empty_cans_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_fish_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_jutage_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_preparation_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_barq_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_btes_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_tag_name
+#: model:ir.model.fields,field_description:midav_base.field_sh_code_designation
+#, python-format
+msgid "Designation"
+msgstr "Designation"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_dest_port
+msgid "Destination Port"
+msgstr "Port Destination"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "Destination port"
+msgstr "Port Destination"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:22
+#: model:ir.model.fields,field_description:midav_base.field_product_product_dimensions
+#: model:ir.model.fields,field_description:midav_base.field_product_template_dimensions
+#, python-format
+msgid "Dimensions"
+msgstr "Dimensions"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_layout_category.py:24
+#: model:ir.model.fields,field_description:midav_base.field_sale_layout_category_dimension_pro_format_usa
+#, python-format
+msgid "Dimensions USA"
+msgstr "Dimensions USA"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+#: model:ir.ui.view,arch_db:midav_base.report_invoice_layouted_midav
+msgid "Disc.(%)"
+msgstr "Rem.(%)"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_brand_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_cans_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_cartons_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_cases_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_description_commodity_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_document_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_empty_cans_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_fish_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_jutage_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_lading_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_mould_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_packaging_type_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_preparation_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_sead_tc_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_barq_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_btes_display_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_tag_display_name
+#: model:ir.model.fields,field_description:midav_base.field_scientific_name_display_name
+#: model:ir.model.fields,field_description:midav_base.field_sh_code_display_name
+#: model:ir.model.fields,field_description:midav_base.field_stock_incoterms_display_name
+msgid "Display Name"
+msgstr "Nom à afficher"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:957
+#: code:addons/midav_base/models/midav_sale.py:963
+#: model:ir.model.fields,field_description:midav_base.field_midav_document_attachments
+#: model:ir.model.fields,field_description:midav_base.field_midav_lading_attachments
+#, python-format
+msgid "Document"
+msgstr "Document"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:956
+#: model:ir.model.fields,field_description:midav_base.field_midav_document_name
+#, python-format
+msgid "Document Model"
+msgstr "Modèle de document"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Documentary references :"
+msgstr "Documentary references :"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:86
+#: code:addons/midav_base/models/midav_sale.py:768
+#: code:addons/midav_base/models/midav_sale.py:885
+#: selection:midav.sale.operation,state:0
+#: selection:midav.sale.operation.line,state:0
+#: selection:midav.sale.picking,state:0
+#, python-format
+msgid "Done"
+msgstr "Fait"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:82
+#: code:addons/midav_base/models/midav_sale.py:767
+#: code:addons/midav_base/models/midav_sale.py:884
+#: selection:midav.sale.operation,state:0
+#: selection:midav.sale.operation.line,state:0
+#: selection:midav.sale.picking,state:0
+#, python-format
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:682
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_pne
+#, python-format
+msgid "Drained Weight/Kgs"
+msgstr "Drained Weight/Kgs"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "Drained weight (Kg)"
+msgstr "Drained weight (Kg)"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:132
+#: model:ir.model.fields,field_description:midav_base.field_product_uom_pne_uom_weight
+#, python-format
+msgid "Dry weight"
+msgstr "Dry weight"
+
+#. module: midav_base
+#: model:stock.incoterms,name:midav_base.incoterm_EXW_midav
+msgid "EX WORKS"
+msgstr "DÉPART USINE"
+
+#. module: midav_base
+#: model:ir.actions.act_window,name:midav_base.midav_empty_cans_action
+#: model:ir.ui.menu,name:midav_base.menu_empty_cans_act
+#: model:ir.ui.view,arch_db:midav_base.midav_empty_cans_form_view
+#: model:ir.ui.view,arch_db:midav_base.midav_empty_cans_tree
+msgid "Empty Cans"
+msgstr "Boite vide"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "Espèces"
+msgstr "Espèces"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_res_country_fce_fcd
+msgid "FCE-FDA N°"
+msgstr "FCE-FDA N°"
+
+#. module: midav_base
+#: model:stock.incoterms,name:midav_base.incoterm_FAS_midav
+msgid "FREE ALONGSIDE SHIP"
+msgstr "FRANCO LE LONG DU NAVIRE"
+
+#. module: midav_base
+#: model:stock.incoterms,name:midav_base.incoterm_FCA_midav
+msgid "FREE CARRIER"
+msgstr "FRANCO TRANSPORTEUR"
+
+#. module: midav_base
+#: model:stock.incoterms,name:midav_base.incoterm_FOB_midav
+msgid "FREE ON BOARD"
+msgstr "FRANCO À BORD"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:70
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_first_notify
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+#, python-format
+msgid "First Notify"
+msgstr "Première Notify"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:25
+#: model:ir.actions.act_window,name:midav_base.midav_fish_action
+#: model:ir.model.fields,field_description:midav_base.field_product_product_midav_fish_id
+#: model:ir.model.fields,field_description:midav_base.field_product_template_midav_fish_id
+#: model:ir.ui.menu,name:midav_base.menu_fish_fish_act
+#: model:ir.ui.view,arch_db:midav_base.midav_fish_form_view
+#: model:ir.ui.view,arch_db:midav_base.midav_fish_tree
+#, python-format
+msgid "Fish"
+msgstr "Poisson"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Fishery products"
+msgstr "Fishery products"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:871
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_qty_flush
+#, python-format
+msgid "Flush"
+msgstr "Floche"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "For consignments of species susceptible to EHN, Taura syndrome and/or\n"
+"                                            Yellowhead disease this statement\n"
+"                                            <br/>\n"
+"                                            must be kept for the consignment to be authorised into any part of the\n"
+"                                            Union."
+msgstr "For consignments of species susceptible to EHN, Taura syndrome and/or\n"
+"                                            Yellowhead disease this statement\n"
+"                                            <br/>\n"
+"                                            must be kept for the consignment to be authorised into any part of the\n"
+"                                            Union."
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:120
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_imp_admission
+#, python-format
+msgid "For import or admission into EU"
+msgstr "Pour l'importation ou l'admission dans l'UE"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "Format"
+msgstr "Format"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_forwarding_agent
+msgid "Forwarding agent"
+msgstr "Transitaire"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "Forwarding agent:"
+msgstr "Transitaire:"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+#: selection:midav.sale.picking,product_temperature:0
+msgid "Frozen"
+msgstr "Frozen"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "GROSS WEIGHT"
+msgstr "Poids Brut"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:19
+#: model:ir.model.fields,field_description:midav_base.field_product_product_gross_weight_nu
+#: model:ir.model.fields,field_description:midav_base.field_product_template_gross_weight_nu
+#, python-format
+msgid "Gross Weight E"
+msgstr "Poids brut à nu"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:684
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_gross_wei
+#, python-format
+msgid "Gross Weight/Kgs"
+msgstr "Gross Weight/Kgs"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:18
+#: model:ir.model.fields,field_description:midav_base.field_product_product_gross_weight
+#: model:ir.model.fields,field_description:midav_base.field_product_template_gross_weight
+#, python-format
+msgid "Gross weight"
+msgstr "Poids brut"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:72
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_gross_weight
+#, python-format
+msgid "Gross weight amount"
+msgstr "Poids Brut"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:73
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_gross_weight_nu
+#, python-format
+msgid "Gross weight nu amount"
+msgstr "Poids Brut à nu"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "HEALTH CERTIFICATE FOR IMPORTS OF FISHERY PRODUCTS INTENDED FOR HUMAN CONSUMPTION"
+msgstr "HEALTH CERTIFICATE FOR IMPORTS OF FISHERY PRODUCTS INTENDED FOR HUMAN CONSUMPTION"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_layout_category.py:14
+#: model:ir.model.fields,field_description:midav_base.field_sale_layout_category_sh_code_healt_certificate
+#, python-format
+msgid "Healt Certificate"
+msgstr "Healt Certificate"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "Health certificate"
+msgstr "Certificat sanitaire"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:119
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_human_consumption
+#, python-format
+msgid "Human consumption"
+msgstr "Consommation humaine"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "I, the undersigned Official Inspector, hereby certify that the aquaculture\n"
+"                                        animals or products thereoff referred to in Part I\n"
+"                                        of this certificate :\n"
+"                                        <br/>\n"
+"                                        (5) originate from a country/territory, zone or compartment declared free\n"
+"                                        from (4) {EHN (4) {Taura syndrome29/01/201} (4)\n"
+"                                        [Yellowhead disease] in accordance with Chapter VII of Directive 2006/88/EC\n"
+"                                        or the relevant OIE Standard by the competent\n"
+"                                        authority of my country,\n"
+"                                        <br/>\n"
+"                                        (i) where the relevant diseases are notifiable to the competent authority\n"
+"                                        and reports of suspicion of infection of the relevant\n"
+"                                        disease must be immediately investigated by the competent authority,\n"
+"                                        <br/>\n"
+"                                        (ii) all introduction of species susceptible to the relevant diseases come\n"
+"                                        from an area declared free of the disease, and\n"
+"                                        <br/>\n"
+"                                        (iii) species susceptible to the relevant diseases are not vaccinated\n"
+"                                        against the relevant diseases]\n"
+"                                        <br/>II.2.2. (3) (4) [Requirements for species susceptible to Viral\n"
+"                                        haemorrhagic septicaemia (VHS), Infectious haematopoietic necrosis\n"
+"                                        (IHN), Infectious salmon anaemia (ISA), Koi herpes virus (KHV) and White\n"
+"                                        spot disease intended for a Member State,zone or\n"
+"                                        compartment declared disease free or subject to a surveillance or\n"
+"                                        eradication programme for the relevant disease\n"
+"                                        I, the undersigned official inspector, hereby certify that the aquaculture\n"
+"                                        animals or products thereof referred to in Part I\n"
+"                                        of this certificate:\n"
+"                                        <br/>\n"
+"                                        (6) originate from a country/territory, zone or compartment declared free\n"
+"                                        from (4) [VHS] (4) [IHN] (4) [ISA] (4) [KHV] (4)\n"
+"                                        [White spot disease] in accordance with Chapter VII of Directive 2006/88/EC\n"
+"                                        or the relevant OIE Standard by the competent\n"
+"                                        authority of my country,\n"
+"                                        <br/>(i) where the relevant diseases are notifiable to the competent\n"
+"                                        authority and reports of suspicion of infection of the relevant\n"
+"                                        disease must be immediately investigated by the competent authority,\n"
+"                                        <br/>(ii) all introduction of species susceptible to the relevant diseases\n"
+"                                        come from an area declared free of the disease, and\n"
+"                                        <br/>(iii) species susceptible to the relevant diseases are not vaccinated\n"
+"                                        against the relevant diseases]\n"
+"                                        <br/>II.2.3. Transport and labelling requirements\n"
+"                                        <br/>I, the undersigned official inspector, hereby certify that:\n"
+"                                        <br/>II.2.3.1. the aquaculture animals referred to above are placed under\n"
+"                                        conditions, including with a water quality,\n"
+"                                        that do not alter their health status;\n"
+"                                        <br/>II.2.3.2. the transport container or well boat prior to loading is\n"
+"                                        clean and disinfected or previously unused; and"
+msgstr "I, the undersigned Official Inspector, hereby certify that the aquaculture\n"
+"                                        animals or products thereoff referred to in Part I\n"
+"                                        of this certificate :\n"
+"                                        <br/>\n"
+"                                        (5) originate from a country/territory, zone or compartment declared free\n"
+"                                        from (4) {EHN (4) {Taura syndrome29/01/201} (4)\n"
+"                                        [Yellowhead disease] in accordance with Chapter VII of Directive 2006/88/EC\n"
+"                                        or the relevant OIE Standard by the competent\n"
+"                                        authority of my country,\n"
+"                                        <br/>\n"
+"                                        (i) where the relevant diseases are notifiable to the competent authority\n"
+"                                        and reports of suspicion of infection of the relevant\n"
+"                                        disease must be immediately investigated by the competent authority,\n"
+"                                        <br/>\n"
+"                                        (ii) all introduction of species susceptible to the relevant diseases come\n"
+"                                        from an area declared free of the disease, and\n"
+"                                        <br/>\n"
+"                                        (iii) species susceptible to the relevant diseases are not vaccinated\n"
+"                                        against the relevant diseases]\n"
+"                                        <br/>II.2.2. (3) (4) [Requirements for species susceptible to Viral\n"
+"                                        haemorrhagic septicaemia (VHS), Infectious haematopoietic necrosis\n"
+"                                        (IHN), Infectious salmon anaemia (ISA), Koi herpes virus (KHV) and White\n"
+"                                        spot disease intended for a Member State,zone or\n"
+"                                        compartment declared disease free or subject to a surveillance or\n"
+"                                        eradication programme for the relevant disease\n"
+"                                        I, the undersigned official inspector, hereby certify that the aquaculture\n"
+"                                        animals or products thereof referred to in Part I\n"
+"                                        of this certificate:\n"
+"                                        <br/>\n"
+"                                        (6) originate from a country/territory, zone or compartment declared free\n"
+"                                        from (4) [VHS] (4) [IHN] (4) [ISA] (4) [KHV] (4)\n"
+"                                        [White spot disease] in accordance with Chapter VII of Directive 2006/88/EC\n"
+"                                        or the relevant OIE Standard by the competent\n"
+"                                        authority of my country,\n"
+"                                        <br/>(i) where the relevant diseases are notifiable to the competent\n"
+"                                        authority and reports of suspicion of infection of the relevant\n"
+"                                        disease must be immediately investigated by the competent authority,\n"
+"                                        <br/>(ii) all introduction of species susceptible to the relevant diseases\n"
+"                                        come from an area declared free of the disease, and\n"
+"                                        <br/>(iii) species susceptible to the relevant diseases are not vaccinated\n"
+"                                        against the relevant diseases]\n"
+"                                        <br/>II.2.3. Transport and labelling requirements\n"
+"                                        <br/>I, the undersigned official inspector, hereby certify that:\n"
+"                                        <br/>II.2.3.1. the aquaculture animals referred to above are placed under\n"
+"                                        conditions, including with a water quality,\n"
+"                                        that do not alter their health status;\n"
+"                                        <br/>II.2.3.2. the transport container or well boat prior to loading is\n"
+"                                        clean and disinfected or previously unused; and"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "I, the undersigned, declare that I am aware of the relevant provisions of\n"
+"                                        Regulations (EC) N° 178/2002, (EC) N° 852/2004, (EC)\n"
+"                                        N° 853/2004 and (EC) n° 854/2004 and certify that the fishery products\n"
+"                                        described\n"
+"                                        above were produced in accordance with\n"
+"                                        those requirements, in particular that they :\n"
+"                                        <br/>\n"
+"                                        <br/>\n"
+"                                        — come from (an) establishment(s) implementing a programme based on the\n"
+"                                        HACCP\n"
+"                                        principles in accordance with Regulation (EC)\n"
+"                                        N° 852/2004,\n"
+"                                        <br/>\n"
+"                                        <br/>\n"
+"                                        — have been caught and handled on board vessels, landed, handled and were\n"
+"                                        appropriate prepared, processed, frozen and\n"
+"                                        thawed hygienically in compliance with the requirements laid down in Section\n"
+"                                        VIII, Chapters I to IV of Annex III to Regulation (EC)\n"
+"                                        N° 853/2004,\n"
+"                                        <br/>\n"
+"                                        <br/>\n"
+"                                        — satisfy the health standards laid down in Section VIII, Chapter V of Annex\n"
+"                                        III\n"
+"                                        to Regulation (EC) n° 853/2004 and the criteria\n"
+"                                        laid down in Regulation (EC) n° 2073/2005 on microbiological criteria for\n"
+"                                        foodstuffs,\n"
+"                                        <br/>\n"
+"                                        <br/>\n"
+"                                        — have been packaged, stored and transported in compliance with Section\n"
+"                                        VIII,\n"
+"                                        Chapters VI to VIII of Annex III to Regulation (EC)\n"
+"                                        n° 853/2004,\n"
+"                                        <br/>\n"
+"                                        <br/>\n"
+"                                        — have been marked in accordance with Section I of Annex II to Regulation\n"
+"                                        (EC)\n"
+"                                        n° 853/2004,\n"
+"                                        <br/>\n"
+"                                        — the garantees covering live animals and products thereof, if from\n"
+"                                        aquaculture\n"
+"                                        origin, provided by residue plans submitted in\n"
+"                                        accordance with Directive 96/23/EC, and in particular Article 29 thereof,\n"
+"                                        are\n"
+"                                        filled\n"
+"                                        and\n"
+"                                        <br/>\n"
+"                                        — have satisfactorily undergone the official controls laid down in Annex III\n"
+"                                        to\n"
+"                                        Regulation (EC) N° 854/2004"
+msgstr "I, the undersigned, declare that I am aware of the relevant provisions of\n"
+"                                        Regulations (EC) N° 178/2002, (EC) N° 852/2004, (EC)\n"
+"                                        N° 853/2004 and (EC) n° 854/2004 and certify that the fishery products\n"
+"                                        described\n"
+"                                        above were produced in accordance with\n"
+"                                        those requirements, in particular that they :\n"
+"                                        <br/>\n"
+"                                        <br/>\n"
+"                                        — come from (an) establishment(s) implementing a programme based on the\n"
+"                                        HACCP\n"
+"                                        principles in accordance with Regulation (EC)\n"
+"                                        N° 852/2004,\n"
+"                                        <br/>\n"
+"                                        <br/>\n"
+"                                        — have been caught and handled on board vessels, landed, handled and were\n"
+"                                        appropriate prepared, processed, frozen and\n"
+"                                        thawed hygienically in compliance with the requirements laid down in Section\n"
+"                                        VIII, Chapters I to IV of Annex III to Regulation (EC)\n"
+"                                        N° 853/2004,\n"
+"                                        <br/>\n"
+"                                        <br/>\n"
+"                                        — satisfy the health standards laid down in Section VIII, Chapter V of Annex\n"
+"                                        III\n"
+"                                        to Regulation (EC) n° 853/2004 and the criteria\n"
+"                                        laid down in Regulation (EC) n° 2073/2005 on microbiological criteria for\n"
+"                                        foodstuffs,\n"
+"                                        <br/>\n"
+"                                        <br/>\n"
+"                                        — have been packaged, stored and transported in compliance with Section\n"
+"                                        VIII,\n"
+"                                        Chapters VI to VIII of Annex III to Regulation (EC)\n"
+"                                        n° 853/2004,\n"
+"                                        <br/>\n"
+"                                        <br/>\n"
+"                                        — have been marked in accordance with Section I of Annex II to Regulation\n"
+"                                        (EC)\n"
+"                                        n° 853/2004,\n"
+"                                        <br/>\n"
+"                                        — the garantees covering live animals and products thereof, if from\n"
+"                                        aquaculture\n"
+"                                        origin, provided by residue plans submitted in\n"
+"                                        accordance with Directive 96/23/EC, and in particular Article 29 thereof,\n"
+"                                        are\n"
+"                                        filled\n"
+"                                        and\n"
+"                                        <br/>\n"
+"                                        — have satisfactorily undergone the official controls laid down in Annex III\n"
+"                                        to\n"
+"                                        Regulation (EC) N° 854/2004"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "I, undersigned, ............................... , veterinary inspector in charge of the\n"
+"                            border post of safi declare that canned fish under-mentionned, correspond to the standard\n"
+"                            required for export, have been checked up as follows :"
+msgstr "I, undersigned, ............................... , veterinary inspector in charge of the\n"
+"                            border post of safi declare that canned fish under-mentionned, correspond to the standard\n"
+"                            required for export, have been checked up as follows :"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_brand_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_cans_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_cartons_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_cases_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_description_commodity_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_document_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_empty_cans_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_fish_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_jutage_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_lading_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_mould_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_packaging_type_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_preparation_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_sead_tc_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_barq_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_btes_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_tag_id
+#: model:ir.model.fields,field_description:midav_base.field_scientific_name_id
+#: model:ir.model.fields,field_description:midav_base.field_sh_code_id
+msgid "ID"
+msgstr "ID"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "II.a. Certificate reference number\n"
+"                                    <br/>"
+msgstr "II.a. Certificate reference number\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "II.b."
+msgstr "II.b."
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "ISO Code"
+msgstr "ISO Code"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Identification of container / seal number : Where\n"
+"                                            there is a serial number of the seal it has to be indicated."
+msgstr "Identification of container / seal number : Where\n"
+"                                            there is a serial number of the seal it has to be indicated."
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Identification:"
+msgstr "Identification:"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:87
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+#: selection:midav.sale.picking,state:0
+#, python-format
+msgid "Improper Quality"
+msgstr "Qualité non conforme"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_order.py:77
+#: model:ir.model.fields,field_description:midav_base.field_sale_order_incoterm_id
+#, python-format
+msgid "Incoterm"
+msgstr "Incoterm"
+
+#. module: midav_base
+#: model:ir.model.fields,help:midav_base.field_stock_incoterms_code
+msgid "Incoterm Standard Code"
+msgstr "Code standard Incoterm"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_stock_incoterms
+#: model:ir.ui.menu,name:midav_base.menu_incoterm_midav
+msgid "Incoterms"
+msgstr "Incoterms"
+
+#. module: midav_base
+#: model:ir.model.fields,help:midav_base.field_stock_incoterms_name
+msgid "Incoterms are series of sales terms. They are used to divide transaction costs and responsibilities between buyer and seller and reflect state-of-the-art transportation practices."
+msgstr "Les incoterms sont une série de conditions de vente. Ils sont utilisés pour partager les coûts et les responsabilités entre les acheteurs et les vendeurs, et représentent les meilleurs pratiques du moment dans le domaine du transport."
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_account_invoice
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_account_invoice_id
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "Invoices"
+msgstr "Factures"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:69
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_invoice_count
+#, python-format
+msgid "Invoices count"
+msgstr "Nombre Factures"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_product_product_is_product_variant
+msgid "Is Product Variant"
+msgstr "Is Product Variant"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:27
+#: model:ir.actions.act_window,name:midav_base.midav_jutage_action
+#: model:ir.model.fields,field_description:midav_base.field_product_product_midav_jutage_id
+#: model:ir.model.fields,field_description:midav_base.field_product_template_midav_jutage_id
+#: model:ir.ui.menu,name:midav_base.menu_jutage_jutage_act
+#: model:ir.ui.view,arch_db:midav_base.jutage_jutage_tree
+#: model:ir.ui.view,arch_db:midav_base.midav_jutage_form_view
+#, python-format
+msgid "Jutage"
+msgstr "Jutage"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Keep as appropriate."
+msgstr "Keep as appropriate."
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "Kg"
+msgstr "Kg"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "Kgs"
+msgstr "Kgs"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "Kingdom Of Morocco\n"
+"                        <br/>\n"
+"                        National Office Of Sanitary Security Of Food Products\n"
+"                        <br/>\n"
+"                        Provincial Veterinary Service Of Safi\n"
+"                        <br/>"
+msgstr "Kingdom Of Morocco\n"
+"                        <br/>\n"
+"                        National Office Of Sanitary Security Of Food Products\n"
+"                        <br/>\n"
+"                        Provincial Veterinary Service Of Safi\n"
+"                        <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Kingdom of Morocco\n"
+"                    <br/>\n"
+"                    National Office of Sanitary Security of Food Products.\n"
+"                    <br/>\n"
+"                      provincial veterinary service of Safi\n"
+"                    <br/>"
+msgstr "Kingdom of Morocco\n"
+"                    <br/>\n"
+"                    National Office of Sanitary Security of Food Products.\n"
+"                    <br/>\n"
+"                      provincial veterinary service of Safi\n"
+"                    <br/>"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:653
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_lot_code
+#, python-format
+msgid "LOT CODE"
+msgstr "LOT CODE"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:874
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_lack_of_weight
+#, python-format
+msgid "Lack of weight"
+msgstr "Manque de poids"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:658
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_lapsing_date
+#, python-format
+msgid "Lapsing Date"
+msgstr "Date de péremption"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:685
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_expired_date
+#, python-format
+msgid "Lapsing date"
+msgstr "Date préremption"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_brand___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_cans___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_cartons___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_cases___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_description_commodity___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_document___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_empty_cans___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_fish___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_jutage___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_lading___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_mould___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_packaging_type___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_preparation___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_sead_tc___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_barq___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_btes___last_update
+#: model:ir.model.fields,field_description:midav_base.field_midav_tag___last_update
+#: model:ir.model.fields,field_description:midav_base.field_scientific_name___last_update
+#: model:ir.model.fields,field_description:midav_base.field_sh_code___last_update
+#: model:ir.model.fields,field_description:midav_base.field_stock_incoterms___last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_brand_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_cans_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_cartons_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_cases_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_description_commodity_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_document_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_empty_cans_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_fish_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_jutage_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_lading_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_mould_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_packaging_type_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_preparation_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_sead_tc_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_barq_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_btes_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_midav_tag_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_scientific_name_write_uid
+#: model:ir.model.fields,field_description:midav_base.field_sh_code_write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_brand_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_cans_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_cartons_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_cases_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_description_commodity_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_document_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_empty_cans_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_fish_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_jutage_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_lading_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_mould_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_packaging_type_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_preparation_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_sead_tc_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_barq_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_btes_write_date
+#: model:ir.model.fields,field_description:midav_base.field_midav_tag_write_date
+#: model:ir.model.fields,field_description:midav_base.field_scientific_name_write_date
+#: model:ir.model.fields,field_description:midav_base.field_sh_code_write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:866
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_qty_leak
+#, python-format
+msgid "Leak quantity"
+msgstr "Quantité fuite"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "Liste de colisage"
+msgstr "Liste de colisage"
+
+#. module: midav_base
+#: model:ir.ui.menu,name:midav_base.midav_localization
+msgid "Localisation"
+msgstr "Localisation"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:654
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_lot_code_finale
+#, python-format
+msgid "Lot"
+msgstr "Lot"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "Lots"
+msgstr "Lots"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "MA    /     /         /52"
+msgstr "MA    /     /         /52"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:656
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_mould
+#, python-format
+msgid "MOULD"
+msgstr "MOULE"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_barq_mcode
+#: model:ir.model.fields,field_description:midav_base.field_midav_stickers_btes_mcode
+msgid "Management Code"
+msgstr "Code Management"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Manufacturing plant"
+msgstr "Manufacturing plant"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:652
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_marquage
+#, python-format
+msgid "Marquage"
+msgstr "Marquage"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:96
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_marquage_lc
+#, python-format
+msgid "Marquage Colisage Liste"
+msgstr "Marquage Colisage Liste"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:97
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_marquage_or
+#, python-format
+msgid "Marquage Preparation Order"
+msgstr "Marquage Preparation Order"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "Marquage connaisement"
+msgstr "Marquage connaisement"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_means_of_conveyance
+msgid "Means of conveyance"
+msgstr "Moyenne de transport"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "Merchandises"
+msgstr "Marchandises"
+
+#. module: midav_base
+#: model:ir.actions.act_window,name:midav_base.action_incoterms_tree_midav
+msgid "Midav Incoterm"
+msgstr "Midav Incoterm"
+
+#. module: midav_base
+#: model:ir.actions.act_window,name:midav_base.midav_mould_action
+msgid "Midav Mould"
+msgstr "Midav Mould"
+
+#. module: midav_base
+#: model:ir.actions.act_window,name:midav_base.action_sale_operation_line
+msgid "Midav Sale Operation Lines"
+msgstr "Lines d'opérations de préparation"
+
+#. module: midav_base
+#: model:ir.actions.act_window,name:midav_base.action_sale_operation
+msgid "Midav Sale Operations"
+msgstr "Opérations de préparation"
+
+#. module: midav_base
+#: model:ir.actions.act_window,name:midav_base.action_sale_picking_line
+msgid "Midav Sale Picking Lines"
+msgstr "Lignes de préparation"
+
+#. module: midav_base
+#: model:ir.actions.act_window,name:midav_base.action_sale_picking
+msgid "Midav Sale Pickings"
+msgstr "Ordres de préparation"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:864
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_qty_missing
+#, python-format
+msgid "Missing quantity"
+msgstr "Quantité manquante"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "Mobile:"
+msgstr "Mobile :"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_account_invoice_to_text
+#: model:ir.model.fields,field_description:midav_base.field_sale_order_to_text
+msgid "Montant total en lettre"
+msgstr "Montant total en lettre"
+
+#. module: midav_base
+#: model:ir.ui.menu,name:midav_base.menu_mould_act
+msgid "Mould"
+msgstr "Mould"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "NATIONAL OFFICE FOR FOOD SAFETY OF FOOD PRODUCTS\n"
+"                        <br/>\n"
+"                          PROVINCIAL VETERINARY SERVICE OF SAFI\n"
+"                        <br/>"
+msgstr "NATIONAL OFFICE FOR FOOD SAFETY OF FOOD PRODUCTS\n"
+"                        <br/>\n"
+"                          PROVINCIAL VETERINARY SERVICE OF SAFI\n"
+"                        <br/>"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_nb_colis
+msgid "NB colis"
+msgstr "NB colis"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "NET WEIGHT"
+msgstr "Poids Net"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:651
+#: code:addons/midav_base/models/midav_sale.py:756
+#: code:addons/midav_base/models/midav_sale.py:849
+#: code:addons/midav_base/models/midav_sale.py:940
+#: code:addons/midav_base/models/midav_sale.py:949
+#: code:addons/midav_base/models/midav_sale.py:962
+#: code:addons/midav_base/models/midav_sale.py:976
+#: code:addons/midav_base/models/products.py:139
+#: model:ir.model.fields,field_description:midav_base.field_midav_cans_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_description_commodity_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_lading_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_mould_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_packaging_type_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_name
+#: model:ir.model.fields,field_description:midav_base.field_midav_sead_tc_name
+#: model:ir.model.fields,field_description:midav_base.field_scientific_name_name
+#: model:ir.model.fields,field_description:midav_base.field_stock_incoterms_name
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+#, python-format
+msgid "Name"
+msgstr "Nom"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Name (in capital letters) :"
+msgstr "Name (in capital letters) :"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "Nature of commodity"
+msgstr "Nature of commodity"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Nature of commodity : specify whether aquaculture or wild origin.\n"
+"                                            <br/>\n"
+"                                            Treatment type : Specify whether live, chilled, frozen or processed..\n"
+"                                            <br/>\n"
+"                                            Manufacturing plant : includes factory vessel, freezer, cold store,\n"
+"                                            processing plant."
+msgstr "Nature of commodity : specify whether aquaculture or wild origin.\n"
+"                                            <br/>\n"
+"                                            Treatment type : Specify whether live, chilled, frozen or processed..\n"
+"                                            <br/>\n"
+"                                            Manufacturing plant : includes factory vessel, freezer, cold store,\n"
+"                                            processing plant."
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_navigation_comp
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "Navigation Company"
+msgstr "Cie de navigation"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_order.py:73
+#: model:ir.model.fields,field_description:midav_base.field_sale_order_nb_sale_pickings
+#, python-format
+msgid "Nb sale pickings"
+msgstr "Nombre d'ordre de préparation"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:668
+#: code:addons/midav_base/models/midav_sale.py:872
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_nbr_carton
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_nbr_carton
+#, python-format
+msgid "Nbr colis"
+msgstr "Nbr colis"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Nbr of packages"
+msgstr "Nbr of packages"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:133
+#: model:ir.model.fields,field_description:midav_base.field_product_uom_pn_uom_weight
+#, python-format
+msgid "Net Weight"
+msgstr "Net Weight"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:683
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_pn
+#, python-format
+msgid "Net Weight/Kgs"
+msgstr "Net Weight/Kgs"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:16
+#: model:ir.model.fields,field_description:midav_base.field_product_product_net_weight
+#: model:ir.model.fields,field_description:midav_base.field_product_template_net_weight
+#, python-format
+msgid "Net weight"
+msgstr "Poids net"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "Net weight (Kg)"
+msgstr "Net weight (Kg)"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Net weight /Kgs"
+msgstr "Net weight /Kgs"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:74
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_net_weight
+#, python-format
+msgid "Net weight amount"
+msgstr "Poids Net"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:135
+#: code:addons/midav_base/models/midav_sale.py:693
+#: code:addons/midav_base/models/midav_sale.py:775
+#: code:addons/midav_base/models/midav_sale.py:892
+#, python-format
+msgid "New"
+msgstr "Nouveau"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "Nombre de cartons"
+msgstr "Nombre de cartons"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+msgid "Notify"
+msgstr "Notifier"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "Number of packages"
+msgstr "Number of packages"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "N°\n"
+"                            MA    /     /         /52"
+msgstr "N°\n"
+"                            MA    /     /         /52"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:77
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_agreement_nbr
+#, python-format
+msgid "N° Agreement"
+msgstr "N° Agreement"
+
+#. module: midav_base
+#: code:addons/midav_base/models/res_company.py:13
+#: model:ir.model.fields,field_description:midav_base.field_res_company_approval
+#, python-format
+msgid "N° Approval"
+msgstr "N° Approval"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:76
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_booking_nbr
+#, python-format
+msgid "N° Booking"
+msgstr "N° Booking"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:78
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_escale_nbr
+#, python-format
+msgid "N° Escale"
+msgstr "N° Escale"
+
+#. module: midav_base
+#: code:addons/midav_base/models/res_company.py:14
+#: model:ir.model.fields,field_description:midav_base.field_res_company_fda
+#, python-format
+msgid "N° FCE FDA"
+msgstr "N° FCE FDA"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:663
+#: code:addons/midav_base/models/midav_sale.py:858
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_lot
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_lot
+#, python-format
+msgid "N° Lot"
+msgstr "N° Lot"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_name
+msgid "N° Order"
+msgstr "N° Ordre"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "OFFICIAL STAMP"
+msgstr "CACHET OFFICIEL"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Official inspector\n"
+"                                    <br/>"
+msgstr "Official inspector\n"
+"                                    <br/>"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:673
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_old_uom_id
+#, python-format
+msgid "Old Unit of measure"
+msgstr "Unité de measure ancienne"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:67
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_operations_count
+#, python-format
+msgid "Operations count"
+msgstr "Nombre Opérations"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "Order #"
+msgstr "Commande n°"
+
+#. module: midav_base
+#: code:addons/midav_base/models/account_invoice.py:73
+#: model:ir.model.fields,field_description:midav_base.field_account_invoice_midav_order_id
+#, python-format
+msgid "Order M"
+msgstr "Order M"
+
+#. module: midav_base
+#: code:addons/midav_base/models/account_invoice.py:72
+#: model:ir.model.fields,field_description:midav_base.field_account_invoice_order_id
+#, python-format
+msgid "Order N"
+msgstr "Order N"
+
+#. module: midav_base
+#: model:ir.actions.report,name:midav_base.action_report_order_preparation
+msgid "Order preparation report"
+msgstr "Rapport d'ordre de préparation"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+#: selection:midav.sale.picking,means_of_conveyance:0
+msgid "Other"
+msgstr "Autre"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:17
+#: model:ir.model.fields,field_description:midav_base.field_product_product_pne_weight
+#: model:ir.model.fields,field_description:midav_base.field_product_template_pne_weight
+#, python-format
+msgid "PNE"
+msgstr "Poids Net égoutté"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:75
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_pne_weight
+#, python-format
+msgid "PNE amount"
+msgstr "Poids Net égoutté"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "PROMOTIONAL AD ITEMS FOR SAFI BRAND"
+msgstr "PROMOTIONAL AD ITEMS FOR SAFI BRAND"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:121
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_packaging_type_id
+#: model:ir.ui.view,arch_db:midav_base.midav_packaging_type_form_view
+#: model:ir.ui.view,arch_db:midav_base.midav_packaging_type_tree_view
+#, python-format
+msgid "Packaging Type"
+msgstr "Type d'emballage"
+
+#. module: midav_base
+#: model:ir.actions.act_window,name:midav_base.midav_packaging_type_action
+#: model:ir.ui.menu,name:midav_base.menu_midav_packaging_type_act
+msgid "Packaging type"
+msgstr "Packaging type"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:84
+#: selection:midav.sale.picking,state:0
+#, python-format
+msgid "Packing"
+msgstr "En Colisage"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "Packing list"
+msgstr "Liste colisgae"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Part II.1 of this certificate does not apply to\n"
+"                                            countries with special public health certification requirements laid\n"
+"                                            down in equivalence agreements or other Union legislation."
+msgstr "Part II.1 of this certificate does not apply to\n"
+"                                            countries with special public health certification requirements laid\n"
+"                                            down in equivalence agreements or other Union legislation."
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Part II.2 of this certificate does not apply to:\n"
+"                                            <br/>\n"
+"                                            (a) non-viable crustaceans, which means crustaceans no longer able to\n"
+"                                            survive as living animals if returned to the\n"
+"                                            <br/>\n"
+"                                            environment from which they were obtained,\n"
+"                                            <br/>\n"
+"                                            (b) fish which are slaughtered and eviscerated before dispatch,\n"
+"                                            <br/>\n"
+"                                            (c) aquaculture animals and products thereof, which are placed on the\n"
+"                                            market for human consumption without further\n"
+"                                            <br/>\n"
+"                                            processing, provided that they are packed in retail-sale packages which\n"
+"                                            comply with the provisions for such packages\n"
+"                                            <br/>\n"
+"                                            in Regulation (EC) No 853/2004, or for dispatch centres,\n"
+"                                            <br/>\n"
+"                                            (d) crustaceans destined for processing establishments authorised in\n"
+"                                            accordance with Article 4(2) of\n"
+"                                            <br/>\n"
+"                                            Directive 2006/88/EC, purification centres or similar businesses which\n"
+"                                            are equipped with an effluent\n"
+"                                            <br/>\n"
+"                                            treatment system inactivating the pathogens in question, or where the\n"
+"                                            effluent is subject to other types\n"
+"                                            <br/>\n"
+"                                            of treatment reducing the risk of transmitting diseases to the natural\n"
+"                                            waters to an acceptable level,\n"
+"                                            <br/>\n"
+"                                            (e) crustaceans which are intended for further processing before human\n"
+"                                            consumption without temporary\n"
+"                                            <br/>\n"
+"                                            storage at the place of processing and packed and labelled for that\n"
+"                                            purpose in accordance with\n"
+"                                            <br/>\n"
+"                                            Regulation (EC) No 853/2004.\n"
+"                                            <br/>"
+msgstr "Part II.2 of this certificate does not apply to:\n"
+"                                            <br/>\n"
+"                                            (a) non-viable crustaceans, which means crustaceans no longer able to\n"
+"                                            survive as living animals if returned to the\n"
+"                                            <br/>\n"
+"                                            environment from which they were obtained,\n"
+"                                            <br/>\n"
+"                                            (b) fish which are slaughtered and eviscerated before dispatch,\n"
+"                                            <br/>\n"
+"                                            (c) aquaculture animals and products thereof, which are placed on the\n"
+"                                            market for human consumption without further\n"
+"                                            <br/>\n"
+"                                            processing, provided that they are packed in retail-sale packages which\n"
+"                                            comply with the provisions for such packages\n"
+"                                            <br/>\n"
+"                                            in Regulation (EC) No 853/2004, or for dispatch centres,\n"
+"                                            <br/>\n"
+"                                            (d) crustaceans destined for processing establishments authorised in\n"
+"                                            accordance with Article 4(2) of\n"
+"                                            <br/>\n"
+"                                            Directive 2006/88/EC, purification centres or similar businesses which\n"
+"                                            are equipped with an effluent\n"
+"                                            <br/>\n"
+"                                            treatment system inactivating the pathogens in question, or where the\n"
+"                                            effluent is subject to other types\n"
+"                                            <br/>\n"
+"                                            of treatment reducing the risk of transmitting diseases to the natural\n"
+"                                            waters to an acceptable level,\n"
+"                                            <br/>\n"
+"                                            (e) crustaceans which are intended for further processing before human\n"
+"                                            consumption without temporary\n"
+"                                            <br/>\n"
+"                                            storage at the place of processing and packed and labelled for that\n"
+"                                            purpose in accordance with\n"
+"                                            <br/>\n"
+"                                            Regulation (EC) No 853/2004.\n"
+"                                            <br/>"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Partie I: Details of dispatched consignment"
+msgstr "Partie I: Details of dispatched consignment"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Partie II : Certification"
+msgstr "Partie II : Certification"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Parts II.2.1 and II.2.2 of this certificate only apply to species\n"
+"                                            susceptible to one or more of the diseases\n"
+"                                            <br/>\n"
+"                                            referred to in the heading of the point concerned. Susceptible species\n"
+"                                            are listed in Annex IV to\n"
+"                                            <br/>\n"
+"                                            Directive 2006/88/EC."
+msgstr "Parts II.2.1 and II.2.2 of this certificate only apply to species\n"
+"                                            susceptible to one or more of the diseases\n"
+"                                            <br/>\n"
+"                                            referred to in the heading of the point concerned. Susceptible species\n"
+"                                            are listed in Annex IV to\n"
+"                                            <br/>\n"
+"                                            Directive 2006/88/EC."
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_order.py:74
+#: model:ir.model.fields,field_description:midav_base.field_sale_order_payment_mode_id
+#, python-format
+msgid "Payment mode"
+msgstr "Mode de paiement"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "Phone:"
+msgstr "Téléphone :"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "Plant agreement"
+msgstr "Plant agreement"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_order.py:71
+#: model:ir.model.fields,field_description:midav_base.field_sale_order_nb_port
+#: model:ir.ui.view,arch_db:midav_base.view_order_form_midav
+#, python-format
+msgid "Port Number"
+msgstr "Port"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Postal Code"
+msgstr "Postal Code"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:26
+#: model:ir.actions.act_window,name:midav_base.midav_preparation_action
+#: model:ir.model.fields,field_description:midav_base.field_product_product_midav_preparation_id
+#: model:ir.model.fields,field_description:midav_base.field_product_template_midav_preparation_id
+#: model:ir.ui.menu,name:midav_base.menu_preparation_preparation_act
+#: model:ir.ui.view,arch_db:midav_base.midav_preparation_form_view
+#: model:ir.ui.view,arch_db:midav_base.midav_preparation_tree
+#, python-format
+msgid "Preparation"
+msgstr "Préparation"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_order_preparation_document
+msgid "Preparation Order and inventory tracking of finished products"
+msgstr "Preparation Order and inventory tracking of finished products"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:83
+#: selection:midav.sale.picking,state:0
+#, python-format
+msgid "Prepare"
+msgstr "Préparer"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.report_invoice_layouted_midav
+msgid "Price"
+msgstr "Prix"
+
+#. module: midav_base
+#: model:ir.actions.report,name:midav_base.action_report_list_colisage
+msgid "Print colisage list"
+msgstr "Imprimer Liste Colisage"
+
+#. module: midav_base
+#: model:ir.actions.report,name:midav_base.action_report_health_certificate
+msgid "Print health certificate"
+msgstr "Imprimer Certificat sanitaire"
+
+#. module: midav_base
+#: model:ir.actions.report,name:midav_base.action_report_transit_order
+msgid "Print transit order"
+msgstr "Imprimer Ordre transit"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_layout_category.py:12
+#: code:addons/midav_base/models/sale_layout_category.py:18
+#: model:ir.model.fields,field_description:midav_base.field_sale_layout_category_ligne_pro_format
+#: model:ir.model.fields,field_description:midav_base.field_sale_layout_category_sh_code_pro_format
+#, python-format
+msgid "Pro Format"
+msgstr "Pro Format"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_layout_category.py:13
+#: model:ir.model.fields,field_description:midav_base.field_sale_layout_category_sh_code_pro_format_usa
+#, python-format
+msgid "Pro Format USA"
+msgstr "Pro Format USA"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:57
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_process_type
+#, python-format
+msgid "Process Type"
+msgstr "Process Type"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:661
+#: code:addons/midav_base/models/midav_sale.py:856
+#: model:ir.model,name:midav_base.model_product_product
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_product_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_product_id
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#, python-format
+msgid "Product"
+msgstr "Article"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_product_uom
+msgid "Product Unit of Measure"
+msgstr "Unité de mesure d'article"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:657
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_production_date
+#, python-format
+msgid "Production Date"
+msgstr "Production Date"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "Production codes"
+msgstr "Production codes"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:681
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_production
+#, python-format
+msgid "Production date"
+msgstr "Date production"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "Products"
+msgstr "Articles"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:53
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_public_op
+#, python-format
+msgid "Public Order Preparation"
+msgstr "Public Order Preparation"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Qualification and title :"
+msgstr "Qualification and title :"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:66
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_quality_notes
+#, python-format
+msgid "Quality Notes"
+msgstr "Notes de qualité"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:85
+#: selection:midav.sale.picking,state:0
+#, python-format
+msgid "Quality check"
+msgstr "En contrôle qualité"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "Quality compliant"
+msgstr "Qualité conforme"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "Quantities"
+msgstr "Quantities"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+#: model:ir.ui.view,arch_db:midav_base.report_invoice_layouted_midav
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:667
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_qty_enter
+#, python-format
+msgid "Quantity Entered"
+msgstr "Quantité entrée"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:666
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_qty_remain
+#, python-format
+msgid "Quantity Remained"
+msgstr "Quantité Réstante"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:665
+#: code:addons/midav_base/models/midav_sale.py:862
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_qty_done
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_qty_done
+#, python-format
+msgid "Quantity done"
+msgstr "A exporter"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:860
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_qty_export
+#, python-format
+msgid "Quantity export"
+msgstr "Entrée"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_products.py:66
+#: model:ir.model.fields,field_description:midav_base.field_midav_cartons_qty_per_one
+#, python-format
+msgid "Quantity per one"
+msgstr "Quantité par Carton"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:861
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_qty_sample
+#, python-format
+msgid "Quantity sample"
+msgstr "Prélèvement echantillons"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:664
+#: code:addons/midav_base/models/midav_sale.py:859
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_qty_todo
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_qty_todo
+#, python-format
+msgid "Quantity to do"
+msgstr "A préparer"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_sale_order
+msgid "Quotation"
+msgstr "Devis"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "Quotation #"
+msgstr "Devis №"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_layout_category.py:19
+#: model:ir.model.fields,field_description:midav_base.field_sale_layout_category_ligne_r2
+#, python-format
+msgid "R2"
+msgstr "R2"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_layout_category.py:15
+#: code:addons/midav_base/models/sale_layout_category.py:20
+#: model:ir.model.fields,field_description:midav_base.field_sale_layout_category_ligne_r3
+#: model:ir.model.fields,field_description:midav_base.field_sale_layout_category_sh_code_r3
+#, python-format
+msgid "R3"
+msgstr "R3"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_layout_category.py:16
+#: code:addons/midav_base/models/sale_layout_category.py:21
+#: model:ir.model.fields,field_description:midav_base.field_sale_layout_category_ligne_r4
+#: model:ir.model.fields,field_description:midav_base.field_sale_layout_category_sh_code_r4
+#, python-format
+msgid "R4"
+msgstr "R4"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+#: selection:midav.sale.picking,means_of_conveyance:0
+msgid "Railway wagon"
+msgstr "Railway wagon"
+
+#. module: midav_base
+#: code:addons/midav_base/models/account_invoice.py:68
+#: model:ir.model.fields,field_description:midav_base.field_account_invoice_ref_fda
+#, python-format
+msgid "Ref FDA"
+msgstr "Ref FDA"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_order.py:72
+#: model:ir.model.fields,field_description:midav_base.field_sale_order_ref_po
+#, python-format
+msgid "Ref. order"
+msgstr "Ref. Commande"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:24
+#: model:ir.model.fields,field_description:midav_base.field_product_product_midav_empty_cans_id
+#: model:ir.model.fields,field_description:midav_base.field_product_template_midav_empty_cans_id
+#, python-format
+msgid "Reference UVC (box)"
+msgstr "Référence UVC (box)"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Registration number (railway wagons or container and\n"
+"                                            lorries), flight number (aircraft) or name (ship). Separate\n"
+"                                            information is to be provided in the event of unloading and reloading."
+msgstr "Registration number (railway wagons or container and\n"
+"                                            lorries), flight number (aircraft) or name (ship). Separate\n"
+"                                            information is to be provided in the event of unloading and reloading."
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:863
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_qty_remain
+#, python-format
+msgid "Remained quantity"
+msgstr "Quantité restante"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+#: selection:midav.sale.picking,means_of_conveyance:0
+msgid "Road vehicle"
+msgstr "Road vehicle"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:870
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_qty_rust
+#, python-format
+msgid "Rust"
+msgstr "Rouille"
+
+#. module: midav_base
+#: model:ir.actions.act_window,name:midav_base.midav_sead_tc_action
+#: model:ir.ui.menu,name:midav_base.menu_midav_sead_tc_act
+#: model:ir.ui.view,arch_db:midav_base.midav_sead_tc_form_view
+#: model:ir.ui.view,arch_db:midav_base.midav_sead_tc_tree_view
+msgid "SEAD / TC"
+msgstr "SEAL / TC"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:941
+#: model:ir.model.fields,field_description:midav_base.field_midav_sead_tc_sead
+#, python-format
+msgid "SEAL"
+msgstr "SEAL"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:679
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_sead_tc_id
+#, python-format
+msgid "SEAL / TC"
+msgstr "SEAL / TC"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:969
+#: model:ir.model.fields,field_description:midav_base.field_sh_code_name
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+#, python-format
+msgid "SH CODE"
+msgstr "SH CODE"
+
+#. module: midav_base
+#: model:ir.actions.act_window,name:midav_base.sh_code_action
+#: model:ir.ui.menu,name:midav_base.menu_sh_code
+msgid "SH Code"
+msgstr "SH Code"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:21
+#: model:ir.model.fields,field_description:midav_base.field_product_product_sid
+#: model:ir.model.fields,field_description:midav_base.field_product_template_sid
+#, python-format
+msgid "SID"
+msgstr "SID"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_layout_category.py:23
+#: model:ir.model.fields,field_description:midav_base.field_sale_layout_category_sid_pro_format_usa
+#, python-format
+msgid "SID USA"
+msgstr "SID USA"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "SID:"
+msgstr "SID:"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "SUB TOTALS"
+msgstr "SUB TOTALS"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "Safi, On:<br/><br/><br/>\n"
+"                            Official veterinary <br/><br/>\n"
+"                            Stamp &amp; Signature"
+msgstr "Safi, On:<br/><br/><br/>\n"
+"                            Official veterinary <br/><br/>\n"
+"                            Stamp &amp; Signature"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_sale_operation
+#: model:ir.ui.view,arch_db:midav_base.view_sale_operation_form
+#: model:ir.ui.view,arch_db:midav_base.view_sale_operation_tree
+msgid "Sale Operation"
+msgstr "Opération de préparation"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_operation_line_form
+#: model:ir.ui.view,arch_db:midav_base.view_sale_operation_line_tree
+msgid "Sale Operation Line"
+msgstr "Ligne opération de préparation"
+
+#. module: midav_base
+#: model:ir.ui.menu,name:midav_base.menu_sale_operation_line_midav
+msgid "Sale Operation lines"
+msgstr "Lignes opération de préparation"
+
+#. module: midav_base
+#: model:ir.ui.menu,name:midav_base.menu_sale_operation_midav
+msgid "Sale Operations"
+msgstr "Opération de préparation"
+
+#. module: midav_base
+#: code:addons/midav_base/models/account_invoice.py:70
+#: model:ir.model,name:midav_base.model_midav_sale_picking
+#: model:ir.model.fields,field_description:midav_base.field_account_invoice_sale_picking_id
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_tree
+#, python-format
+msgid "Sale Picking"
+msgstr "Ordre de préparation"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:61
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_sale_picking_line_ids
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_line_form
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_line_tree
+#, python-format
+msgid "Sale Picking Line"
+msgstr "Ligne ordre de préparation"
+
+#. module: midav_base
+#: model:ir.ui.menu,name:midav_base.menu_sale_picking_line_midav
+msgid "Sale Picking Lines"
+msgstr "Lignes ordre de préparation"
+
+#. module: midav_base
+#: model:ir.ui.menu,name:midav_base.menu_sale_picking_midav
+msgid "Sale Pickings"
+msgstr "Ordres de préparation"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:850
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_sale_operation_id
+#, python-format
+msgid "Sale operation"
+msgstr "Opération de préparation"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_line_form
+msgid "Sale operation line"
+msgstr "Ligne opération de préparation"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:676
+#: code:addons/midav_base/models/midav_sale.py:763
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_sale_operation_line_ids
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_sale_operation_line_ids
+#: model:ir.ui.view,arch_db:midav_base.view_sale_operation_form
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_line_form
+#, python-format
+msgid "Sale operation lines"
+msgstr "Lignes opération de préparation"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:62
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_sale_operation_ids
+#, python-format
+msgid "Sale operations"
+msgstr "Opérations de préparation"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:63
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_sale_order_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_sale_order_id
+#, python-format
+msgid "Sale order"
+msgstr "Ordre de vente"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:659
+#: code:addons/midav_base/models/midav_sale.py:759
+#: code:addons/midav_base/models/midav_sale.py:854
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_sale_picking_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_sale_picking_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_sale_picking_id
+#, python-format
+msgid "Sale picking"
+msgstr "Ordre de préparation"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:852
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_sale_picking_line_id
+#, python-format
+msgid "Sale picking line"
+msgstr "Ligne ordre de préparation"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "Sale picking lines"
+msgstr "Lignes ordre de préparation"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_order.py:78
+#: model:ir.model.fields,field_description:midav_base.field_sale_order_sale_picking_ids
+#, python-format
+msgid "Sale pickings"
+msgstr "Ordres de préparation"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Ligne de bons de commande"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:35
+#: model:ir.actions.act_window,name:midav_base.scientific_name_action
+#: model:ir.model.fields,field_description:midav_base.field_product_product_name_sci
+#: model:ir.model.fields,field_description:midav_base.field_product_template_name_sci
+#: model:ir.ui.menu,name:midav_base.menu_scientific_name
+#, python-format
+msgid "Scientific Name"
+msgstr "Nom scientifique"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Seal number :"
+msgstr "Seal number :"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:71
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_second_notify
+#: model:ir.ui.view,arch_db:midav_base.transit_report_document
+#, python-format
+msgid "Second Notify"
+msgstr "Deuxième Notify"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_layout_category_id
+msgid "Section"
+msgstr "Section"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:79
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_midav_seq_date
+#, python-format
+msgid "Sequence Date"
+msgstr "Sequence Date"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_operation_form
+msgid "Set to cancel"
+msgstr "Annuller"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_operation_form
+#: model:ir.ui.view,arch_db:midav_base.view_sale_operation_line_form
+msgid "Set to done"
+msgstr "Confirmer"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_operation_form
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "Set to draft"
+msgstr "Définir pour brouillon"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "Set to packing"
+msgstr "Mettre en colisage"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "Set to progress"
+msgstr "Mettre en préparation"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "Set to quality check"
+msgstr "Contrôle qualité"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+#: selection:midav.sale.picking,means_of_conveyance:0
+msgid "Ship"
+msgstr "Ship"
+
+#. module: midav_base
+#: code:addons/midav_base/models/res_country.py:14
+#: model:ir.model.fields,field_description:midav_base.field_res_country_show_sid
+#, python-format
+msgid "Show SID Number for Product"
+msgstr "Show SID Number for Product"
+
+#. module: midav_base
+#: code:addons/midav_base/models/account_invoice.py:69
+#: model:ir.model.fields,field_description:midav_base.field_account_invoice_show_in_report
+#, python-format
+msgid "Show in invoice"
+msgstr "Affiché dans la facture"
+
+#. module: midav_base
+#: code:addons/midav_base/models/res_company.py:15
+#: model:ir.model.fields,field_description:midav_base.field_res_company_show_in_report
+#, python-format
+msgid "Show in report"
+msgstr "Affiché dans la facture"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Signature :"
+msgstr "Signature :"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:873
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_qty_small_dots
+#, python-format
+msgid "Small dots"
+msgstr "Petit Picots"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:674
+#: code:addons/midav_base/models/midav_sale.py:882
+#: code:addons/midav_base/models/sale_order.py:76
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_special_mark
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_special_mark
+#: model:ir.model.fields,field_description:midav_base.field_sale_order_special_mark
+#, python-format
+msgid "Special Marking"
+msgstr "Marquage spéciale"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "Species"
+msgstr "Species"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Species (Scientific\n"
+"                                            Name)"
+msgstr "Species (Scientific\n"
+"                                            Name)"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Stamp :"
+msgstr "Stamp :"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:88
+#: code:addons/midav_base/models/midav_sale.py:770
+#: code:addons/midav_base/models/midav_sale.py:887
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_state
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_state
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_state
+#, python-format
+msgid "State"
+msgstr "Etat"
+
+#. module: midav_base
+#: model:ir.actions.act_window,name:midav_base.midav_stickers_barq_action
+#: model:ir.ui.view,arch_db:midav_base.midav_stickers_barq_form_view
+#: model:ir.ui.view,arch_db:midav_base.midav_stickers_barq_tree
+msgid "Stickers/Barq"
+msgstr "Stickers/Barq"
+
+#. module: midav_base
+#: model:ir.actions.act_window,name:midav_base.midav_stickers_btes_action
+#: model:ir.ui.view,arch_db:midav_base.midav_stickers_btes_form_view
+#: model:ir.ui.view,arch_db:midav_base.midav_stickers_btes_tree
+msgid "Stickers/Btes"
+msgstr "Stickers/Btes"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:757
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_user_id
+#, python-format
+msgid "Storekeeper"
+msgstr "Magasinier"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:942
+#: model:ir.model.fields,field_description:midav_base.field_midav_sead_tc_tc
+#, python-format
+msgid "TC"
+msgstr "TC"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "THE VETERINARY INSPECTOR OF THE BORDER"
+msgstr "THE VETERINARY INSPECTOR OF THE BORDER"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "TOTAL"
+msgstr "TOTAL"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:30
+#: model:ir.actions.act_window,name:midav_base.midav_tag_action
+#: model:ir.model.fields,field_description:midav_base.field_product_product_midav_tag_id
+#: model:ir.model.fields,field_description:midav_base.field_product_template_midav_tag_id
+#: model:ir.ui.view,arch_db:midav_base.midav_tag_form_view
+#: model:ir.ui.view,arch_db:midav_base.midav_tag_tree
+#, python-format
+msgid "Tag"
+msgstr "Étiquette"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_account_tax
+msgid "Tax"
+msgstr "Taxe"
+
+#. module: midav_base
+#: code:addons/midav_base/models/account_tax.py:10
+#: model:ir.model.fields,field_description:midav_base.field_account_tax_tax_code
+#, python-format
+msgid "Tax Code"
+msgstr "Taxe Code"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+#: model:ir.ui.view,arch_db:midav_base.report_invoice_layouted_midav
+msgid "Taxes"
+msgstr "Taxes"
+
+#. module: midav_base
+#: model:ir.ui.menu,name:midav_base.midav_technical_feature
+msgid "Technical Features"
+msgstr "Caractéristiques techniques"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Tel"
+msgstr "Tel"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Tel N°:"
+msgstr "Tel N°:"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:117
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_product_temperature
+#, python-format
+msgid "Temperature of product"
+msgstr "Température du produit"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_products.py:105
+#: sql_constraint:midav.stickers.barq:0
+#, python-format
+msgid "The barq code must be unique!"
+msgstr "Le code barre doit être unique!"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_products.py:70
+#: sql_constraint:midav.cartons:0
+#, python-format
+msgid "The cartons code must be unique!"
+msgstr "Le code cartons doit être unique!"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_products.py:58
+#: sql_constraint:midav.cases:0
+#, python-format
+msgid "The cases code must be unique!"
+msgstr "Le code cases doit être unique!"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_products.py:14
+#: sql_constraint:midav.empty.cans:0
+#, python-format
+msgid "The empty cans code must be unique!"
+msgstr "Le code de boite vide doit être unique!"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_products.py:25
+#: sql_constraint:midav.fish:0
+#, python-format
+msgid "The fish code must be unique!"
+msgstr "Le code poisson doit être unique!"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_products.py:47
+#: sql_constraint:midav.jutage:0
+#, python-format
+msgid "The jutage code must be unique!"
+msgstr "Le code jutage doit être unique!"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_products.py:36
+#: sql_constraint:midav.preparation:0
+#, python-format
+msgid "The preparation code must be unique!"
+msgstr "Le code préparation doit être unique!"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_order.py:190
+#: sql_constraint:sale.order.line:0
+#, python-format
+msgid "The product of the sale order must be unique !"
+msgstr "Le produit de la commande doit être unique !"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_products.py:93
+#: sql_constraint:midav.stickers.btes:0
+#, python-format
+msgid "The stickers code must be unique!"
+msgstr "Le code stickers doit être unique!"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_products.py:81
+#: sql_constraint:midav.tag:0
+#, python-format
+msgid "The tag code must be unique!"
+msgstr "Le code étiquette doit être unique!"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "To be authorised into a Member State, zone or compartment (boxes I.9 and\n"
+"                                            I.10 of Part I of the certificate)\n"
+"                                            <br/>\n"
+"                                            declared free from VHS, IHN, ISA, KHV or Whitespot disease or with a\n"
+"                                            surveillance or eradication\n"
+"                                            <br/>\n"
+"                                            programme drawn up in accordance with Article 44(1) or (2) of Directive\n"
+"                                            2006/88/EC, one of these\n"
+"                                            <br/>\n"
+"                                            statements must be kept if the consignment contain species susceptible\n"
+"                                            to the disease(s) for which disease\n"
+"                                            <br/>\n"
+"                                            freedom or programme(s) apply(ies). Data on the disease status of each\n"
+"                                            farm and mollusc farming area in\n"
+"                                            <br/>\n"
+"                                            the Union are accessible at\n"
+"                                            <br/>\n"
+"                                            http://ec.europa.eu/food/animal/liveanimals/aquaculture/index_en.htm.\n"
+"                                            <br/>\n"
+"                                            <br/>\n"
+"                                            The colour of the stamp and signature must be different to that of the\n"
+"                                            other particulars in the certificate."
+msgstr "To be authorised into a Member State, zone or compartment (boxes I.9 and\n"
+"                                            I.10 of Part I of the certificate)\n"
+"                                            <br/>\n"
+"                                            declared free from VHS, IHN, ISA, KHV or Whitespot disease or with a\n"
+"                                            surveillance or eradication\n"
+"                                            <br/>\n"
+"                                            programme drawn up in accordance with Article 44(1) or (2) of Directive\n"
+"                                            2006/88/EC, one of these\n"
+"                                            <br/>\n"
+"                                            statements must be kept if the consignment contain species susceptible\n"
+"                                            to the disease(s) for which disease\n"
+"                                            <br/>\n"
+"                                            freedom or programme(s) apply(ies). Data on the disease status of each\n"
+"                                            farm and mollusc farming area in\n"
+"                                            <br/>\n"
+"                                            the Union are accessible at\n"
+"                                            <br/>\n"
+"                                            http://ec.europa.eu/food/animal/liveanimals/aquaculture/index_en.htm.\n"
+"                                            <br/>\n"
+"                                            <br/>\n"
+"                                            The colour of the stamp and signature must be different to that of the\n"
+"                                            other particulars in the certificate."
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "Total Price"
+msgstr "Prix total"
+
+#. module: midav_base
+#: code:addons/midav_base/models/account_invoice.py:71
+#: code:addons/midav_base/models/sale_order.py:75
+#: model:ir.model.fields,field_description:midav_base.field_account_invoice_total_amount_letter
+#: model:ir.model.fields,field_description:midav_base.field_sale_order_total_amount_letter
+#, python-format
+msgid "Total amount letter"
+msgstr "Total en lettre"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:54
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_transit_document
+#, python-format
+msgid "Transit Document"
+msgstr "Transit Document"
+
+#. module: midav_base
+#: model:ir.ui.menu,name:midav_base.midav_transit_document
+#: model:ir.ui.view,arch_db:midav_base.view_sale_picking_form
+msgid "Transit Order"
+msgstr "Ordre de transit"
+
+#. module: midav_base
+#: model:ir.ui.menu,name:midav_base.midav_transit_document_menu
+msgid "Transit Order Document"
+msgstr "Transit Order Document"
+
+#. module: midav_base
+#: model:ir.actions.act_window,name:midav_base.midav_transit_document_action
+msgid "Transit Order document"
+msgstr "Transit Order document"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:93
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_transporter
+#, python-format
+msgid "Transporter"
+msgstr "Transporteur"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:56
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_treatement_type
+#, python-format
+msgid "Treatement Type"
+msgstr "Type de traitement"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Treatment type"
+msgstr "Treatment type"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "Type of process"
+msgstr "Type of process"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "UNIT DRAINED WEIGHT"
+msgstr "UNIT DRAINED WEIGHT"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "UNIT GROSS WEIGHT"
+msgstr "UNIT GROSS WEIGHT"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.colisage_report_document
+msgid "UNIT NET WEIGHT"
+msgstr "UNIT NET WEIGHT"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:58
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_usa_print
+#, python-format
+msgid "USA Version of the Report"
+msgstr "USA Version of the Report"
+
+#. module: midav_base
+#: code:addons/midav_base/models/sale_order.py:145
+#, python-format
+msgid "Uncategorized"
+msgstr "Uncategorized"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+#: model:ir.ui.view,arch_db:midav_base.report_invoice_layouted_midav
+msgid "Unit Price"
+msgstr "Prix unitaire"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:672
+#: code:addons/midav_base/models/midav_sale.py:881
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_uom_id
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_line_uom_id
+#, python-format
+msgid "Unit of measure"
+msgstr "Unité de mesure"
+
+#. module: midav_base
+#: code:addons/midav_base/models/products.py:34
+#: model:ir.model.fields,field_description:midav_base.field_product_product_is_codif
+#: model:ir.model.fields,field_description:midav_base.field_product_template_is_codif
+#, python-format
+msgid "Use codification"
+msgstr "Auto réferencement"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Use the appropriate HS codes : 0301, 0.02, 0303,\n"
+"                                            0304,\n"
+"                                            0305, 0306, 0307, 0308, 05.11.91, 15.04, 1516, 1518,\n"
+"                                            1603, 1604, 1605 or 2106"
+msgstr "Use the appropriate HS codes : 0301, 0.02, 0303,\n"
+"                                            0304,\n"
+"                                            0305, 0306, 0307, 0308, 05.11.91, 15.04, 1516, 1518,\n"
+"                                            1603, 1604, 1605 or 2106"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Veterinary certificate to EU"
+msgstr "Veterinary certificate to EU"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:278
+#, python-format
+msgid "Warning!"
+msgstr "Avertissement!"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.product_template_form_view_midav
+msgid "Weights"
+msgstr "Poids"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_report_document
+msgid "Wild"
+msgstr "Wild"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_invoice_document
+msgid "Without payment - Value for Customs only"
+msgstr "Without payment - Value for Customs only"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:279
+#, python-format
+msgid "You must first select a partner!"
+msgstr "Il faut choisir d'abord un client!"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.health_certificate_document_model2
+msgid "cartons"
+msgstr "cartons"
+
+#. module: midav_base
+#: model:ir.actions.server,name:midav_base.del_company_product
+msgid "del company product"
+msgstr "del company product"
+
+#. module: midav_base
+#: model:ir.actions.report,name:midav_base.action_report_health_certificate_model2
+msgid "health certificate Model 2"
+msgstr "Imprimer Certificat Sanitaire Model 2"
+
+#. module: midav_base
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_picking_lading
+msgid "lading"
+msgstr "Connaissement"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_brand
+msgid "midav.brand"
+msgstr "midav.brand"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_cans
+msgid "midav.cans"
+msgstr "midav.cans"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_cartons
+msgid "midav.cartons"
+msgstr "midav.cartons"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_cases
+msgid "midav.cases"
+msgstr "midav.cases"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_description_commodity
+msgid "midav.description.commodity"
+msgstr "midav.description.commodity"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_document
+msgid "midav.document"
+msgstr "midav.document"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_empty_cans
+msgid "midav.empty.cans"
+msgstr "midav.empty.cans"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_fish
+msgid "midav.fish"
+msgstr "midav.fish"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_jutage
+msgid "midav.jutage"
+msgstr "midav.jutage"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_lading
+msgid "midav.lading"
+msgstr "midav.lading"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_mould
+msgid "midav.mould"
+msgstr "midav.moule"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_packaging_type
+msgid "midav.packaging.type"
+msgstr "midav.packaging.type"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_preparation
+msgid "midav.preparation"
+msgstr "midav.preparation"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_sale_operation_line
+msgid "midav.sale.operation.line"
+msgstr "midav.sale.operation.line"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_sale_picking_line
+msgid "midav.sale.picking.line"
+msgstr "midav.sale.picking.line"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_sead_tc
+msgid "midav.sead.tc"
+msgstr "midav.sead.tc"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_stickers_barq
+msgid "midav.stickers.barq"
+msgstr "midav.stickers.barq"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_stickers_btes
+msgid "midav.stickers.btes"
+msgstr "midav.stickers.btes"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_midav_tag
+msgid "midav.tag"
+msgstr "midav.tag"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:876
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_premption_date
+#, python-format
+msgid "peremption date"
+msgstr "peremption date"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.midav_sale_order_document
+msgid "phone:"
+msgstr "téléphone:"
+
+#. module: midav_base
+#: code:addons/midav_base/models/midav_sale.py:877
+#: model:ir.model.fields,field_description:midav_base.field_midav_sale_operation_line_production_date
+#, python-format
+msgid "production date"
+msgstr "production date"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_sale_layout_category
+msgid "sale.layout_category"
+msgstr "sale.layout_category"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_scientific_name
+msgid "scientific.name"
+msgstr "scientific.name"
+
+#. module: midav_base
+#: model:ir.model,name:midav_base.model_sh_code
+msgid "sh.code"
+msgstr "sh.code"
+
+#. module: midav_base
+#: model:ir.ui.view,arch_db:midav_base.sanitary_report_document
+msgid "￼￼￼￼￼￼Additional sanitary certificate to\n"
+"                        <br/>\n"
+"                        Health Certificate"
+msgstr "￼￼￼￼￼￼Additional sanitary certificate to\n"
+"                        <br/>\n"
+"                        Health Certificate"
+

@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="health_report_document">
+            <t  t-if="o.state == 'improper_quality'" t-call="web.basic_layout">
+                <div  class="page" style="padding-top:200px">
+                    <t t-call="midav_base.midav_non_conforme_page"/>
+                </div>
+            </t>
+
+            <t t-if="o.state != 'improper_quality'" t-call="web.basic_layout">
+                <!--t t-set="o" t-value="o.with_context({'lang':o.sale_order_id.partner_id.lang})"/-->
+                <div class="text-center header" style="text-transform: capitalize;max-height:40px;">
+                    Kingdom of Morocco
+                    <br/>
+                    National Office of Sanitary Security of Food Products.
+                    <br/>
+                      provincial veterinary service of Safi
+                    <br/>
+                    <center>
+                        <div style="width:30%;height:1px;background-color:black;"/>
+                    </center>
+                </div>
+
+                <div class="page">
+                    <style>
+                        .vertical-text-amh {
+                        float:left;
+                        width:500px;
+                        height:20px;
+                        margin-left:-250px;
+                        margin-top:120px;
+                        font-size:1.2em;
+                        font-weight:bold;
+                        -webkit-transform: rotate(-90deg);
+                        -moz-transform: rotate(-90deg);
+                        -ms-transform: rotate(-90deg);
+                        -o-transform: rotate(-90deg);
+                        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+                        }
+                        .background-img{
+                        background-image:url("midav_base/static/src/img/line.png");
+                        background-repeat: no-repeat;
+                        background-size: 100% 100%;
+                        }
+                        .full-text-my{
+                        font-size:14px;
+                        }
+                        .full-text-my-bold{
+                        font-size:16px;
+                        }
+                        td{
+                        border-color: black;
+                        }
+                    </style>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <center class="text-center" style="font-weight:bold;">
+                        HEALTH CERTIFICATE FOR IMPORTS OF FISHERY PRODUCTS INTENDED FOR HUMAN CONSUMPTION
+                    </center>
+                    <table class="table table-bordered" style="width:100%; font-size:12px;">
+                        <tbody>
+                            <tr>
+                                <td style="text-transformed:uppercase;border-color:white;border-bottom:1px solid gray;font-weight:bold;"
+                                    class="font-weight-bold" rowspan="1" colspan="6">
+                                    Country: Morocco
+                                </td>
+                                <td style="border-color:white;border-bottom:1px solid gray;font-weight:bold;"
+                                    rowspan="1" colspan="6">
+                                    Veterinary certificate to EU
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="8" colspan="1" style="max-height:10px;max-width:10px;">
+                                    <p class="vertical-text-amh">Partie I: Details of dispatched consignment</p>
+                                </td>
+                                <td rowspan="3" colspan="5" style="width:50px;">
+                                    1.1. Consignor
+                                    <br/>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-xs-2">Name</div>
+                                        <div class="col-xs-10">
+                                            <strong>
+                                                &#160;
+                                                <span t-esc="o.sale_order_id.company_id.name"/>
+                                            </strong>
+                                        </div>
+                                        <div class="col-xs-2">Address</div>
+                                        <div class="col-xs-10">
+                                            <strong>
+                                                &#160;
+                                                <span t-esc="o.sale_order_id.company_id.street"/>
+                                            </strong>
+                                            <br/>
+                                            <strong>
+                                                &#160;
+                                                <span t-esc="o.sale_order_id.company_id.zip"/>
+                                                <span t-esc="o.sale_order_id.company_id.city"/>
+                                            </strong>
+                                        </div>
+                                        <div class="col-xs-2">Tel</div>
+                                        <div class="col-xs-10">
+                                            <strong>
+                                                &#160;
+                                                <span t-esc="o.sale_order_id.company_id.phone"/>
+                                            </strong>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td rowspan="1" colspan="3">
+                                    1.2. Certificate reference number
+                                    <br/>
+                                    <strong>
+                                        MA &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/52
+                                        <!--span t-esc="o.num_certificate"/ -->
+                                    </strong>
+                                </td>
+                                <td rowspan="1" colspan="3" class="background-img">1.2.a.</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="6">
+                                    1.3. Central Competent Authority
+                                    <br/>
+                                    <strong>
+                                        &#160;
+                                        <span>ONSSA</span>
+                                    </strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="6">
+                                    1.4. Local Competent Authority
+                                    <br/>
+                                    <strong>
+                                        &#160;
+                                        <span>SERVICE VETERINAIRE PROVINCIAL DE SAFI</span>
+                                    </strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="5">
+                                    1.5. Consignee
+                                    <br/>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-xs-5">Name</div>
+                                        <div class="col-xs-7">
+                                            <strong>
+                                                &#160;
+                                                <span t-esc="o.sale_order_id.partner_id.name"/>
+                                            </strong>
+                                        </div>
+                                        <div class="col-xs-5">Address</div>
+                                        <div class="col-xs-7">
+                                            <strong>
+                                                &#160;
+                                                <span t-esc="o.sale_order_id.partner_id.street"/>
+                                            </strong>
+                                        </div>
+                                        <div class="col-xs-5">Postal Code</div>
+                                        <div class="col-xs-7">
+                                            <strong>
+                                                &#160;
+                                                <span t-esc="o.sale_order_id.partner_id.zip"/>
+                                                <span t-esc="o.sale_order_id.partner_id.city"/>
+                                                <span t-esc="o.sale_order_id.partner_id.country_id.name"/>
+                                            </strong>
+                                        </div>
+                                        <div class="col-xs-5">Tel N°:</div>
+                                        <div class="col-xs-7">
+                                            <strong>
+                                                &#160;
+                                                <span t-esc="o.sale_order_id.partner_id.phone"/>
+                                            </strong>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td rowspan="1" colspan="6" class="background-img">1.6.</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="3">1.7. Country origin
+                                    <span style="margin-left:10px;">ISO Code</span>
+                                </td>
+                                <td rowspan="1" colspan="2">1.8. Region of origin
+                                    <span style="margin-left:10px;">Code</span>
+                                </td>
+                                <td rowspan="2" colspan="2" style="min-width:150px;">
+                                    1.9. Country of destination
+                                    <br/>
+                                    <center>
+                                        <strong style="text-transform: uppercase;">
+
+                                            <span t-field="o.with_context({'lang': u'en_EN'}).sale_order_id.partner_id.country_id.name"/>
+                                        </strong>
+                                    </center>
+                                </td>
+                                <td rowspan="2" colspan="1">
+                                    ISO Code
+                                    <center>
+                                        <strong style="text-transform: uppercase;">
+                                            <span t-esc="o.sale_order_id.partner_id.country_id.code"/>
+                                        </strong>
+                                    </center>
+                                </td>
+                                <td rowspan="2" colspan="3" class="background-img">1.10.</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="2">
+                                    &#160;
+                                    <strong style="text-transform: uppercase;">
+                                        <span t-esc="o.sale_order_id.company_id.country_id.name"/>
+                                    </strong>
+                                </td>
+                                <td rowspan="1" colspan="1">
+                                    &#160;
+                                    <strong style="text-transform: uppercase;">
+                                        <span t-esc="o.sale_order_id.company_id.country_id.code"/>
+                                    </strong>
+                                </td>
+                                <td rowspan="1" colspan="1">
+                                    &#160;
+                                    <strong style="text-transform: uppercase;">
+                                        <span t-esc="o.sale_order_id.company_id.state_id.name"/>
+                                    </strong>
+                                </td>
+                                <td rowspan="1" colspan="1">
+                                    &#160;
+                                    <strong style="text-transform: uppercase;">
+                                        <span t-esc="o.sale_order_id.company_id.state_id.code"/>
+                                    </strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="5">
+                                    1.11. Place of origin
+                                    <br/>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-xs-6">Name &#160; &#160;
+                                            <strong>
+                                                &#160;
+                                                <span t-esc="o.sale_order_id.company_id.name"/>
+                                            </strong>
+                                        </div>
+                                        <div class="col-xs-6">Approval number &#160; &#160;
+                                            <strong>
+                                                &#160;
+                                                <span t-esc="o.sale_order_id.company_id.approval"/>
+                                            </strong>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">Address
+                                            &#160; &#160;
+                                            <strong>
+                                                &#160;
+                                                <span t-esc="o.sale_order_id.company_id.street"/>
+                                            </strong>
+                                            <br/>
+                                            <strong>
+                                                &#160;
+                                                <span t-esc="o.sale_order_id.company_id.zip"/>
+                                                <span t-esc="o.sale_order_id.company_id.city"/>
+                                            </strong>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td rowspan="1" colspan="6" class="background-img">1.12.</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="5">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            1.13. Place of loading
+                                        </div>
+                                        <div class="col-xs-6">
+                                            &#160;
+                                            <strong>
+                                                &#160;
+                                                <span t-field="o.sale_order_id.company_id.city"/>/
+                                                <span t-field="o.with_context({'lang': u'en_EN'}).sale_order_id.company_id.country_id.name"/>
+                                            </strong>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td rowspan="1" colspan="6">
+                                    <div class="row">
+                                        1.14. Date of departure:
+                                        <strong>
+                                            &#160;
+                                            <span t-field="o.departure_date" t-field-options='{"format": "dd/MM/yyyy"}'/>
+                                        </strong>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="10" colspan="1"
+                                    style="border-left:1px solid white;border-bottom:1px solid white;">&#160;
+                                </td>
+                                <td rowspan="3" colspan="5">
+                                    1.15. Means of transport
+                                    <br/>
+                                    <t t-set="mean_con" t-value="o.means_of_conveyance"/>
+                                    <table style="width:100%;">
+                                        <tr>
+                                            <td>
+                                                Aeroplane &#160;
+                                            </td>
+                                            <td style="text-align:left;">
+                                                <t t-if="mean_con == 'aeroplane'">
+                                                    <input type="checkbox" checked=""/>
+                                                </t>
+                                                <t t-if="mean_con != 'aeroplane'">
+                                                    <span style="display:inline-block;width:13px;height:13px;border:solid 1px black;">
+                                                        &#160;
+                                                    </span>
+                                                </t>
+                                            </td>
+                                            <td>
+                                                Ship &#160;
+                                            </td>
+                                            <td style="text-align:left;">
+                                                <t t-if="mean_con == 'ship'">
+                                                    <input type="checkbox" checked="" style="margin-bottom:3px"/>
+                                                </t>
+                                                <t t-if="mean_con != 'ship'">
+                                                    <span style="display:inline-block;width:13px;height:13px;border:solid 1px black;">
+                                                        &#160;
+                                                    </span>
+                                                </t>
+                                            </td>
+                                            <td>
+                                                Railway wagon &#160;
+                                            </td>
+                                            <td style="text-align:left;">
+                                                <t t-if="mean_con == 'railway_wagon'">
+                                                    <input type="checkbox" checked=""/>
+                                                </t>
+                                                <t t-if="mean_con != 'railway_wagon'">
+                                                    <span style="display:inline-block;width:13px;height:13px;border:solid 1px black;">
+                                                        &#160;
+                                                    </span>
+                                                </t>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Road vehicle &#160;
+                                            </td>
+                                            <td style="text-align:left;">
+                                                <t t-if="mean_con == 'road_vehicle'">
+                                                    <input type="checkbox" checked=""/>
+                                                </t>
+                                                <t t-if="mean_con != 'road_vehicle'">
+                                                    <span style="display:inline-block;width:13px;height:13px;border:solid 1px black;">
+                                                        &#160;
+                                                    </span>
+                                                </t>
+                                            </td>
+                                            <td>
+                                                Other &#160;
+                                            </td>
+                                            <td style="text-align:left;">
+                                                <t t-if="mean_con == 'other'">
+                                                    <input type="checkbox" checked=""/>
+                                                </t>
+                                                <t t-if="mean_con != 'other'">
+                                                    <span style="display:inline-block;width:13px;height:13px;border:solid 1px black;">
+                                                        &#160;
+                                                    </span>
+                                                </t>
+                                            </td>
+                                            <td>&#160;
+                                            </td>
+                                            <td>&#160;
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            Identification:
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <strong>See Bill of Lading</strong>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            Documentary references :
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <strong>See Bill of Lading</strong>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td rowspan="2" colspan="6">1.16. Entry BIP in EU
+                                    <br/>
+                                    <center>
+                                        <strong>
+                                            <span t-esc="o.dest_port"/>
+                                        </strong>
+                                    </center>
+                                </td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td rowspan="1" colspan="6" class="background-img">1.17.</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" colspan="6" style="border-right:1px solid white;">
+                                    1.18. Description of commodity
+                                    <br/>
+                                    <br/>
+                                    <t t-foreach="o.get_unique_desc_commodity()[0]" t-as="comod">
+                                        <strong>
+                                            <span t-esc="comod"/>
+                                        </strong>
+                                        <br/>
+                                    </t>
+                                </td>
+                                <td rowspan="1" colspan="5">
+                                    1.19. Commodity Code (HS code)
+                                    <br/>
+                                    <center>
+                                        <t t-foreach="o.get_unique_sh_codes()[0]" t-as="sh">
+                                            <t t-if="sh">
+                                                <strong>
+                                                    <t t-esc="sh"/>
+                                                </strong>
+                                                <br/>
+                                            </t>
+                                        </t>
+                                    </center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="1">&#160;</td>
+                                <td rowspan="1" colspan="4">
+                                    1.20. Quantity
+                                    <p>
+                                        <span style="font-size:13px;">Gross weight/Kgs:</span>
+                                        <span class="pull-right" t-esc="'{:.2f}'.format(o.gross_weight) or 0"/>
+                                    </p>
+                                    <p>
+                                        <span style="font-size:13px;">Net weight/Kgs:</span>
+                                        <span class="pull-right" t-esc="'{:.2f}'.format(o.net_weight) or 0"/>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="7">
+                                    1.21. Temperature of product
+                                    <br/>
+                                    <div class="row">
+                                        <t t-set="temp_con" t-value="o.product_temperature"/>
+                                        <div class="col-xs-4">
+                                            Ambient &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                                            <t t-if="temp_con == 'ambient'">
+                                                <input type="checkbox" checked=""/>
+                                            </t>
+                                            <t t-if="temp_con != 'ambient'">
+                                                <span style="display:inline-block;width:13px;height:13px;border:solid 1px black;">
+                                                    &#160;
+                                                </span>
+                                            </t>
+
+                                        </div>
+                                        <div class="col-xs-4">
+                                            Chilled &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                                            <t t-if="temp_con == 'chilled'">
+                                                <input type="checkbox" checked=""/>
+                                            </t>
+                                            <t t-if="temp_con != 'chilled'">
+                                                <span style="display:inline-block;width:13px;height:13px;border:solid 1px black;">
+                                                    &#160;
+                                                </span>
+                                            </t>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            Frozen &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                                            <t t-if="temp_con == 'frozen'">
+                                                <input type="checkbox" checked=""/>
+                                            </t>
+                                            <t t-if="temp_con != 'frozen'">
+                                                <span style="display:inline-block;width:13px;height:13px;border:solid 1px black;">
+                                                    &#160;
+                                                </span>
+                                            </t>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td rowspan="1" colspan="4">
+                                    1.22. Number of packages
+                                    <br/>
+                                    <strong>
+                                        <center>
+                                            &#160;
+                                            <span t-esc="o.get_unique_number_of_packages()[0]"/>
+                                            <br/>
+                                        </center>
+                                    </strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="7">1.23. Seal / container number
+                                    <br/>
+                                    <t t-foreach="o.get_unique_tc_lines()[0]" t-as="stc">
+                                        <t t-if="stc">
+                                            <div class="row">
+                                                <div class="col-xs-5">
+                                                    <strong>
+                                                        Container number :
+                                                        <span t-esc="stc.tc"/>
+                                                    </strong>
+                                                </div>
+                                                <div class="col-xs-1">
+                                                    &#160;&#160;
+                                                </div>
+                                                <div class="col-xs-5">
+                                                    <strong>
+                                                        Seal number :
+                                                        <span t-esc="stc.sead"/>
+                                                    </strong>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </t>
+                                </td>
+                                <td rowspan="1" colspan="4" style="min-width:300px;">1.24. Type of packaging
+                                    <br/>
+                                    <center>
+                                        &#160;
+                                        <t t-if="o.packaging_type_id">
+                                            <strong t-esc="o.packaging_type_id.name"/>
+                                        </t>
+
+                                    </center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="11">
+                                    1.25. Commodity certified for :
+                                    <br/>
+                                    Human consumption &#160;&#160;&#160;&#160;&#160;
+
+                                    <t t-if="o.human_consumption">
+                                        <input type="checkbox" checked=""/>
+                                    </t>
+                                    <t t-if="not o.human_consumption">
+                                        <span style="display:inline-block;width:13px;height:13px;border:solid 1px black;">
+                                            &#160;
+                                        </span>
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="5" class="background-img">1.26.</td>
+                                <td rowspan="1" colspan="6">
+                                    1.27. For import or admission into EU
+                                    &#160;&#160;&#160;&#160;&#160;
+                                    <t t-if="o.imp_admission">
+                                        <input type="checkbox" checked=""/>
+                                    </t>
+                                    <t t-if="not o.imp_admission">
+                                        <span style="display:inline-block;width:13px;height:13px;border:solid 1px black;">
+                                            &#160;
+                                        </span>
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="11">
+                                    1.28. Identification of commodities
+                                    <br/>
+                                    <div class="row" style="font-size:12px">
+                                        <div class="col-xs-2 text-center" style="font-size:12px;">Species (Scientific
+                                            Name)
+                                        </div>
+                                        <div class="col-xs-2 text-center" style="font-size:12px;">Nature of commodity
+                                        </div>
+                                        <div class="col-xs-2 text-center" style="font-size:12px;">Treatment type</div>
+                                        <div class="col-xs-2 text-center" style="font-size:12px;">Approval nbr of
+                                            establishment
+                                        </div>
+                                        <div class="col-xs-2 text-center" style="font-size:12px;">Manufacturing plant
+                                        </div>
+                                        <div class="col-xs-1 text-center" style="font-size:11.5px;">Nbr of packages
+                                        </div>
+                                        <div class="col-xs-1 text-center" style="font-size:12px;">Net weight /Kgs</div>
+                                    </div>
+                                    <t t-foreach="o.get_merchandise_by_sh()[0]" t-as="line_pick">
+                                        <div class="row">
+                                            <t t-set="nb_c" t-value="0"/>
+                                            <t t-set="pn" t-value="0"/>
+                                            <t t-foreach="line_pick[1]" t-as="line">
+                                                <t t-set="nb_c" t-value="nb_c+line.nbr_carton"/>
+                                                <t t-set="pn" t-value="pn+line.pn"/>
+                                            </t>
+
+                                            <div class="col-xs-2 text-center" style="font-weight:bold;font-size:11px;">
+                                                <t t-esc="line_pick[1][0].product_id.name_sci.name"/>
+                                            </div>
+                                            <div class="col-xs-2 text-center" style="font-weight:bold;font-size:11px;">
+                                                Wild
+                                                <t t-esc="line_pick[1][0].product_id.midav_fish_id.name"/>
+                                            </div>
+                                            <div class="col-xs-2 text-center" style="font-weight:bold;font-size:11px;">
+                                                <t t-esc="o.treatement_type"/>
+                                            </div>
+                                            <div class="col-xs-2 text-center" style="font-weight:bold;font-size:11px;">
+                                                &#160;
+                                                <span t-esc="o.sale_order_id.company_id.approval"/>
+                                            </div>
+                                            <div class="col-xs-2 text-center" style="font-weight:bold;font-size:11px;">
+                                                &#160;
+                                                <span t-esc="o.sale_order_id.company_id.name"/>
+                                            </div>
+                                            <div class="col-xs-1 text-center" style="font-weight:bold;font-size:11px;">
+                                                &#160;
+                                                <span t-esc="nb_c"/>
+                                                Cartons
+                                            </div>
+                                            <div class="col-xs-1 text-center" style="font-weight:bold;font-size:11px;">
+                                                &#160;
+                                                <span t-esc="'{:.2f}'.format(pn) or 0"/>
+                                            </div>
+                                        </div>
+                                    </t>
+                                    <br/>
+                                    <br/>
+                                    <strong class="pull-right" style="margin-right:5%;">SEE ADDITIONAL CERTIFICATE
+                                    </strong>
+                                </td>
+                            </tr>
+                            <!--tr>
+                                <td rowspan="1" colspan="1">1</td>
+                                <td rowspan="1" colspan="1">2</td>
+                                <td rowspan="1" colspan="1">3</td>
+                                <td rowspan="1" colspan="1">4</td>
+                                <td rowspan="1" colspan="1">5</td>
+                                <td rowspan="1" colspan="1">6</td>
+                                <td rowspan="1" colspan="1">7</td>
+                                <td rowspan="1" colspan="1">8</td>
+                                <td rowspan="1" colspan="1">9</td>
+                                <td rowspan="1" colspan="1">10</td>
+                                <td rowspan="1" colspan="1">11</td>
+                                <td rowspan="1" colspan="1">12</td>
+                            </tr-->
+                        </tbody>
+                    </table>
+                </div>
+                <p class="page" >
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div>
+                        &#160;<br/>
+                        &#160;<br/>
+                        &#160;<br/>
+                        &#160;<br/>
+                    </div>
+                    <table class="table table-bordered" style="width:100%;">
+                        <tbody>
+                            <tr>
+                                <td style="text-transformed:uppercase;border-color:white;border-bottom:1px solid gray;font-weight:bold;"
+                                    class="font-weight-bold" rowspan="1" colspan="6">
+                                    Country: Morocco
+                                </td>
+                                <td style="border-color:white;border-bottom:1px solid gray;font-weight:bold;"
+                                    rowspan="1" colspan="6">
+                                    Fishery products
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" colspan="1" style="max-height:20px;max-width:20px;">
+                                    <p class="vertical-text-amh">Partie II : Certification</p>
+                                </td>
+                                <td rowspan="1" colspan="4" style="width:50px;">
+                                    <strong>
+                                        II. Health attestation
+                                    </strong>
+                                </td>
+                                <td rowspan="1" colspan="4" style="width:50px;">
+                                    II.a. Certificate reference number
+                                    <br/>
+                                    <strong>
+                                        MA &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/52
+                                        <!--t t-esc="o.num_certificate"/-->
+                                    </strong>
+                                </td>
+                                <td rowspan="1" colspan="3" style="width:50px;">
+                                    II.b.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="11" style="border-bottom:1px solid white;">
+                                    <strong class="full-text-my-bold">
+                                        II.1. (1) Public health attestation
+                                    </strong>
+                                    <br/>
+                                    <br/>
+                                    <p class="full-text-my">
+                                        I, the undersigned, declare that I am aware of the relevant provisions of
+                                        Regulations (EC) N° 178/2002, (EC) N° 852/2004, (EC)
+                                        N° 853/2004 and (EC) n° 854/2004 and certify that the fishery products
+                                        described
+                                        above were produced in accordance with
+                                        those requirements, in particular that they :
+                                        <br/>
+                                        <br/>
+                                        — come from (an) establishment(s) implementing a programme based on the
+                                        HACCP
+                                        principles in accordance with Regulation (EC)
+                                        N° 852/2004,
+                                        <br/>
+                                        <br/>
+                                        — have been caught and handled on board vessels, landed, handled and were
+                                        appropriate prepared, processed, frozen and
+                                        thawed hygienically in compliance with the requirements laid down in Section
+                                        VIII, Chapters I to IV of Annex III to Regulation (EC)
+                                        N° 853/2004,
+                                        <br/>
+                                        <br/>
+                                        — satisfy the health standards laid down in Section VIII, Chapter V of Annex
+                                        III
+                                        to Regulation (EC) n° 853/2004 and the criteria
+                                        laid down in Regulation (EC) n° 2073/2005 on microbiological criteria for
+                                        foodstuffs,
+                                        <br/>
+                                        <br/>
+                                        — have been packaged, stored and transported in compliance with Section
+                                        VIII,
+                                        Chapters VI to VIII of Annex III to Regulation (EC)
+                                        n° 853/2004,
+                                        <br/>
+                                        <br/>
+                                        — have been marked in accordance with Section I of Annex II to Regulation
+                                        (EC)
+                                        n° 853/2004,
+                                        <br/>
+                                        — the garantees covering live animals and products thereof, if from
+                                        aquaculture
+                                        origin, provided by residue plans submitted in
+                                        accordance with Directive 96/23/EC, and in particular Article 29 thereof,
+                                        are
+                                        filled
+                                        and
+                                        <br/>
+                                        — have satisfactorily undergone the official controls laid down in Annex III
+                                        to
+                                        Regulation (EC) N° 854/2004
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="1"
+                                    style="max-height:10px;max-width:10px;border-left:1px solid white;border-bottom:1px solid white;">
+                                    &#160;
+                                </td>
+                                <td rowspan="1" colspan="11" style="border-top:1px solid white;">
+                                    <strong class="full-text-my-bold">
+                                        II.2. (2) (4) Animal health attestation for fish and crustaceans of
+                                        aquaculture origin
+                                    </strong>
+                                    <br/>
+                                    <br/>
+                                    <strong class="full-text-my-bold">
+                                        II.2.1. (3) (4) [Requirements for susceptible species to Epizootic
+                                        haematopoietic necrosis (EHN), Taura syndrome and Yellowhead disease
+                                    </strong>
+                                    <br/>
+                                    <p class="full-text-my">
+                                        I, the undersigned Official Inspector, hereby certify that the aquaculture
+                                        animals or products thereoff referred to in Part I
+                                        of this certificate :
+                                        <br/>
+                                        (5) originate from a country/territory, zone or compartment declared free
+                                        from (4) {EHN (4) {Taura syndrome29/01/201} (4)
+                                        [Yellowhead disease] in accordance with Chapter VII of Directive 2006/88/EC
+                                        or the relevant OIE Standard by the competent
+                                        authority of my country,
+                                        <br/>
+                                        (i) where the relevant diseases are notifiable to the competent authority
+                                        and reports of suspicion of infection of the relevant
+                                        disease must be immediately investigated by the competent authority,
+                                        <br/>
+                                        (ii) all introduction of species susceptible to the relevant diseases come
+                                        from an area declared free of the disease, and
+                                        <br/>
+                                        (iii) species susceptible to the relevant diseases are not vaccinated
+                                        against the relevant diseases]
+                                        <br/>II.2.2. (3) (4) [Requirements for species susceptible to Viral
+                                        haemorrhagic septicaemia (VHS), Infectious haematopoietic necrosis
+                                        (IHN), Infectious salmon anaemia (ISA), Koi herpes virus (KHV) and White
+                                        spot disease intended for a Member State,zone or
+                                        compartment declared disease free or subject to a surveillance or
+                                        eradication programme for the relevant disease
+                                        I, the undersigned official inspector, hereby certify that the aquaculture
+                                        animals or products thereof referred to in Part I
+                                        of this certificate:
+                                        <br/>
+                                        (6) originate from a country/territory, zone or compartment declared free
+                                        from (4) [VHS] (4) [IHN] (4) [ISA] (4) [KHV] (4)
+                                        [White spot disease] in accordance with Chapter VII of Directive 2006/88/EC
+                                        or the relevant OIE Standard by the competent
+                                        authority of my country,
+                                        <br/>(i) where the relevant diseases are notifiable to the competent
+                                        authority and reports of suspicion of infection of the relevant
+                                        disease must be immediately investigated by the competent authority,
+                                        <br/>(ii) all introduction of species susceptible to the relevant diseases
+                                        come from an area declared free of the disease, and
+                                        <br/>(iii) species susceptible to the relevant diseases are not vaccinated
+                                        against the relevant diseases]
+                                        <br/>II.2.3. Transport and labelling requirements
+                                        <br/>I, the undersigned official inspector, hereby certify that:
+                                        <br/>II.2.3.1. the aquaculture animals referred to above are placed under
+                                        conditions, including with a water quality,
+                                        that do not alter their health status;
+                                        <br/>II.2.3.2. the transport container or well boat prior to loading is
+                                        clean and disinfected or previously unused; and
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+
+                <p class="page" style="">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div>
+                        &#160;<br/>
+                        &#160;<br/>
+                        &#160;<br/>
+                        &#160;<br/>
+                    </div>
+                    <table class="table table-bordered" style="width:100%;">
+                        <tbody>
+                            <tr>
+                                <td style="text-transformed:uppercase;border-color:white;border-bottom:1px solid gray;font-weight:bold;"
+                                    class="font-weight-bold" rowspan="1" colspan="6">
+                                    Country: Morocco
+                                </td>
+                                <td style="border-color:white;border-bottom:1px solid gray;font-weight:bold;"
+                                    rowspan="1" colspan="6">
+                                    Fishery products
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="1"
+                                    style="max-height:20px;max-width:20px;border-bottom:1px solid white;">
+                                    &#160;
+                                </td>
+                                <td rowspan="1" colspan="4" style="width:50px;">
+                                    <strong>
+                                        II. Health information
+                                    </strong>
+                                </td>
+                                <td rowspan="1" colspan="4" style="width:50px;">
+                                    II.a. Certificate reference number
+                                    <br/>
+                                    <strong>
+                                        MA &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/52
+                                        <!--t t-esc="o.num_certificate"/-->
+                                    </strong>
+                                </td>
+                                <td rowspan="1" colspan="3" style="width:50px;">
+                                    II.b.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" colspan="1"
+                                    style="border-left:1px solid white;border-bottom:1px solid white;">&#160;
+                                </td>
+                                <td rowspan="1" colspan="11">
+                                    <div class="row">
+                                        <div class="col-xs-2">&#160;</div>
+                                        <div class="col-xs-10">
+                                            <strong>Notes</strong>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <strong>Partie I :</strong>
+                                        </div>
+                                        <div class="col-xs-10">&#160;</div>
+                                        <div class="col-xs-2">Box reference I.8</div>
+                                        <div class="col-xs-10">:Region of origin: For frozen or processed bivalve
+                                            molluscs, indicate the production area
+                                        </div>
+                                        <div class="col-xs-2">Box reference I.1</div>
+                                        <div class="col-xs-10">1 : Place of origin : name and address of the
+                                            dispatch
+                                            establishment
+                                        </div>
+
+                                        <div class="col-xs-2">Box reference I.1</div>
+                                        <div class="col-xs-10">Registration number (railway wagons or container and
+                                            lorries), flight number (aircraft) or name (ship). Separate
+                                            information is to be provided in the event of unloading and reloading.
+                                        </div>
+
+                                        <div class="col-xs-2">Box reference I.1</div>
+                                        <div class="col-xs-10">Use the appropriate HS codes : 0301, 0.02, 0303,
+                                            0304,
+                                            0305, 0306, 0307, 0308, 05.11.91, 15.04, 1516, 1518,
+                                            1603, 1604, 1605 or 2106
+                                        </div>
+
+                                        <div class="col-xs-2">Box reference I.2</div>
+                                        <div class="col-xs-10">Identification of container / seal number : Where
+                                            there is a serial number of the seal it has to be indicated.
+                                        </div>
+
+                                        <div class="col-xs-2">Box reference I.2</div>
+                                        <div class="col-xs-10">
+                                            Nature of commodity : specify whether aquaculture or wild origin.
+                                            <br/>
+                                            Treatment type : Specify whether live, chilled, frozen or processed..
+                                            <br/>
+                                            Manufacturing plant : includes factory vessel, freezer, cold store,
+                                            processing plant.
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <strong>Partie II :</strong>
+                                        </div>
+                                        <div class="col-xs-10">&#160;</div>
+
+                                        <div class="col-xs-2">(1)</div>
+                                        <div class="col-xs-10">Part II.1 of this certificate does not apply to
+                                            countries with special public health certification requirements laid
+                                            down in equivalence agreements or other Union legislation.
+                                        </div>
+
+                                        <div class="col-xs-2">(2)</div>
+                                        <div class="col-xs-10">
+                                            Part II.2 of this certificate does not apply to:
+                                            <br/>
+                                            (a) non-viable crustaceans, which means crustaceans no longer able to
+                                            survive as living animals if returned to the
+                                            <br/>
+                                            environment from which they were obtained,
+                                            <br/>
+                                            (b) fish which are slaughtered and eviscerated before dispatch,
+                                            <br/>
+                                            (c) aquaculture animals and products thereof, which are placed on the
+                                            market for human consumption without further
+                                            <br/>
+                                            processing, provided that they are packed in retail-sale packages which
+                                            comply with the provisions for such packages
+                                            <br/>
+                                            in Regulation (EC) No 853/2004, or for dispatch centres,
+                                            <br/>
+                                            (d) crustaceans destined for processing establishments authorised in
+                                            accordance with Article 4(2) of
+                                            <br/>
+                                            Directive 2006/88/EC, purification centres or similar businesses which
+                                            are equipped with an effluent
+                                            <br/>
+                                            treatment system inactivating the pathogens in question, or where the
+                                            effluent is subject to other types
+                                            <br/>
+                                            of treatment reducing the risk of transmitting diseases to the natural
+                                            waters to an acceptable level,
+                                            <br/>
+                                            (e) crustaceans which are intended for further processing before human
+                                            consumption without temporary
+                                            <br/>
+                                            storage at the place of processing and packed and labelled for that
+                                            purpose in accordance with
+                                            <br/>
+                                            Regulation (EC) No 853/2004.
+                                            <br/>
+                                        </div>
+
+                                        <div class="col-xs-2">(3)</div>
+                                        <div class="col-xs-10">
+                                            Parts II.2.1 and II.2.2 of this certificate only apply to species
+                                            susceptible to one or more of the diseases
+                                            <br/>
+                                            referred to in the heading of the point concerned. Susceptible species
+                                            are listed in Annex IV to
+                                            <br/>
+                                            Directive 2006/88/EC.
+                                        </div>
+
+                                        <div class="col-xs-2">(4)</div>
+                                        <div class="col-xs-10">Keep as appropriate.</div>
+
+                                        <div class="col-xs-2">(5)</div>
+                                        <div class="col-xs-10">
+                                            For consignments of species susceptible to EHN, Taura syndrome and/or
+                                            Yellowhead disease this statement
+                                            <br/>
+                                            must be kept for the consignment to be authorised into any part of the
+                                            Union.
+                                        </div>
+
+                                        <div class="col-xs-2">(6)</div>
+                                        <div class="col-xs-10">
+                                            To be authorised into a Member State, zone or compartment (boxes I.9 and
+                                            I.10 of Part I of the certificate)
+                                            <br/>
+                                            declared free from VHS, IHN, ISA, KHV or Whitespot disease or with a
+                                            surveillance or eradication
+                                            <br/>
+                                            programme drawn up in accordance with Article 44(1) or (2) of Directive
+                                            2006/88/EC, one of these
+                                            <br/>
+                                            statements must be kept if the consignment contain species susceptible
+                                            to the disease(s) for which disease
+                                            <br/>
+                                            freedom or programme(s) apply(ies). Data on the disease status of each
+                                            farm and mollusc farming area in
+                                            <br/>
+                                            the Union are accessible at
+                                            <br/>
+                                            http://ec.europa.eu/food/animal/liveanimals/aquaculture/index_en.htm.
+                                            <br/>
+                                            <br/>
+                                            The colour of the stamp and signature must be different to that of the
+                                            other particulars in the certificate.
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="11">
+                                    Official inspector
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-xs-3">Name (in capital letters) :</div>
+                                        <div class="col-xs-3">&#160;</div>
+                                        <div class="col-xs-3">Qualification and title :</div>
+                                        <div class="col-xs-3">&#160;</div>
+
+                                        <div class="col-xs-3">Date :</div>
+                                        <div class="col-xs-3">&#160;</div>
+                                        <div class="col-xs-3">Signature :</div>
+                                        <div class="col-xs-3">&#160;</div>
+
+                                        <div class="col-xs-3">Stamp :</div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+
+            </t>
+        </template>
+
+        <template id="health_certificate_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <!--t t-call="midav_base.health_report_document" t-lang="o.sale_order_id.partner_id.lang"/-->
+                    <t t-call="midav_base.health_report_document" />
+                </t>
+            </t>
+
+        </template>
+
+        <report id="action_report_health_certificate"
+                model="midav.sale.picking"
+                name="midav_base.health_certificate_report"
+                file="midav_base.health_certificate_report"
+                string="Print health certificate"
+                report_type="qweb-pdf"
+                paperformat="midav_base.paperformat_certificat_sanitaire"
+                print_report_name="'HEALTH_CERTIFICATE - %s' % (object.name)"
+        />
+        <!-- paperformat="midav_base.paperformat_certificat_sanitaire"/-->
+
+
+    </data>
+</odoo>

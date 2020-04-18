@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="action_sale_picking" model="ir.actions.act_window">
+                    <field name="name">Midav Sale Pickings</field>
+                    <field name="res_model">midav.sale.picking</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                </record>
+        <record id="midav_cans_action" model="ir.actions.act_window">
+                    <field name="name">Cans</field>
+                    <field name="res_model">midav.cans</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                </record>
+        <record id="sh_code_action" model="ir.actions.act_window">
+                    <field name="name">SH Code</field>
+                    <field name="res_model">sh.code</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                </record>
+        <record id="scientific_name_action" model="ir.actions.act_window">
+                    <field name="name">Scientific Name</field>
+                    <field name="res_model">scientific.name</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                </record>
+        <record id="action_sale_picking_line" model="ir.actions.act_window">
+                    <field name="name">Midav Sale Picking Lines</field>
+                    <field name="res_model">midav.sale.picking.line</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                </record>
+
+        <record id="action_sale_operation" model="ir.actions.act_window">
+                    <field name="name">Midav Sale Operations</field>
+                    <field name="res_model">midav.sale.operation</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                </record>
+
+        <record id="action_sale_operation_line" model="ir.actions.act_window">
+                    <field name="name">Midav Sale Operation Lines</field>
+                    <field name="res_model">midav.sale.operation.line</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                </record>
+
+        <record id="midav_sead_tc_action" model="ir.actions.act_window">
+            <field name="name">SEAD / TC</field>
+            <field name="res_model">midav.sead.tc</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add SEAD / TC .
+              </p>
+            </field>
+        </record>
+
+        <record id="midav_description_commodity_action" model="ir.actions.act_window">
+            <field name="name">Description of commodity</field>
+            <field name="res_model">midav.description.commodity</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add Description of commodity .
+              </p>
+            </field>
+        </record>
+
+        <record id="midav_packaging_type_action" model="ir.actions.act_window">
+            <field name="name">Packaging type</field>
+            <field name="res_model">midav.packaging.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add Packaging Type .
+              </p>
+            </field>
+        </record>
+
+        <!-- Account invoice action global-->
+        <record id="midav_invoice_action" model="ir.actions.act_window">
+            <field name="name">Account invoices</field>
+            <field name="res_model">account.invoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+         <record id="action_invoice_customer_tree1" model="ir.actions.act_window">
+            <field name="name">Customer Invoices</field>
+            <field name="res_model">account.invoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="account.invoice_tree"/>
+            <field name="domain">[('type','=','out_invoice')]</field>
+            <field name="context">{'type':'out_invoice', 'journal_type': 'sale','default_type':'out_invoice', 'default_journal_type': 'sale'}</field><field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('account.invoice_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('account.invoice_form')})]"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a customer invoice.
+              </p>
+            </field>
+        </record>
+
+
+        <record id="action_incoterms_tree_midav" model="ir.actions.act_window">
+            <field name="name">Midav Incoterm</field>
+            <field name="res_model">stock.incoterms</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="midav_mould_action" model="ir.actions.act_window">
+            <field name="name">Midav Mould</field>
+            <field name="res_model">midav.mould</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+
+        <menuitem id="menu_sale_picking_midav" parent="sale.sale_order_menu"
+                  name="Sale Pickings" action="action_sale_picking" sequence="10"/>
+        <menuitem id="menu_sale_picking_line_midav" parent="sale.sale_order_menu"
+                  name="Sale Picking Lines" action="action_sale_picking_line" sequence="11"/>
+        <menuitem id="menu_sale_operation_midav" parent="sale.sale_order_menu"
+                  name="Sale Operations" action="action_sale_operation" sequence="12"/>
+        <menuitem id="menu_sale_operation_line_midav" parent="sale.sale_order_menu"
+                  name="Sale Operation lines" action="action_sale_operation_line" sequence="13"/>
+
+        <!-- Midav products menus-->
+        <menuitem id="midav_technical_feature" name="Technical Features" parent="sale.menu_sale_config" sequence="80"/>
+        <menuitem action="midav_empty_cans_action" id="menu_empty_cans_act" parent="midav_technical_feature" sequence="89"/>
+        <menuitem action="midav_fish_action" id="menu_fish_fish_act" parent="midav_technical_feature" sequence="90"/>
+        <menuitem action="midav_preparation_action" id="menu_preparation_preparation_act" parent="midav_technical_feature" sequence="91"/>
+        <menuitem action="midav_jutage_action" id="menu_jutage_jutage_act" parent="midav_technical_feature" sequence="92"/>
+        <menuitem action="midav_mould_action" id="menu_mould_act" name="Mould" parent="midav_technical_feature" sequence="95"/>
+        <menuitem action="midav_brand_action" id="menu_brand_act" name="Brand" parent="midav_technical_feature" sequence="96"/>
+        <menuitem action="midav_cans_action" id="menu_cans_act" name="Cans" parent="midav_technical_feature" sequence="97"/>
+        <menuitem action="sh_code_action" id="menu_sh_code" name="SH Code" parent="midav_technical_feature" sequence="98"/>
+        <menuitem action="action_incoterms_tree_midav" id="menu_incoterm_midav" name="Incoterms" parent="midav_technical_feature" sequence="99"/>
+        <menuitem action="scientific_name_action" id="menu_scientific_name" name="Scientific Name" parent="midav_technical_feature" sequence="93"/>
+        <!--menuitem action="midav_cartons_action" id="menu_cartons_cartons_act" parent="midav_technical_feature" sequence="94"/-->
+        <!--menuitem action="midav_tag_action" id="menu_tag_tag_act" parent="midav_technical_feature" sequence="95"/-->
+        <!--menuitem action="midav_stickers_btes_action" id="menu_stickers_btes_act" parent="midav_technical_feature" sequence="96"/-->
+        <!--menuitem action="midav_stickers_barq_action" id="menu_stickers_barq_act" parent="midav_technical_feature" sequence="97"/!-->
+        <menuitem action="midav_sead_tc_action" id="menu_midav_sead_tc_act" parent="midav_technical_feature" sequence="94"/>
+        <!--menuitem action="midav_brand_action" id="menu_midav_brand_act" parent="midav_technical_feature" sequence="99"/-->
+        <menuitem action="midav_description_commodity_action" id="menu_midav_description_commodity_act" parent="midav_technical_feature" sequence="100"/>
+        <menuitem action="midav_packaging_type_action" id="menu_midav_packaging_type_act" parent="midav_technical_feature" sequence="101"/>
+
+        <menuitem id="midav_localization" name="Localisation" parent="sale.menu_sale_config" sequence="104"/>
+        <menuitem id="midav_localization_country" name="Country" parent="midav_base.midav_localization" action="base.action_country" />
+
+        <menuitem id="midav_transit_document" name="Transit Order" parent="sale.menu_sale_config" sequence="105"/>
+        <menuitem id="midav_transit_document_menu" name="Transit Order Document" parent="midav_base.midav_transit_document" action="midav_base.midav_transit_document_action" />
+    </data>
+</odoo>

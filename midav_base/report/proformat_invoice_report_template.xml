@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <template id="midav_sale_order_document" inherit_id="sale.report_saleorder_document">
+
+            <xpath expr="//div[@class='page']//div[@class='row']//div[@t-field='doc.partner_id']" position="replace">
+                <strong><span t-field="doc.partner_id.name"></span></strong><br/>
+
+                <div t-field="doc.partner_id"
+                    t-options='{"widget": "contact", "fields": ["address"], "no_marker": True}' />
+                <t t-if="doc.partner_id.phone">phone: </t>
+                <span t-field="doc.partner_id.phone" ></span>
+                <t t-if="doc.partner_id.mobile"><br/>mobile: </t>
+                <span t-field="doc.partner_id.mobile"></span>
+                <t t-if="doc.partner_id.email"><br/>email: </t>
+                <span t-field="doc.partner_id.email"></span>
+            </xpath>
+
+            <xpath expr="///div[@class='page']//h2" position="replace">
+                <t t-set="subtotal" t-value="0"/>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 >
+                            <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
+                                <span style="color: blue;" t-if="doc.state not in ['draft','sent']">Order #</span>
+                                <span style="color: blue;" t-if="doc.state in ['draft','sent']">Quotation #</span>
+                            </t>
+                            <t t-if="env.context.get('proforma', alse) or is_pro_forma">
+                                <span style="color: blue;">Pro-Forma Invoice #</span>
+
+                            </t>
+                            <span t-field="doc.name" style="color: blue;"/>
+                            <br/>
+                            <t t-if="doc.client_order_ref">
+                                <span>Ref client :</span>
+                                <span t-field="doc.client_order_ref"/>
+                            </t>
+
+                        </h2>
+                    </div>
+                </div>
+
+            </xpath>
+
+            <xpath expr="//table[1]/tbody//tr/td/span[@t-field='l.price_unit']" position="replace">
+                <span t-field="l.price_unit"/>
+                <span t-field="doc.pricelist_id.currency_id"/>
+            </xpath>
+
+
+            <xpath expr="//div[@id='informations']" position="replace">
+                <div class="row mt32 mb32" id="informations">
+                    <!--<div t-if="doc.client_order_ref" class="col-xs-3">-->
+                    <!--<strong>Your Reference:</strong>-->
+                    <!--<p t-field="doc.client_order_ref"/>-->
+                    <!--</div>-->
+                    <div class="row  mt8 mb8 row-eq-height" >
+                        <div class="col-xs-12" >
+                            <div t-if="doc.confirmation_date" class="col-xs-3">
+                                <strong>Date Ordered:</strong>
+                                <p t-field="doc.confirmation_date" t-field-options='{"format": "dd/MM/yyyy"}'/>
+                            </div>
+                            <div t-if="doc.date_order" class="col-xs-3">
+                                <strong>Quotation date:</strong>
+                                <p t-field="doc.date_order" t-field-options='{"format": "dd/MM/yyyy"}'/>
+                            </div>
+                            <div t-if="doc.validity_date and doc.state in ['draft', 'sent']" class="col-xs-3">
+                                <strong>Validity Date:</strong>
+                                <p t-field="doc.validity_date" t-field-options='{"format": "dd/MM/yyyy"}'/>
+                            </div>
+                            <div class="col-xs-3">
+                                <strong>Emission Date:</strong>
+                                <p t-esc="doc.date_emission()" />
+                            </div>
+                            <!--<div t-if="doc.user_id.name" class="col-xs-3">-->
+                            <!--<strong>Salesperson:</strong>-->
+                            <!--<p t-field="doc.user_id"/>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+
+                    <div class="row  mt8 mb8 row-eq-height">
+                        <div class="col-xs-12"  >
+                            <div t-if="doc.origin_product" name="origin" class="col-xs-3">
+                                <strong>Product origin:</strong>
+                                <p t-field="doc.origin_product"/>
+                            </div>
+                            <div name="port_nb" class="col-xs-3">
+                                <strong>Incoterm /Port:</strong>
+                                <p><span t-field="doc.incoterm_id.code"/>/&amp;nbsp;
+                                    <span t-field="doc.nb_port"/>
+                                </p>
+                            </div>
+                            <div t-if="doc.commodity_destination" name="origin" class="col-xs-3">
+                                <strong>Commodity Destination:</strong>
+                                <p t-field="doc.commodity_destination"/>
+                            </div>
+                            <t t-if="doc.partner_id.country_id.show_sid">
+                                <div name="fce_fcd" class="col-xs-3">
+                                    <strong>FCE-FCD N°:</strong>
+                                    <p t-field="doc.partner_id.country_id.fce_fcd"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="row  mt8 mb8 row-eq-height">
+                        <div class="col-xs-12">
+                            <div name="society" t-if="doc.company_id" class="col-xs-4">
+                                <strong>Beneficiary:</strong>
+                                <br/>
+                                <span t-field="doc.company_id.name"/>
+                                <br/>
+                                <span t-field="doc.company_id.street"/>
+                                <br/>
+                                <span t-field="doc.company_id.zip"/>,&amp;nbsp;
+                                <span t-field="doc.company_id.city"/>
+                                <br/>
+                                <span t-field="doc.company_id.country_id"/>
+                                <br/>
+                            </div>
+                            <div class="col-xs-4">
+                                <strong>BANK:</strong>
+                                <br t-if="doc.bank_id.bank_id.name"/>
+                                <span t-field="doc.bank_id.bank_id.name"/>,
+                                <br t-if="doc.bank_id.bank_id.street"/>
+                                <span t-field="doc.bank_id.bank_id.street"/>
+                                <br t-if="doc.bank_id.bank_id.street2"/>
+                                <span t-field="doc.bank_id.bank_id.street2"/>
+                                <br t-if="doc.bank_id.bank_id.zip or doc.bank_id.bank_id.country"/>
+                                <span t-if="doc.bank_id.bank_id.zip" t-field="doc.bank_id.bank_id.zip">,&amp;nbsp;
+                                </span>
+                                <span t-if="doc.bank_id.bank_id.city" t-field="doc.bank_id.bank_id.city">-&amp;nbsp;
+                                </span>
+                                <span t-if="doc.bank_id.bank_id.country" t-field="doc.bank_id.bank_id.country">,</span>
+                                <br/>
+                                IBAN N°:
+                                <span t-field="doc.bank_id.acc_number" style="display:inline"/>
+                                <br/>
+                                SWIFT:
+                                <span t-field="doc.bank_id.bank_id.bic" style="display:inline"/>
+                            </div>
+                            <div name="payment_term" t-if="doc.payment_term_id" class="col-xs-4">
+                                <strong>Payment Terms:</strong>
+                                <p t-field="doc.payment_term_id"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </xpath>
+            <xpath expr="//table[1]" position="replace">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th class="text-center">Quantity</th>
+                            <th class="text-center">Unit Price</th>
+                            <th t-if="display_discount" class="text-center" groups="sale.group_discount_per_so_line">
+                                Disc.(%)
+                            </th>
+                            <th class="text-center">Taxes</th>
+                            <th class="text-center" groups="sale.group_show_price_subtotal">Amount</th>
+                            <th class="text-center price_tax_included" groups="sale.group_show_price_total">Total Price
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="sale_tbody">
+                        <t t-set="a" t-value="20"></t>
+                        <t t-set="total" t-value="0"/>
+                        <t t-foreach="page" t-as="layout_category">
+                            <t t-if="layout_category_size > 1 or page_size > 1" groups="sale.group_sale_layout">
+                                <tr class="active">
+                                    <td colspan="7" style="font-weight: bold; border-bottom: 1px solid black;">&amp;bull;
+                                        <t t-esc="layout_category['name']"/>
+                                    </td>
+                                </tr>
+                            </t>
+
+                            <!-- Lines associated -->
+                            <t t-foreach="layout_category['lines']" t-as="l">
+                                <tr t-if="l.product_uom_qty>0 ">
+                                    <!-- and l.layout_category_id.ligne_pro_format -->
+                                    <td>
+                                        <span t-field="l.name"/>
+                                        <t t-if="not l.product_id.type == 'service'">
+                                            <t t-if="doc.partner_id.country_id.code == 'US'">
+                                                <t t-if="l.layout_category_id.sh_code_pro_format">
+                                                    <t t-if="l.layout_category_id.sh_code_pro_format_usa">
+                                                        <p>
+                                                            <strong>Code SH:</strong>
+                                                            <span t-field="l.product_id.code_sh"/>
+                                                        </p>
+                                                    </t>
+                                                </t>
+                                                <t t-if="not l.layout_category_id.sh_code_pro_format">
+                                                    <t t-if="l.layout_category_id.sh_code_pro_format_usa">
+                                                        <p>
+                                                            <strong>Code SH:</strong>
+                                                            <span t-field="l.product_id.code_sh"/>
+                                                        </p>
+                                                    </t>
+                                                </t>
+                                            </t>
+                                            <t t-if="not doc.partner_id.country_id.code == 'US'">
+                                                <p t-if="l.layout_category_id.sh_code_pro_format">
+                                                    <strong>Code SH:</strong>
+                                                    <span t-field="l.product_id.code_sh"/>
+                                                </p>
+                                            </t>
+
+                                            <p t-if="l.product_id.barcode">
+                                                <strong>Code Barre:</strong>
+                                                <span t-field="l.product_id.barcode"/>
+                                            </p>
+                                        </t>
+                                        <p t-if="doc.partner_id.country_id.code == 'US'">
+                                            <t t-if="not l.product_id.type == 'service'">
+                                                <t t-if="l.layout_category_id.sid_pro_format_usa">
+                                                    <strong>SID:</strong>&amp;nbsp;
+                                                    <span t-field="l.product_id.sid"/>&amp;nbsp;&amp;nbsp;
+                                                </t>
+                                                <t t-if="l.layout_category_id.dimension_pro_format_usa">
+                                                    <strong>Dimensions:</strong>&amp;nbsp;
+                                                    <span t-field="l.product_id.dimensions"/>
+                                                </t>
+                                            </t>
+                                        </p>
+                                        <p t-if="not doc.partner_id.country_id.code == 'US'">
+                                            <t t-if="not l.product_id.type == 'service'">
+                                                <strong t-if="l.product_id.sid">SID:</strong>&amp;nbsp;
+                                                <span t-field="l.product_id.sid"/>
+                                                <strong t-if="l.product_id.dimensions">&amp;nbsp;&amp;nbsp;
+                                                    Dimensions:</strong>&amp;nbsp;
+                                                <span t-field="l.product_id.dimensions"/>
+                                            </t>
+                                        </p>
+                                        <!--p t-if="doc.partner_id.country_id.show_sid">
+                                            <t t-if="not l.product_id.type == 'service'">
+                                                <strong>SID:</strong>&amp;nbsp;
+                                                <span t-field="l.product_id.sid"/>
+                                                <strong>&amp;nbsp;&amp;nbsp; Dimensions:</strong>&amp;nbsp;
+                                                <span t-field="l.product_id.dimensions"/>
+                                            </t>
+                                        </p-->
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="l.product_uom_qty"/>
+                                        <span t-field="l.product_uom" groups="product.group_uom"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="l.price_unit"/>
+                                        <span t-field="doc.pricelist_id.currency_id.symbol"/>
+
+
+                                    </td>
+                                    <td t-if="display_discount" class="text-right"
+                                        groups="sale.group_discount_per_so_line">
+                                        <span t-field="l.discount"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-esc="', '.join(map(lambda x: (x.description or x.name), l.tax_id))"/>
+                                    </td>
+                                    <td class="text-right" groups="sale.group_show_price_subtotal">
+                                        <span t-field="l.price_subtotal"
+                                            t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                                    </td>
+                                    <td class="text-right" groups="sale.group_show_price_total">
+                                        <span t-field="l.price_total"
+                                            t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                                    </td>
+
+                                    <!--
+                                    <td class="text-right" groups="sale.group_show_price_subtotal">
+                                        <span t-esc="str('{:.2f}'.format(l.price_subtotal,',f'))+doc.pricelist_id.currency_id.symbol"/>
+
+                                    </td>
+                                    <td class="text-right" groups="sale.group_show_price_total">
+                                        <span t-esc="str('{:.2f}'.format(l.price_total,',f'))+doc.pricelist_id.currency_id.symbol"/>
+
+                                    </td>-->
+                                </tr>
+                            </t>
+
+
+                            <t t-if="(layout_category_size > 1 or page_size > 1) and layout_category['subtotal']"
+                               groups="sale.group_sale_layout">
+                                <tr class="text-right">
+                                    <td colspan="6">
+                                        <strong>Subtotal :</strong>
+                                        <t t-set="subtotal"
+                                           t-value="sum(line.price_subtotal for line in layout_category['lines'])"/>
+                                        <span t-esc=" str('{:.2f}'.format(subtotal,',f'))+doc.pricelist_id.currency_id.symbol"/>
+
+                                        <!--t t-set="total" t-value="total+subtotal"></t-->
+
+                                    </td>
+                                </tr>
+                            </t>
+
+                        </t>
+                    </tbody>
+                </table>
+            </xpath>
+            <xpath expr="//t[@t-as='amount_by_group']" position="replace">
+                <t t-foreach="doc._get_tax_amount_by_group()" t-as="amount_by_group">
+                    <tr style="border-bottom:1px solid #dddddd;">
+                        <t t-if="amount_by_group[3] == 1 and doc.amount_untaxed == amount_by_group[2]">
+                            <td>
+                                <span t-esc="amount_by_group[0]"/>
+                                <span>&amp;nbsp;<span>on</span>&amp;nbsp;<t t-esc="amount_by_group[2]" t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/></span>
+                            </td>
+                            <td class="text-right">
+                                <span t-esc="amount_by_group[1]"
+                                                t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+
+                            </td>
+                        </t>
+                        <t t-else="">
+                            <td>
+                                <span t-esc="amount_by_group[0]"/>
+                            </td>
+                            <td class="text-right">
+                                <span t-esc="amount_by_group[1]"
+                                                t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+
+                            </td>
+                        </t>
+                    </tr>
+                </t>
+            </xpath>
+
+            <xpath expr="//div[@name='total']/div/table[1]/tr" position="before">
+                <tr class="border-black" style="border-bottom:1px solid #dddddd;">
+                    <td>
+                        <strong>Total Quantity</strong>
+                    </td>
+                    <td class="text-right">
+                        <!--span t-esc="'{:.2f}'.format(doc.sum_qty(),',f')"/-->
+                        <span t-esc="int(doc.sum_qty())"/>
+
+                    </td>
+
+
+                </tr>
+
+            </xpath>
+            <xpath expr="//p[@t-if='doc.payment_term_id.note']" position="replace">
+
+            </xpath>
+            <!--xpath expr="//div[@name='total']//span[@t-field='doc.amount_untaxed']" position="replace">
+                <span t-esc="str('{:.2f}'.format(doc.get_subtotal()[0]))+doc.pricelist_id.currency_id.symbol"/>
+
+            </xpath>
+            <xpath expr="//div[@name='total']//span[@t-field='doc.amount_total']" position="replace">
+                <span t-esc=" str('{:.2f}'.format(doc.get_subtotal()[1]))+doc.pricelist_id.currency_id.symbol"/>
+
+            </xpath-->
+            <xpath expr="//div[@name='total']" position="after">
+                <div>
+                    <p>
+                        <strong>HAS ADOPTED THIS PROFORMA INVOICE AT THE SUM OF : </strong>&#160;&#160;
+                        <!--strong>ARRETE LA PRESENTE FACTURE PROFORMA A LA SOMME DE :</strong-->
+
+                        <span t-esc="doc.total_amount_letter"/>
+                        <!--span t-esc="doc.amount_letter(doc.get_subtotal()[1])"/-->
+                        <!--span t-field="doc.to_text"/-->
+
+                    </p>
+                </div>
+            </xpath>
+
+
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_country_form_midav">
+            <field name="name">res.country.form.midav</field>
+            <field name="model">res.country</field>
+            <field name="inherit_id" ref="base.view_country_form" />
+            <field name="priority" eval="20"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='code']" position="after">
+                        <field name="show_sid"/>
+                        <field name="fce_fcd"/>
+                </xpath>
+                <!--<field name="code">-->
+                    <!--<field name="show_sid"/>-->
+                <!--</field>-->
+            </field>
+        </record>
+    </data>
+</odoo>

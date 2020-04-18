@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--add fields in empty cans form view-->
+       <record id="midav_empty_cans_form_view" model="ir.ui.view">
+           <field name="name">midav.empty.cans.form</field>
+           <field name="model">midav.empty.cans</field>
+           <field name="arch" type="xml">
+                <form string="Empty Cans">
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                    </group>
+                </form>
+           </field>
+       </record>
+       <!--add fields in empty cans  tree view-->
+        <record id="midav_empty_cans_tree" model="ir.ui.view">
+            <field name="name">midav.empty.cans.tree</field>
+            <field name="model">midav.empty.cans</field>
+            <field name="arch" type="xml">
+                <tree string="Empty Cans">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <!--add action menu empty cans-->
+        <record id="midav_empty_cans_action" model="ir.actions.act_window">
+            <field name="name">Empty Cans</field>
+            <field name="res_model">midav.empty.cans</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add empty.cans.
+              </p>
+            </field>
+        </record>
+       <!--add fields in fish form view-->
+       <record id="midav_fish_form_view" model="ir.ui.view">
+           <field name="name">midav.fish.form</field>
+           <field name="model">midav.fish</field>
+           <field name="arch" type="xml">
+                <form string="Fish">
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                    </group>
+                </form>
+           </field>
+       </record>
+       <!--add fields in fish tree view-->
+        <record id="midav_fish_tree" model="ir.ui.view">
+            <field name="name">midav.fish.tree</field>
+            <field name="model">midav.fish</field>
+            <field name="arch" type="xml">
+                <tree string="Fish">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <!--add action menu fish-->
+        <record id="midav_fish_action" model="ir.actions.act_window">
+            <field name="name">Fish</field>
+            <field name="res_model">midav.fish</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add Fish.
+              </p>
+            </field>
+        </record>
+
+        <!--add fields in preparation form view-->
+       <record id="midav_preparation_form_view" model="ir.ui.view">
+           <field name="name">midav.preparation.form</field>
+           <field name="model">midav.preparation</field>
+           <field name="arch" type="xml">
+                <form string="Preparation">
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                    </group>
+                </form>
+           </field>
+       </record>
+       <!--add fields in preparation  tree view-->
+        <record id="midav_preparation_tree" model="ir.ui.view">
+            <field name="name">midav.preparation.tree</field>
+            <field name="model">midav.preparation</field>
+            <field name="arch" type="xml">
+                <tree string="Preparation">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <!--add action menu preparation-->
+        <record id="midav_preparation_action" model="ir.actions.act_window">
+            <field name="name">Preparation</field>
+            <field name="res_model">midav.preparation</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add preparation
+              </p>
+            </field>
+        </record>
+
+        <!--add fields in jutage form view-->
+       <record id="midav_jutage_form_view" model="ir.ui.view">
+           <field name="name">midav.jutage.form</field>
+           <field name="model">midav.jutage</field>
+           <field name="arch" type="xml">
+                <form string="Jutage">
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                    </group>
+                </form>
+           </field>
+       </record>
+       <!--add fields in jutage tree view-->
+        <record id="jutage_jutage_tree" model="ir.ui.view">
+            <field name="name">midav.jutage.tree</field>
+            <field name="model">midav.jutage</field>
+            <field name="arch" type="xml">
+                <tree string="Jutage">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <!--add action menu justage-->
+        <record id="midav_jutage_action" model="ir.actions.act_window">
+            <field name="name">Jutage</field>
+            <field name="res_model">midav.jutage</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add Jutage
+              </p>
+            </field>
+        </record>
+
+        <!--add fields in cases form view-->
+       <record id="midav_cases_form_view" model="ir.ui.view">
+           <field name="name">midav.cases.form</field>
+           <field name="model">midav.cases</field>
+           <field name="arch" type="xml">
+                <form string="Cases">
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                    </group>
+                </form>
+           </field>
+       </record>
+       <!--add fields in cases tree view-->
+        <record id="midav_cases_tree" model="ir.ui.view">
+            <field name="name">midav.cases.tree</field>
+            <field name="model">midav.cases</field>
+            <field name="arch" type="xml">
+                <tree string="Cases">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <!--add action menu cases-->
+        <record id="midav_cases_action" model="ir.actions.act_window">
+            <field name="name">Cases</field>
+            <field name="res_model">midav.cases</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add Cases
+              </p>
+            </field>
+        </record>
+
+        <!--add fields in cartons form view-->
+       <record id="midav_cartons_form_view" model="ir.ui.view">
+           <field name="name">midav.cartons.form</field>
+           <field name="model">midav.cartons</field>
+           <field name="arch" type="xml">
+                <form string="Cartons">
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                        <field name="qty_per_one"/>
+                    </group>
+                </form>
+           </field>
+       </record>
+       <!--add fields in cartons tree view-->
+        <record id="midav_cartons_tree" model="ir.ui.view">
+            <field name="name">midav.cartons.tree</field>
+            <field name="model">midav.cartons</field>
+            <field name="arch" type="xml">
+                <tree string="Cartons">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="qty_per_one"/>
+                </tree>
+            </field>
+        </record>
+        <!--add action menu cartons-->
+        <record id="midav_cartons_action" model="ir.actions.act_window">
+            <field name="name">Cartons</field>
+            <field name="res_model">midav.cartons</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add Cartons.
+              </p>
+            </field>
+        </record>
+
+        <!--add fields in etiquettes form view-->
+       <record id="midav_tag_form_view" model="ir.ui.view">
+           <field name="name">midav.tag.form</field>
+           <field name="model">midav.tag</field>
+           <field name="arch" type="xml">
+                <form string="Tag">
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                    </group>
+                </form>
+           </field>
+       </record>
+       <!--add fields in tag tree view-->
+        <record id="midav_tag_tree" model="ir.ui.view">
+            <field name="name">midav.tag.tree</field>
+            <field name="model">midav.tag</field>
+            <field name="arch" type="xml">
+                <tree string="Tag">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <!--add action menu etiquettes-->
+        <record id="midav_tag_action" model="ir.actions.act_window">
+            <field name="name">Tag</field>
+            <field name="res_model">midav.tag</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add Tag.
+              </p>
+            </field>
+        </record>
+
+        <!--add fields in etiquettes form view-->
+       <record id="midav_stickers_btes_form_view" model="ir.ui.view">
+           <field name="name">midav_stickers.btes.form</field>
+           <field name="model">midav.stickers.btes</field>
+           <field name="arch" type="xml">
+                <form string="Stickers/Btes">
+                    <group>
+                        <field name="code"/>
+                        <field name="mcode"/>
+                        <field name="name"/>
+                    </group>
+                </form>
+           </field>
+       </record>
+       <!--add fields in stickers tree view-->
+        <record id="midav_stickers_btes_tree" model="ir.ui.view">
+            <field name="name">midav.stickers.btes.tree</field>
+            <field name="model">midav.stickers.btes</field>
+            <field name="arch" type="xml">
+                <tree string="Stickers/Btes">
+                    <field name="code"/>
+                    <field name="mcode"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <!--add action menu etiquettes-->
+        <record id="midav_stickers_btes_action" model="ir.actions.act_window">
+            <field name="name">Stickers/Btes</field>
+            <field name="res_model">midav.stickers.btes</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add Stickers/Btes.
+              </p>
+            </field>
+        </record>
+
+        <!--add fields in stickers/barq form view-->
+       <record id="midav_stickers_barq_form_view" model="ir.ui.view">
+           <field name="name">midav.stickers.barq.form</field>
+           <field name="model">midav.stickers.barq</field>
+           <field name="arch" type="xml">
+                <form string="Stickers/Barq">
+                    <group>
+                        <field name="code"/>
+                        <field name="mcode"/>
+                        <field name="name"/>
+                    </group>
+                </form>
+           </field>
+       </record>
+       <!--add fields in stickers/barq tree view-->
+        <record id="midav_stickers_barq_tree" model="ir.ui.view">
+            <field name="name">midav.stickers.barq.tree</field>
+            <field name="model">midav.stickers.barq</field>
+            <field name="arch" type="xml">
+                <tree string="Stickers/Barq">
+                    <field name="code"/>
+                    <field name="mcode"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <!--add action menu etiquettes-->
+        <record id="midav_stickers_barq_action" model="ir.actions.act_window">
+            <field name="name">Stickers/Barq</field>
+            <field name="res_model">midav.stickers.barq</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add Stickers/Barq.
+              </p>
+            </field>
+        </record>
+
+         <!--add fields in brand form view-->
+       <record id="midav_brand_form_view" model="ir.ui.view">
+           <field name="name">midav.brand.form</field>
+           <field name="model">midav.brand</field>
+           <field name="arch" type="xml">
+                <form string="Brands">
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                    </group>
+                </form>
+           </field>
+       </record>
+       <!--add fields in stickers/barq tree view-->
+        <record id="midav_brand_tree" model="ir.ui.view">
+            <field name="name">midav.brand.tree</field>
+            <field name="model">midav.brand</field>
+            <field name="arch" type="xml">
+                <tree string="Brands">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <!--add action menu etiquettes-->
+        <record id="midav_brand_action" model="ir.actions.act_window">
+            <field name="name">Brand</field>
+            <field name="res_model">midav.brand</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add Brands.
+              </p>
+            </field>
+        </record>
+
+        <record id="midav_transit_document_action" model="ir.actions.act_window">
+            <field name="name">Transit Order document</field>
+            <field name="res_model">midav.document</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+   </data>
+</odoo>

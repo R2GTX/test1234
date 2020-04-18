@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <template id="midav_non_conforme_page">
+
+            <div class="container">
+                <div class="row" style="">
+                    <p class="text-center" style="display:inline-block;width:100%;margin-top:250px;font-size:50px;">
+                        <strong>Ordre de preparation
+                            <br/>
+                            non conforme
+                            <span></span>
+                        </strong>
+                    </p>
+                </div>
+            </div>
+
+        </template>
+
+        <template id="midav_custom_layout_header">
+            <div class="header"><!-- class="header"-->
+                <div class="row">
+                    <div class="col-xs-10">
+                        <img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % to_text(company.logo)"
+                             style="width:100px;height: 100px;"/>
+                    </div>
+                    <div class="col-xs-2 pull-right " style="font-size:8.5px">
+
+                        <span class="text-right" t-field="company.partner_id"/>
+                        <br/>
+                        <span class="text-right" t-esc="company.street"/>
+                        <br/>
+                        <span class="text-right" t-esc="company.street2"/>
+                        <span class="text-right" t-esc="company.city"/>
+                        <br/>
+                        <span class="text-right">
+                            <span>N° Agreement :</span>
+                            <span t-field="o.sale_order_id.company_id.approval"/>
+                        </span>
+                        <br/>
+                        <span class="text-right">
+                            <span>N° FCE-FDA :</span>
+                            <span t-field="o.sale_order_id.company_id.fda"/>
+                        </span>
+
+
+                    </div>
+                </div>
+                <div style="backgroud-color:black; color:black;border:1px solid black;width:105%;height:1px;margin-top:3px"/>
+            </div>
+        </template>
+
+        <template id="midav_custom_layout_footer">
+            <div class="footer" style="font-size:10px">
+                <style>
+                    p{
+                    font-size:1em;
+                    }
+                </style>
+                <br/>
+                <div style="backgroud-color:black; color:black;border:1px solid black;width:105%;height:1px;"/>
+                <p class="row text-center">
+
+                    <span t-esc="company.report_footer"/>
+
+                </p>
+                <p class="row text-center">
+                    <span t-esc="company.street"/>
+                    <span t-esc="company.street2"/>
+                    <span t-esc="company.city"/>
+                    (<span t-esc="company.country_id.name"/>)
+                    - Tel.:
+                    <span t-esc="company.phone"/>
+                    - Fax 212-(0) 524.46.14.15
+                    - Email:
+                    <span t-esc="company.email"/>
+                </p>
+            </div>
+        </template>
+
+
+        <template id="colisage_report_document">
+            <t t-if="o.state == 'improper_quality'" t-call="web.basic_layout">
+                <div class="page">
+                    <t t-call="midav_base.midav_non_conforme_page"/>
+                </div>
+            </t>
+
+            <t t-if="o.state != 'improper_quality'" t-call="web.basic_layout">
+                <t t-set="o" t-value="o.with_context({'lang':o.sale_order_id.partner_id.lang})"/>
+                <t t-set="company" t-value="o.sale_order_id.company_id"/>
+                <!--t t-call="midav_base.midav_custom_layout_header"/-->
+                <div class="header">
+                    <div class="container">
+                        <div class="row">
+                            <div style="display: inline-block;height:20px;width:100px;">
+
+                            </div>
+                            <div>
+                                <div class="col-xs-10">
+                                    <img t-if="company.logo"
+                                         t-att-src="'data:image/png;base64,%s' % to_text(company.logo)"
+                                         style="max-width:100px;max-height: 50px;"/>
+                                </div>
+                                <div class="col-xs-2 pull-right " style="font-size:8.5px">
+
+                                    <span t-field="company.partner_id"/>
+                                    <br/>
+                                    <span t-esc="company.street"/>
+                                    <br/>
+                                    <span t-esc="company.street2"/>
+                                    <span t-esc="company.city"/>
+                                    <br/>
+                                    <span>
+                                        <span>N° Agreement :</span>
+                                        <span t-field="o.sale_order_id.company_id.approval"/>
+                                    </span>
+                                    <br/>
+                                    <span>
+                                        <span>N° FCE-FDA :</span>
+                                        <span t-field="o.sale_order_id.company_id.fda"/>
+                                    </span>
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="page">
+                    <style>
+                        body{
+                        font-size:8.5px;
+                        }
+                        table{
+                        font-size:8.5px;
+                        }
+                        th{
+                        font-size:8.5px;
+                        }
+                        td{
+                        font-size:8.5px;
+                        }
+                        tbody{
+                        font-size:8.5px;
+                        }
+                        thead{
+                        font-size:8.5px;
+                        }
+                        span{
+                        font-size:8.5px;
+                        }
+                    </style>
+                    <div class="oe_structure"/>
+                    <div class="row">
+                        <p class="col-xs-6 pull-right text-center">
+                            <span t-esc="o.sale_order_id.company_id.city"/>, On
+                            <t t-set="date" t-value="context_timestamp(datetime.datetime.now()).strftime('%d %B %Y')"/>
+                            <span t-esc="date.replace(date.split()[1],o.get_month(date.split()[1]))"/>
+
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <strong>Record N°:</strong>
+                            <t t-if="o.account_invoice_id">
+                                <span t-field="o.account_invoice_id.number"/>
+                                <span t-field="o.sale_order_id.partner_id"/>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="col-xs-8">
+                            <strong>Destination:</strong>
+                            <t t-if="o.name">
+                                <span t-field="o.dest_port"/>
+
+                            </t>
+                        </p>
+                    </div>
+                    <div class="row">
+                        <p class="col-xs-8">
+                            <strong>Markings:</strong>
+                            <span t-field="o.marquage_lc"/>
+                        </p>
+                    </div>
+                    <h4 class="text-center">
+                        <u>PACKING LIST</u>
+                    </h4>
+                    <h4 class="text-center">
+                        <u>LISTE DE COLISAGE</u>
+                    </h4>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <strong>Merchandise:</strong>
+                        </div>
+                        <t t-if="not o.public_op">
+                            <div class="col-xs-10">
+                                <t t-foreach="o.get_lines_by_product()[0]" t-as="product_line">
+                                    <t t-set="nb_c" t-value="0"/>
+                                    <t t-set="unit" t-value="0"/>
+                                    <t t-foreach="product_line[1]" t-as="line">
+                                        <t t-set="nb_c" t-value="nb_c+line.nbr_carton"/>
+                                        <t t-set="unit" t-value="line.uom_packing_id.name"/>
+                                    </t>
+                                    <t t-if="nb_c > 0">
+                                       <strong>
+                                        <span t-esc="nb_c"/>
+                                        </strong>
+                                        <span t-esc="unit"/>
+                                        <span t-esc="product_line[0].name"/>
+                                        <br/>
+                                    </t>
+
+                                </t>
+
+                            </div>
+                        </t>
+                        <t t-if="o.public_op">
+                            PROMOTIONAL AD ITEMS FOR SAFI BRAND
+                        </t>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <br/>
+                            <t t-if="not o.public_op">
+                                <strong>Notre réference :</strong>
+                                <span t-field="o.sale_order_id"/>
+                            </t>
+
+                            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                            <strong t-if="o.sale_order_id.company_id.approval">N° Agreement :</strong>
+                            <span t-if="o.sale_order_id.company_id.approval" t-field="o.sale_order_id.company_id.approval"/>
+                            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                            <!--<strong t-if="o.sale_order_id.company_id.fda">N° FCE-FDA :</strong>
+                            <span t-if="o.sale_order_id.company_id.fda"
+                                  t-field="o.sale_order_id.company_id.fda"
+                            />-->
+                            <br/>
+                            <t t-if="o.sale_order_id.client_order_ref">
+                                <strong>Votre réference :</strong>
+                                <span t-field="o.sale_order_id.client_order_ref"/>
+                            </t>
+                        </div>
+                    </div>
+                    <t t-set="nb_tot" t-value="0"/>
+                    <t t-set="gross_wei_tot" t-value="0"/>
+                    <t t-set="pn_tot" t-value="0"/>
+                    <t t-set="pne_tot" t-value="0"/>
+                    <table class="table table-bordered table-condensed">
+                        <thead style="background-color:#ADD8E6;">
+                            <tr>
+                                <th class="text-center">
+                                    <strong>BRAND</strong>
+                                </th>
+                                <th class="text-center">
+                                    <strong>LOT CODE</strong>
+                                </th>
+                                <th class="text-center">
+                                    <strong>GTIN (GENCOD)</strong>
+                                </th>
+                                <th class="text-center">
+                                    <strong>CLIENT LOT CODE</strong>
+                                </th>
+                                <th class="text-center">
+                                    <strong>FORMAT</strong>
+                                </th>
+                                <th class="text-center">
+                                    <strong>MOULD</strong>
+                                </th>
+                                <th class="text-center">
+                                    <strong>PRODUCT</strong>
+                                </th>
+                                <th class="text-center">
+                                    <strong>SH CODE</strong>
+                                </th>
+                                <th class="text-right">
+                                    <strong><span>Quantity UVC</span></strong>
+                                </th>
+                                <th class="text-right">
+                                    <strong>PROD Date</strong>
+                                </th>
+                                <th class="text-right">
+                                    <strong>Expiry Date</strong>
+                                </th>
+                                <th class="text-right">
+                                    <strong><span>Gross Weight</span></strong>
+                                </th>
+                                <th class="text-right">
+                                    <strong><span>Net Weight</span></strong>
+                                </th>
+                                <th class="text-center">
+                                    <strong>Drained Weight</strong>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2" class="text-center">
+                                    <strong>T/C N°</strong>
+                                </td>
+                                <td class="text-center" colspan="5">
+                                    <t t-foreach="o.get_seat_tc()" t-as="seal">
+                                        <p>
+                                            <span t-field="seal.tc"/>
+                                        </p>
+                                    </t>
+                                </td>
+                                <td class="text-center" colspan="2">
+                                    <strong>SEALS N°</strong>
+                                </td>
+                                <td class="text-center" colspan="5">
+                                    <t t-foreach="o.get_seat_tc()" t-as="seal">
+                                        <p>
+                                            <span t-field="seal.sead"/>
+                                        </p>
+                                    </t>
+                                </td>
+                            </tr>
+                            <!--<t t-foreach="o.group_by_shcode2()" t-as="lines">
+                                <t t-set="nb_tot" t-value="0"/>
+                                <tr t-foreach="lines" t-as="line">
+                                    <t t-set="nb_tot" t-value="nb_tot+line.nbr_carton"/>
+                                    <t t-set="pne_tot" t-value="pne_tot+line.pne"/>
+                                    <td class="text-center">
+                                        <span t-field="line.product_id.brand"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-if="line.lot_code_finale" t-field="line.lot_code_finale"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.product_id.barcode"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.lot_code"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <t t-if="not o.public_op">
+                                            <span t-field="line.product_id.midav_empty_cans_id.code"/>
+                                        </t>
+                                        <t t-if="o.public_op">
+                                            <span t-field="line.product_id.name"/>
+                                        </t>
+
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.mould"/>
+                                    </td>
+                                    <td class="text-center">
+
+                                        <span t-field="line.product_id.description_commodity_id"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.product_id.code_sh"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.nbr_carton"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.production_date"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.lapsing_date"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-field="line.gross_wei"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.pn"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.pne"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6"></td>
+                                    <td class="text-center" colspan="2">
+                                        <strong>SUB TOTAL</strong>
+                                    </td>
+                                    <td class="text-center">
+                                        <strong>
+                                            <span t-esc="nb_tot"/>
+                                        </strong>
+                                    </td>
+                                    <td colspan="5"></td>
+                                </tr>
+                            </t>-->
+                            <t t-foreach="o.group_by_shcode2()" t-as="lines">
+                                <t t-set="nb_tot" t-value="0"/>
+                                <tr t-foreach="lines" t-as="line">
+                                    <t t-if="line[8] > 0">
+                                        <t t-set="nb_tot" t-value="nb_tot+line[8]"/>
+
+
+                                        <t t-set="gross_wei_tot" t-value="gross_wei_tot+line[11]"/>
+                                        <t t-set="pn_tot" t-value="pn_tot+line[12]"/>
+                                        <t t-set="pne_tot" t-value="pne_tot+line[13]"/>
+                                        <td class="text-center">
+                                            <span t-esc="line[0]"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span  t-esc="line[1]"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="line[2]"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="line[3]"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t >
+                                                <span t-esc="line[4]"/>
+                                            </t>
+
+
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="line[5]"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <!--span t-field="line.product_id.midav_jutage_id.name"/-->
+                                            <span t-esc="line[6]"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="line[7]"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="line[8]"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="line[9]"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="line[10]"/>
+                                        </td>
+                                        <!--<t t-if=" not o.usa_print">-->
+                                        <!--<td class="text-center">-->
+                                        <!--<span t-field="line.get_lapsing_date()"/>-->
+                                        <!--</td>-->
+                                        <!--</t>-->
+                                        <td class="text-center">
+                                            <span t-esc="'{:.2f}'.format(line[11])"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="'{:.2f}'.format(line[12])"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="'{:.2f}'.format(line[13])"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                                <tr>
+                                    <td colspan="6"></td>
+                                    <td class="text-center" colspan="2">
+                                        <strong>SUB TOTAL</strong>
+                                    </td>
+                                    <td class="text-center">
+                                        <strong>
+                                            <span t-esc="nb_tot"/>
+                                        </strong>
+                                    </td>
+                                    <td colspan="5"></td>
+                                </tr>
+                            </t>
+                            <tr>
+                                <td colspan="11"></td>
+                                <td class="text-center">
+                                    <!--span t-esc="'{:.2f}'.format(o.total_weights()[0])"/-->
+                                    <span t-esc="'{:.2f}'.format(gross_wei_tot)"/>
+                                </td>
+                                <td class="text-center">
+                                    <!--span t-esc="'{:.2f}'.format(o.total_weights()[1])"/-->
+                                    <span t-esc="'{:.2f}'.format(pn_tot)"/>
+                                </td>
+                                <td class="text-center">
+                                    <!--span t-esc="'{:.2f}'.format(o.total_weights()[2])"/-->
+                                    <span t-esc="'{:.2f}'.format(pne_tot)"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"></td>
+                                <td class="text-center">UNIT GROSS WEIGHT</td>
+                                <td class="text-center">UNIT NET WEIGHT</td>
+                                <td class="text-center">UNIT DRAINED WEIGHT</td>
+                                <td class="text-center" colspan="3"></td>
+                                <td class="text-center"></td>
+                                <td class="text-center">SUB TOTALS</td>
+                                <td class="text-center">SH CODE</td>
+                                <td class="text-center">Quantity</td>
+                                <td class="text-center">GROSS WEIGHT</td>
+                                <td class="text-center">NET WEIGHT</td>
+                                <td class="text-center">DRAINED WEIGHT</td>
+                            </tr>
+                            <t t-foreach="o.get_all_info_lc()" t-as="info">
+                                <tr>
+                                    <t t-if="not info[0]">
+                                        <td class="text-center" colspan="4"></td>
+                                    </t>
+                                    <t t-if="info[0]">
+                                        <td class="text-center">
+                                            <span t-esc="info[0]"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="'%.2f'%(info[1])"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="'%.2f'%(info[2])"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="'%.2f'%(info[3])"/>
+                                        </td>
+                                    </t>
+                                    <td class="text-center" colspan="4"></td>
+                                    <t t-if="not info[5]">
+                                        <td class="text-center" colspan="6"></td>
+                                    </t>
+                                    <t t-if="info[5]">
+                                        <td class="text-center">
+                                            <span t-esc="'%.2f'%(info[4])"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="info[5]"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="'%.2f'%(info[4])"></span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="'%.2f'%(info[6])"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="'%.2f'%(info[7])"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="'%.2f'%(info[8])"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                            </t>
+                            <tr>
+                                <td class="text-center" colspan="8"></td>
+                                <td class="text-center">
+                                    <strong>
+                                        <span t-esc="o.nb_colis"/>
+                                    </strong>
+                                </td>
+                                <td class="text-center"></td>
+                                <td class="text-center">
+                                    <strong>
+                                        <span t-esc="o.nb_colis"/>
+                                    </strong>
+                                </td>
+                                <td class="text-center">
+                                    <strong>
+                                        <span t-esc="'%.2f'%(o.gross_weight)"/>
+                                    </strong>
+                                </td>
+                                <td class="text-center">
+                                    <strong>
+                                        <span t-esc="'%.2f'%(o.net_weight)"/>
+                                    </strong>
+                                </td>
+                                <td class="text-center">
+                                    <strong>
+                                        <span t-esc="'%.2f'%(o.pne_weight)"/>
+                                    </strong>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="text-center" colspan="4">
+                                    <strong>FABRICATION CODES:</strong>
+                                </td>
+                                <td class="text-center" colspan="3">
+                                    <span t-field="o.codification_1"></span>
+                                </td>
+                                <td class="text-center" colspan="3">
+                                    <span t-field="o.codification_2"></span>
+                                </td>
+                                <td class="text-center" colspan="2">
+                                    <span t-field="o.codification_3"></span>
+                                </td>
+                                <td class="text-center" colspan="2">
+                                    <span t-field="o.codification_4"></span>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <!--<div class="row">-->
+                    <!--<div class="col-xs-6 text-right">-->
+                    <!--<span>P.U. c/s 50</span>-->
+                    <!--</div>-->
+                    <!--</div><br/>-->
+                    <!--<div class="row" style="padding:5px;">-->
+                    <!--<div class="col-xs-2 text-left">-->
+                    <!--<strong>Gross weight:</strong>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-2 text-right">-->
+                    <!--<span>-->
+                    <!--<span t-esc="'%.3f'%(o.gross_weight)"/> Kgs-->
+                    <!--</span>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-2 text-right">-->
+                    <!--<span t-esc="'%.3f'%(o.gross_weight / nb_tot)"/>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row" style="padding:5px;">-->
+                    <!--<div class="col-xs-2 text-left">-->
+                    <!--<strong>Gross weight 1/2:</strong>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-2 text-right">-->
+                    <!--<span>-->
+                    <!--<span t-esc="'%.3f'%(o.gross_weight_nu)"/> Kgs-->
+                    <!--</span>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-2 text-right">-->
+                    <!--<span t-esc="'%.3f'%(o.gross_weight_nu / nb_tot)"/>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row" style="padding:5px;">-->
+                    <!--<div class="col-xs-2 text-left">-->
+                    <!--<strong>Net weight:</strong>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-2 text-right">-->
+                    <!--<span>-->
+                    <!--<span t-esc="'%.3f'%(o.net_weight)"/> Kgs-->
+                    <!--</span>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-2 text-right">-->
+                    <!--<span t-esc="'%.3f'%(o.net_weight / nb_tot)"/>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row" style="padding:5px;">-->
+                    <!--<div class="col-xs-2 text-left">-->
+                    <!--<strong>Drained weight:</strong>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-2 text-right">-->
+                    <!--<span>-->
+                    <!--<span t-esc="'%.3f'%(o.pne_weight)"/> Kgs-->
+                    <!--</span>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-2 text-right">-->
+                    <!--<span t-esc="'%.3f'%(o.pne_weight / nb_tot)"/>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<br/>-->
+                    <!--<div class="row">-->
+                    <!--<div class="col-xs-6">-->
+                    <!--<table class="table table-condensed">-->
+                    <!--<tbody>-->
+                    <!--<tr t-foreach="o.get_unique_tc_lines()[0]" t-as="tc_v">-->
+                    <!--<td><strong><span t-esc="tc_v.name"/></strong></td>-->
+                    <!--</tr>-->
+                    <!--</tbody>-->
+                    <!--</table>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <div class="oe_structure"/>
+                </div>
+                <t t-call="midav_base.midav_custom_layout_footer"/>
+            </t>
+        </template>
+
+        <template id="transit_report_document">
+            <t t-if="o.state == 'improper_quality'" t-call="web.basic_layout">
+                <div class="page">
+                    <t t-call="midav_base.midav_non_conforme_page"/>
+                </div>
+            </t>
+            <t t-if="o.state != 'improper_quality'" t-call="web.basic_layout">
+                <t t-set="o" t-value="o.with_context({'lang':o.sale_order_id.partner_id.lang})"/>
+                <t t-set="company" t-value="o.sale_order_id.company_id"/>
+                <t t-call="midav_base.midav_custom_layout_header"/>
+
+
+                <div class="page">
+                    <h2 class="text-center">- TRANSIT ORDER -</h2>
+                    <h4 class="text-center">Forwarding agent:
+                        <span t-field="o.forwarding_agent"/>
+                    </h4>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            Date
+                        </div>
+                        <div class="col-xs-2 text-right">
+                            &amp;nbsp;&amp;nbsp;&amp;nbsp;
+                        </div>
+                        <div class="col-xs-6 font-weight-bold">
+                            <span t-field="o.date_transit" t-field-options='{"format": "dd/MM/yyyy"}'/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            BILLING N°
+                        </div>
+                        <div class="col-xs-2 text-right">
+                            &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+                        </div>
+                        <div class="col-xs-6 font-weight-bold">
+                            <t t-if="o.account_invoice_id">
+                                <span t-field="o.account_invoice_id.number"/>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            CHARGER
+                        </div>
+                        <div class="col-xs-2 text-right">
+                            &amp;nbsp;&amp;nbsp;&amp;nbsp;
+                        </div>
+                        <div class="col-xs-6 font-weight-bold">
+                            <span t-esc="o.charger"
+                                  t-options='{"widget": "contact", "fields": ["address", "name", "phone"],}'/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            CONSIGNEE
+                        </div>
+                        <div class="col-xs-2 text-right ">
+                            &amp;nbsp;&amp;nbsp;&amp;nbsp;
+                        </div>
+                        <div class="col-xs-6 font-weight-bold">
+                            <span t-esc="o.consignee"
+                                  t-options='{"widget": "contact", "fields": ["address", "name", "phone"],}'/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            Merchandises
+                        </div>
+                        <div class="col-xs-2 text-right">
+                            &amp;nbsp;&amp;nbsp;&amp;nbsp;
+                        </div>
+                        <div class="col-xs-5 font-weight-bold">
+                            <table class="table  table-bordered">
+                                <tr>
+                                    <th>Nombre de cartons</th>
+                                    <th>Espèces</th>
+                                    <th>Code SH</th>
+                                </tr>
+
+                                <t t-foreach="o.get_merchandise_by_sh()[0]" t-as="product_line">
+                                    <t t-set="nb_c" t-value="0"/>
+                                    <t t-set="unit" t-value="0"/>
+                                    <t t-foreach="product_line[1]" t-as="line">
+                                        <t t-set="nb_c" t-value="nb_c+line.nbr_carton"/>
+                                        <t t-set="unit" t-value="line.uom_packing_id.name"/>
+                                    </t>
+                                    <tr>
+                                        <td>
+                                            <strong>
+                                                <span t-esc="nb_c"/>
+                                            </strong>
+                                            Cartons
+                                        </td>
+                                        <td>
+                                            <span t-esc="product_line[1][0].product_id.midav_fish_id.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="product_line[0].name"/>
+                                        </td>
+
+                                    </tr>
+                                </t>
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-3">
+                            Destination port
+                        </div>
+                        <div class="col-xs-1 text-right">
+                            &amp;nbsp;&amp;nbsp;&amp;nbsp;
+                        </div>
+                        <div class="col-xs-6 font-weight-bold">
+                            <span t-esc="o.dest_port"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-3">
+                            Boarding port
+                        </div>
+                        <div class="col-xs-1 text-right">
+                            &amp;nbsp;&amp;nbsp;&amp;nbsp;
+                        </div>
+                        <div class="col-xs-6 font-weight-bold">
+                            <span t-esc="o.board_port"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-3">
+                            Navigation Company
+                        </div>
+                        <div class="col-xs-1 text-right">
+                            &amp;nbsp;&amp;nbsp;&amp;nbsp;
+                        </div>
+                        <div class="col-xs-6 font-weight-bold">
+                            <t t-if="o.navigation_comp">- Navire :
+                                <span t-esc="o.navigation_comp"/>
+                                <br/>
+                            </t>
+
+                            <t t-if="o.booking_nbr">- N° Booking :
+                                <span t-esc="o.booking_nbr"/>
+                                <br/>
+                            </t>
+                            <t t-if="o.midav_seq_date">- Date de sequence :
+                                <span t-field="o.midav_seq_date" t-field-options='{"format": "dd/MM/yyyy"}'/>
+                                <br/>
+                            </t>
+                            <t t-if="o.escale_nbr">- N° Escale :
+                                <span t-esc="o.escale_nbr"/>
+                                <br/>
+                            </t>
+                            <t t-if="o.agreement_nbr">- AGR :
+                                <span t-esc="o.agreement_nbr"/>
+                            </t>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-2">
+                            Notify
+                        </div>
+                        <div class="col-xs-2 text-right">
+                            &amp;nbsp;&amp;nbsp;&amp;nbsp;
+                        </div>
+
+                        <div class="col-xs-6 font-weight-bold">
+
+                            <t t-if="o.first_notify">
+                                <p style="font-weight: bold;text-decoration: underline black;">First Notify</p>
+                                <span t-esc="o.first_notify"
+                                      t-options='{"widget": "contact", "fields": ["address", "name", "phone"],}'/>
+                            </t>
+                            <t t-if="o.second_notify">
+                                <p style="font-weight: bold;text-decoration: underline black;">Second Notify</p>
+                                <span t-esc="o.second_notify"
+                                      t-options='{"widget": "contact", "fields": ["address", "name", "phone"],}'/>
+                            </t>
+
+                        </div>
+
+                    </div>
+                    <br/>
+
+                    <div class="row">
+                        <div class="col-xs-2">
+                            Connaissement
+                        </div>
+                        <div class="col-xs-2 text-right">
+                            &amp;nbsp;&amp;nbsp;&amp;nbsp;
+                        </div>
+                        <div class="col-xs-6 font-weight-bold">
+                            <span t-raw="o.lading.attachments"/>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            Marquage connaisement
+                        </div>
+                        <div class="col-xs-2 text-right">
+                            &amp;nbsp;&amp;nbsp;&amp;nbsp;
+                        </div>
+                        <div class="col-xs-6 font-weight-bold">
+                            <span t-esc="o.bill_of_lading"/><!--Marquage connaisement-->
+                        </div>
+
+                    </div>
+                    <br/>
+                    <!--div class="row">
+                        <div t-if="o.transit_document2" class="col-xs-8">
+                            <u>Documents put to us2</u>
+                            <span t-raw="o.transit_document2.attachments"/>
+                        </div>
+                    </div-->
+                    <br/>
+
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <u>Documents put to us</u>
+                            <span t-raw="o.transit_document.attachments"/>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <strong>Transporter:</strong>
+                        <span t-esc="o.transporter.name"/>
+                    </div>
+                    <br/>
+                </div>
+
+                <t t-call="midav_base.midav_custom_layout_footer"/>
+            </t>
+        </template>
+
+        <template id="colisage_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="midav_base.colisage_report_document" t-lang="o.sale_order_id.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+
+        <template id="transit_order_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="midav_base.transit_report_document" t-lang="o.sale_order_id.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+
+        <report id="action_report_list_colisage"
+                model="midav.sale.picking"
+                name="midav_base.colisage_report"
+                file="midav_base.colisage_report"
+                string="Print colisage list"
+                report_type="qweb-pdf"
+                print_report_name="'LISTE-COLISAGE - %s' % (object.name)"
+        />
+
+        <report id="action_report_transit_order"
+                model="midav.sale.picking"
+                name="midav_base.transit_order_report"
+                file="midav_base.transit_order_report"
+                string="Print transit order"
+                report_type="qweb-pdf"
+                print_report_name="'ORDRE-TRANSIT - %s' % (object.name)"/>
+
+    </data>
+</odoo>

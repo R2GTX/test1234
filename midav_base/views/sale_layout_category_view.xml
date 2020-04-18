@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Report configuration -->
+    <record id="report_configuration_form_midav_view" model="ir.ui.view">
+        <field name="name">report.configuration.form.view</field>
+        <field name="model">sale.layout_category</field>
+        <field name="inherit_id" ref="sale.report_configuration_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="replace">
+                <group>
+                        <field name="name"/>
+                    <group>
+                        <field name="subtotal" widget="checkbox"/>
+                        <field name="pagebreak" widget="checkbox"/>
+                    </group>
+                    <group>
+                        <field name="count_qty"/>
+                        <field name="sequence"/>
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//group" position="after">
+                <group>
+                    <group string="Afficher SH code">
+                        <field name="sh_code_pro_format"/>
+                        <!--<field name="sh_code_pro_format_usa"/>
+                        <field name="sid_pro_format_usa"/>
+                        <field name="dimension_pro_format_usa"/>
+                        <field name="code_barre_pro_format_usa"/>-->
+                        <field name="sh_code_healt_certificate"/>
+                        <!--field name="sh_code_r3"/>
+                        <field name="sh_code_r4"/-->
+                    </group>
+                    <group string="Afficher la ligne">
+                        <field name="ligne_pro_format"/>
+                        <!--field name="ligne_r2"/>
+                        <field name="ligne_r3"/>
+                        <field name="ligne_r4"/-->
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

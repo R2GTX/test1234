@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--   Sale picking -->
+
+        <record id="view_sale_picking_tree" model="ir.ui.view">
+            <field name="name">midav.sale.picking.midav.tree</field>
+            <field name="model">midav.sale.picking</field>
+            <field name="arch" type="xml">
+                <tree string="Sale Picking" create="false">
+                    <field name="name"/>
+                    <field name="sale_order_id"/>
+                    <field name="client_id"/>
+                    <field name="date"/>
+                    <field name="gross_weight"/>
+                    <field name="gross_weight_nu"/>
+                    <field name="net_weight"/>
+                    <field name="pne_weight"/>
+                    <field name="state"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_sale_picking_form" model="ir.ui.view">
+            <field name="name">midav.sale.picking.midav.form</field>
+            <field name="model">midav.sale.picking</field>
+            <field name="arch" type="xml">
+                <form string="Sale Picking" create="false">
+                    <header>
+                        <field name="company_id" invisible="1"/>
+                        <button name="action_draft" string="Set to draft" type="object"
+                                states="progress,packing,quality_ckeck,done"/>
+                        <button name="action_progress" string="Set to progress" type="object" states="draft"/>
+                        <button name="action_packing" string="Set to packing" type="object" states="progress"/>
+                        <button name="action_in_quality_check" string="Set to quality check" type="object"
+                                states="packing"/>
+                        <button class="btn-primary" name="action_print_packing_list" string="Packing list" type="object"
+                                states="packing"/>
+                        <button name="action_done" string="Quality compliant" type="object"
+                                states="quality_check,improper_quality"/>
+                        <button name="action_undone" string="Improper Quality" type="object" states="quality_check"/>
+                        <button class="btn-primary" name="action_billing" string="Billing" type="object" context="{'default_company_id': company_id, 'default_type': 'out_invoice'}"
+                                attrs="{'invisible':['|','|',('invoice_count','!=',0),('state','!=','done'),('public_op','!=',False)]}"
+                        />
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,progress,packing,quality_check,improper_quality,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button type="object" class="oe_stat_button" icon="fa-pencil-square-o"
+                                    name="action_view_sale_operations"
+                                    attrs="{'invisible': [('operations_count', '=', 0)]}">
+                                <div class="o_form_field o_stat_info">
+                                    <span class="o_stat_value">
+                                        <field name="operations_count"/>
+                                    </span>
+                                    <span class="o_stat_text">Sale operations</span>
+                                </div>
+                            </button>
+                            <button name="action_view_invoice" type="object" class="oe_stat_button"
+                                    icon="fa-pencil-square-o" attrs="{'invisible': [('invoice_count', '=', 0)]}">
+                                <field name="invoice_count" widget="statinfo" string="Invoices"/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="client_id"/>
+                                <field name="date"/>
+                                <field name="public_op" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="sale_order_id"/>
+                                <field name="marquage_lc"/>
+                                <field name="marquage_or"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="quality_notes"/>
+                        </group>
+                        <notebook>
+                            <page string="Sale picking lines">
+                                <field name="sale_picking_line_ids" mode="tree"
+                                       attrs="{'readonly':[('state','=','done')]}">
+                                    <tree editable="top">
+                                        <field name="name" invisible="1"/>
+                                        <field name="product_id" options="{'no_create': True, 'no_edit': True}"
+                                               context="{'search_product_sale_order': parent.sale_order_id,'get_options_op':parent.public_op}"
+                                               attrs="{'readonly':[('parent.state','!=','draft')]}"/>
+                                        <field name="layout_category_id" invisible="0"/>
+                                        <field name="old_uom_id" invisible="1"/>
+                                        <field name="uom_id" options="{'no_create': True, 'no_edit': True}"
+                                               context="{'search_uom_product': product_id or False}"
+                                               attrs="{'readonly':[('parent.state','!=','draft')]}"/>
+                                        <field name="lot"
+                                               attrs="{'readonly':[('parent.state','!=','draft')]}"/>
+                                        <field name="lot_code"/>
+                                        <field name="mould"/>
+                                        <field name="production_date"/>
+                                        <field name="lapsing_date"/>
+                                        <field name="qty_todo"/>
+                                        <field name="qty_enter"/>
+                                        <field name="qty_done"/>
+                                        <field name="qty_remain"/>
+                                        <field name="nbr_carton"/>
+                                        <field name="uom_packing_id"
+                                               attrs="{'readonly':[('parent.state','!=','draft')]}"/>
+                                        <field name="sead_tc_id"/>
+                                        <field name="pne" readonly="0"/>
+                                        <field name="pn"/>
+                                        <field name="gross_wei"/>
+                                        <field name="marquage"/>
+                                        <field name="attachements" widget="many2many_tags"/>
+                                        <button name="count_pne" type="object" class="fa fa-refresh"/>
+                                    </tree>
+                                </field>
+                                <group class="oe_right">
+                                    <button name="calcul_gross_weight" type="object" class="fa fa-refresh"/>
+                                    <field name="gross_weight" class="oe_inline"/>
+                                    <field name="gross_weight_nu"/>
+                                    <field name="net_weight"/>
+                                    <field name="pne_weight"/>
+                                    <field name="nb_colis"/>
+                                </group>
+                            </page>
+                            <page string="Transit Order">
+                                <group>
+                                    <group>
+                                        <field name="date_transit"/>
+                                        <field name="charger"/>
+                                        <field name="transporter"/>
+                                        <field name="dest_port"/>
+                                        <field name="board_port"/>
+                                        <field name="navigation_comp"/>
+                                        <field name="forwarding_agent"/>
+                                        <field name="first_notify"/>
+                                        <field name="second_notify"/>
+                                    </group>
+                                    <group>
+                                        <field name="consignee"/>
+                                        <field name="booking_nbr"/>
+                                        <field name="agreement_nbr"/>
+                                        <field name="escale_nbr"/>
+                                        <field name="midav_seq_date"/>
+
+                                        <field name="lading"/>
+                                        <field name="bill_of_lading"/>
+                                        <field name="transit_document"/>
+                                    </group>
+                                </group>
+
+                            </page>
+
+                            <page string="Health certificate">
+                                <group>
+                                    <group>
+                                        <field name="num_certificate"/>
+                                        <field name="means_of_conveyance"/>
+                                        <field name="brand_certificate"/>
+                                        <field name="commodity_nature"/>
+                                        <field name="treatement_type"/>
+                                        <field name="process_type"/>
+                                    </group>
+                                    <group>
+                                        <field name="departure_date"/>
+                                        <field name="usa_print"/>
+                                        <field name="product_temperature"/>
+                                        <field name="human_consumption"/>
+                                        <field name="imp_admission"/>
+                                        <field name="packaging_type_id"/>
+                                        <!--field name="scientific_name"/-->
+                                    </group>
+                                </group><br/>
+                                <div string="Adresses">
+                                <field name="contact_ids" domain="[('parent_id', '=', client_id)]"
+                                       context="{'default_parent_id': client_id}"
+                                       options="{'no_create_edit': true, 'no_create':true}">
+                                    <kanban>
+                                        <field name="color"/>
+                                        <field name="name"/>
+                                        <field name="title"/>
+                                        <field name="type"/>
+                                        <field name="email"/>
+                                        <field name="parent_id"/>
+                                        <field name="is_company"/>
+                                        <field name="function"/>
+                                        <field name="phone"/>
+                                        <field name="street"/>
+                                        <field name="street2"/>
+                                        <field name="zip"/>
+                                        <field name="city"/>
+                                        <field name="country_id"/>
+                                        <field name="mobile"/>
+                                        <field name="state_id"/>
+                                        <field name="image_small"/>
+                                        <field name="lang"/>
+                                        <!-- fields in form x2many view to diminish requests -->
+                                        <field name="comment"/>
+                                        <field name="customer"/>
+                                        <field name="display_name"/>
+                                        <field name="supplier"/>
+                                        <templates>
+                                            <t t-name="kanban-box">
+                                                <t t-set="color" t-value="kanban_color(record.color.raw_value)"/>
+                                                <div t-att-class="color + (record.title.raw_value == 1 ? ' oe_kanban_color_alert' : '') + ' oe_kanban_global_click'">
+                                                    <a t-if="!read_only_mode" type="delete"
+                                                       class="fa fa-times pull-right"/>
+                                                    <div class="o_kanban_image">
+                                                        <img t-if="record.image_small.raw_value"
+                                                             t-att-src="'data:image/png;base64,'+record.image_small.raw_value"/>
+                                                        <t t-if="!record.image_small.raw_value">
+                                                            <img t-if="record.type.raw_value === 'delivery'"
+                                                                 t-att-src="_s + &quot;/base/static/src/img/truck.png&quot;"/>
+                                                            <img t-if="record.type.raw_value === 'invoice'"
+                                                                 t-att-src="_s + &quot;/base/static/src/img/money.png&quot;"/>
+                                                            <t t-if="record.type.raw_value !== 'invoice' &amp;&amp; record.type.raw_value !== 'delivery'">
+                                                                <img t-if="record.is_company.raw_value === true"
+                                                                     t-att-src="_s + &quot;/base/static/src/img/company_image.png&quot;"/>
+                                                                <img t-if="record.is_company.raw_value === false"
+                                                                     t-att-src="_s + &quot;/base/static/src/img/avatar.png&quot;"/>
+                                                            </t>
+                                                        </t>
+                                                    </div>
+                                                    <div class="oe_kanban_details">
+                                                        <field name="name"/>
+                                                        <div t-if="record.function.raw_value">
+                                                            <field name="function"/>
+                                                        </div>
+                                                        <div t-if="record.email.raw_value">
+                                                            <field name="email" widget="email"/>
+                                                        </div>
+                                                        <div t-if="record.type.raw_value != 'contact'">
+                                                            <div>
+                                                                <field name="zip"/>
+                                                                <field name="city"/>
+                                                            </div>
+                                                            <field t-if="record.state_id.raw_value" name="state_id"/>
+                                                            <field name="country_id"/>
+                                                        </div>
+                                                        <div t-if="record.phone.raw_value">Phone:
+                                                            <field name="phone"/>
+                                                        </div>
+                                                        <div t-if="record.mobile.raw_value">Mobile:
+                                                            <field name="mobile"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </templates>
+                                    </kanban>
+                                </field>
+                                </div>
+
+                            </page>
+
+                            <page string="Liste de colisage">
+                                <group string="Codification">
+                                    <group>
+                                        <field name="codification_1"></field>
+                                        <field name="codification_2"></field>
+                                    </group>
+                                    <group>
+                                        <field name="codification_3"></field>
+                                        <field name="codification_4"></field>
+                                    </group>
+                                </group>
+                            </page>
+
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--   Sale picking line -->
+
+        <record id="view_sale_picking_line_tree" model="ir.ui.view">
+            <field name="name">midav.sale.picking.line.midav.tree</field>
+            <field name="model">midav.sale.picking.line</field>
+            <field name="arch" type="xml">
+                <tree string="Sale Picking Line">
+                    <field name="name"/>
+                    <field name="product_id"/>
+                    <field name="sale_picking_id"/>
+                    <field name="lot"/>
+                    <field name="layout_category_id" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_sale_picking_line_form" model="ir.ui.view">
+            <field name="name">midav.sale.picking.line.midav.form</field>
+            <field name="model">midav.sale.picking.line</field>
+            <field name="arch" type="xml">
+                <form string="Sale Picking Line">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="product_id" options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                <field name="layout_category_id" invisible="1"/>
+                                <field name="sead_tc_id"/>
+                                <field name="pne"/>
+                            </group>
+                            <group>
+                                <field name="sale_picking_id"/>
+                                <field name="uom_id"/>
+                                <field name="production"/>
+                                <field name="expired_date"/>
+                                <field name="blanket"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="qty_todo"/>
+                                <field name="qty_done"/>
+                                <field name="qty_remain"/>
+                            </group>
+                            <group>
+                                <field name="lot"/>
+                                <field name="nbr_carton"/>
+                                <field name="uom_packing_id"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="special_mark"/>
+                        </group>
+                        <notebook>
+                            <page string="Sale operation lines">
+                                <field name="sale_operation_line_ids" mode="tree">
+                                    <tree string="Sale operation line" editable="top">
+                                        <field name="name"/>
+                                        <field name="product_id"/>
+                                        <field name="uom_id"/>
+                                        <field name="lot"/>
+                                        <field name="qty_todo"/>
+                                        <field name="qty_export"/>
+                                        <field name="qty_sample"/>
+                                        <field name="qty_done"/>
+                                        <field name="qty_remain"/>
+                                        <field name="qty_dented"/>
+                                        <field name="qty_leak"/>
+                                        <field name="qty_seam"/>
+                                        <field name="qty_cambered"/>
+                                        <field name="qty_big_dots"/>
+                                        <field name="state"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--   Sale operation -->
+
+        <record id="view_sale_operation_tree" model="ir.ui.view">
+            <field name="name">midav.sale.operation.midav.tree</field>
+            <field name="model">midav.sale.operation</field>
+            <field name="arch" type="xml">
+                <tree string="Sale Operation">
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="user_id"/>
+                    <field name="sale_picking_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_sale_operation_form" model="ir.ui.view">
+            <field name="name">midav.sale.operation.midav.form</field>
+            <field name="model">midav.sale.operation</field>
+            <field name="arch" type="xml">
+                <form string="Sale Operation">
+                    <header>
+                        <button name="action_draft" string="Set to draft" type="object" states="done,canceled"/>
+                        <button class="oe_primary" name="action_done" string="Set to done" type="object"
+                                states="draft"/>
+                        <button name="action_canceled" string="Set to cancel" type="object" states="draft,done"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done,canceled"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="user_id"/>
+                                <field name="date"/>
+                            </group>
+                            <group>
+                                <field name="sale_picking_id"
+                                       attrs="{'readonly':[('sale_picking_id','!=',False),('name','!=',False)]}"/>
+                                <field name="back_sale_operation_id" readonly="1"
+                                       attrs="{'invisible':[('back_sale_operation_id','=',False)]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Sale operation lines">
+                                <field name="sale_operation_line_ids" mode="tree"
+                                       attrs="{'readonly':[('state','!=','draft')]}">
+                                    <tree editable="top">
+                                        <field name="name" invisible="1"/>
+                                        <field name="product_id"/>
+                                        <field name="uom_id" attrs="{'readonly':[('uom_id','!=',False)]}"/>
+                                        <field name="uom_packing_id"/>
+                                        <field name="lot"/>
+                                        <field name="production_date"/>
+                                        <field name="premption_date"/>
+                                        <field name="qty_todo"/>
+                                        <field name="qty_export"/>
+                                        <field name="qty_done"/>
+                                        <field name="nbr_carton"/>
+                                        <field name="qty_sample"/>
+                                        <field name="qty_remain"/>
+                                        <field name="qty_missing"/>
+                                        <field name="qty_dented"/>
+                                        <field name="qty_leak"/>
+                                        <field name="qty_seam"/>
+                                        <field name="qty_cambered"/>
+                                        <field name="qty_big_dots"/>
+                                        <field name="qty_rust"/>
+                                        <field name="qty_flush"/>
+                                        <field name="qty_small_dots"/>
+                                        <field name="default_polish"/>
+                                        <field name="lack_of_weight"/>
+                                        <field name="sale_picking_line_id" invisible="1"/>
+                                        <field name="state"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--   Sale operation line -->
+
+        <record id="view_sale_operation_line_tree" model="ir.ui.view">
+            <field name="name">midav.sale.operation.line.midav.tree</field>
+            <field name="model">midav.sale.operation.line</field>
+            <field name="arch" type="xml">
+                <tree string="Sale Operation Line">
+                    <field name="name"/>
+                    <field name="product_id"/>
+                    <field name="lot"/>
+                    <field name="sale_operation_id"/>
+                    <field name="sale_picking_line_id" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_sale_operation_line_form" model="ir.ui.view">
+            <field name="name">midav.sale.operation.line.midav.form</field>
+            <field name="model">midav.sale.operation.line</field>
+            <field name="arch" type="xml">
+                <form string="Sale Operation Line">
+                    <header>
+                        <button name="action_done" string="Set to done" type="object" states="draft"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done,canceled"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="sale_picking_line_id"/>
+                            </group>
+                            <group>
+                                <field name="sale_operation_id"/>
+                                <field name="sale_picking_id"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="product_id"/>
+                                <field name="qty_todo"/>
+                                <field name="qty_export"/>
+                                <field name="qty_done"/>
+                            </group>
+                            <group>
+                                <field name="uom_id"/>
+                                <field name="lot"/>
+                                <field name="qty_sample"/>
+                                <field name="qty_remain"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="qty_missing"/>
+                                <field name="qty_dented"/>
+                                <field name="qty_leak"/>
+                            </group>
+                            <group>
+                                <field name="qty_seam"/>
+                                <field name="qty_cambered"/>
+                                <field name="qty_big_dots"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- midav.sead.tc -->
+        <record id="midav_sead_tc_form_view" model="ir.ui.view">
+            <field name="name">midav.sead.tc.form</field>
+            <field name="model">midav.sead.tc</field>
+            <field name="arch" type="xml">
+                <form string="SEAD / TC">
+                    <group attrs="{'invisible':[('name','=',False)]}">
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="sead"/>
+                        <field name="tc"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="midav_sead_tc_tree_view" model="ir.ui.view">
+            <field name="name">midav.sead.tc.tree</field>
+            <field name="model">midav.sead.tc</field>
+            <field name="arch" type="xml">
+                <tree string="SEAD / TC">
+                    <field name="sead"/>
+                    <field name="tc"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- midav.packaging.type -->
+        <record id="midav_packaging_type_form_view" model="ir.ui.view">
+            <field name="name">midav.packaging.type.form</field>
+            <field name="model">midav.packaging.type</field>
+            <field name="arch" type="xml">
+                <form string="Packaging Type">
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="midav_packaging_type_tree_view" model="ir.ui.view">
+            <field name="name">midav.packaging.type.tree</field>
+            <field name="model">midav.packaging.type</field>
+            <field name="arch" type="xml">
+                <tree string="Packaging Type">
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- midav.packaging.type -->
+        <record id="midav_description_commodity_form_view" model="ir.ui.view">
+            <field name="name">midav.description.commodity.form</field>
+            <field name="model">midav.description.commodity</field>
+            <field name="arch" type="xml">
+                <form string="Description of commodity">
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="midav_description_commodity_tree_view" model="ir.ui.view">
+            <field name="name">midav.description.commodity.tree</field>
+            <field name="model">midav.description.commodity</field>
+            <field name="arch" type="xml">
+                <tree string="Description of commodity">
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

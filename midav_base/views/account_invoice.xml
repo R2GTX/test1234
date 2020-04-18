@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <record model="ir.ui.view" id="invoice_form_midav">
+            <field name="name">account.invoice.form.midav</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form" />
+            <field name="priority" eval="40"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook//page[@name='other_info']/group[1]" position="after">
+                    <group col="4">
+                        <field name="ref_fda"/>
+                        <field name="show_in_report"/>
+                        <field name="order_id" invisible="1"/>
+                        <field name="midav_order_id" invisible="1"/>
+                        <field name="sale_picking_id" invisible="1"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//notebook//page[1]/group[1]" position="after">
+                    <div class="oe_left">
+                        <label for="total_amount_letter"/>:
+                        <field name="total_amount_letter"/>
+                    </div>
+                </xpath>
+
+            </field>
+         </record>
+
+    </data>
+</odoo>

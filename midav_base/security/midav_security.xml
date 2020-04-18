@@ -1,0 +1,196 @@
+<odoo>
+    <data noupdate="0">
+        <record id="midav_picking_manager" model="res.groups">
+            <field name="name"> Sale picking Manager</field>
+        </record>
+
+        <record id="midav_picking_user" model="res.groups">
+            <field name="name"> Sale picking User</field>
+        </record>
+
+        <record id="midav_picking_line_manager" model="res.groups">
+            <field name="name"> Sale picking Line Manager</field>
+        </record>
+
+        <record id="midav_picking_line_user" model="res.groups">
+            <field name="name"> Sale picking Line User</field>
+        </record>
+
+        <record id="midav_operattion_manager" model="res.groups">
+            <field name="name"> Sale Operation Manager</field>
+        </record>
+
+        <record id="midav_operation_user" model="res.groups">
+            <field name="name"> Sale Operation User</field>
+        </record>
+
+        <record id="midav_operattion_line_manager" model="res.groups">
+            <field name="name"> Sale Operation Line  Manager</field>
+        </record>
+
+        <record id="midav_operation_line_user" model="res.groups">
+            <field name="name"> Sale Operation Line  User</field>
+        </record>
+        <record id="midav_quality" model="res.groups">
+            <field name="name"> Quality Validation </field>
+        </record>
+
+
+
+        <record model="ir.rule" id="stock_incoterms_comp_rule">
+            <field name="name">Stock incoterms multi-company</field>
+            <field name="model_id" ref="model_stock_incoterms"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_empty_cans_comp_rule">
+            <field name="name">midav empty canss multi-company</field>
+            <field name="model_id" ref="model_midav_empty_cans"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_fish_comp_rule">
+            <field name="name">midav fish multi-company</field>
+            <field name="model_id" ref="model_midav_fish"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_fish_comp_rule">
+            <field name="name">midav fish multi-company</field>
+            <field name="model_id" ref="model_midav_fish"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_fish_comp_rule">
+            <field name="name">midav fish multi-company</field>
+            <field name="model_id" ref="model_midav_fish"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_preparation_comp_rule">
+            <field name="name">midav preparation multi-company</field>
+            <field name="model_id" ref="model_midav_preparation"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_jutage_comp_rule">
+            <field name="name">midav jutage multi-company</field>
+            <field name="model_id" ref="model_midav_jutage"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_cases_comp_rule">
+            <field name="name">midav cases multi-company</field>
+            <field name="model_id" ref="model_midav_cases"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+         <record model="ir.rule" id="midav_cartons_comp_rule">
+            <field name="name">midav cartons multi-company</field>
+            <field name="model_id" ref="model_midav_cartons"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_stickers_btes_comp_rule">
+            <field name="name">midav stickers btes multi-company</field>
+            <field name="model_id" ref="model_midav_stickers_btes"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_tag_comp_rule">
+            <field name="name">midav tag multi-company</field>
+            <field name="model_id" ref="model_midav_tag"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_stickers_barq_comp_rule">
+            <field name="name">midav stickers barq multi-company</field>
+            <field name="model_id" ref="model_midav_stickers_barq"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_brand_comp_rule">
+            <field name="name">midav brand multi-company</field>
+            <field name="model_id" ref="model_midav_brand"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_packaging_type_comp_rule">
+            <field name="name">midav packaging type multi-company</field>
+            <field name="model_id" ref="model_midav_packaging_type"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_sale_picking_comp_rule">
+            <field name="name">midav sale picking multi-company</field>
+            <field name="model_id" ref="model_midav_sale_picking"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_sale_picking_line_comp_rule">
+            <field name="name">midav sale picking line multi-company</field>
+            <field name="model_id" ref="model_midav_sale_picking_line"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_sale_operation_comp_rule">
+            <field name="name">midav sale operation multi-company</field>
+            <field name="model_id" ref="model_midav_sale_operation"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_sale_operation_line_comp_rule">
+            <field name="name">midav sale operation line multi-company</field>
+            <field name="model_id" ref="model_midav_sale_operation_line"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record model="ir.rule" id="midav_sead_tc_comp_rule">
+            <field name="name">midav sead tc multi-company</field>
+            <field name="model_id" ref="model_midav_sead_tc"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <!--record model="ir.rule" id="midav_mould_comp_rule">
+            <field name="name">midav mould multi-company</field>
+            <field name="model_id" ref="model_midav_mould"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record-->
+
+        <!--record model="ir.rule" id="midav_document_comp_rule">
+            <field name="name">midav document multi-company</field>
+            <field name="model_id" ref="model_midav_document"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record-->
+
+        <!--record model="ir.rule" id="midav_lading_comp_rule">
+            <field name="name">midav lading multi-company</field>
+            <field name="model_id" ref="model_midav_lading"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record-->
+
+
+    </data>
+</odoo>

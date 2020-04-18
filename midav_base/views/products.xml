@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_product_uom_weight">
+            <field name="name">view.product.uom.form.weight</field>
+            <field name="model">product.uom</field>
+            <field name="inherit_id" ref="product.product_uom_form_view"/>
+            <field name="arch" type="xml">
+            <data>
+                <xpath expr="//form/group/group/field[@name='uom_type']" position="after">
+                        <field name="pne_uom_weight"/>
+                        <field name="pn_uom_weight"/>
+                </xpath>
+            </data>
+            </field>
+        </record>
+        `
+        <record model="ir.ui.view" id="product_template_form_view_midav">
+            <field name="name">product.template.common.form.midav</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view" />
+            <field name="priority" eval="20"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='options']" position="inside">
+                    <div>
+                        <field name="is_codif"/>
+                        <label for="is_codif"/>
+                    </div>
+                </xpath>
+
+                <xpath expr="//notebook/page[1]" position="inside">
+                    <group>
+                        <group>
+                            <field name="code_sh"/>
+                            <field name="sid"/>
+                            <field name="dimensions"/>
+                            <field name="brand"/>
+                        </group>
+                        <group>
+                            <field name="cans"/>
+                            <field name="name_sci"/>
+                            <field name="description_commodity_id"/>
+                        </group>
+                    </group>
+                    <group string="Weights">
+                        <group>
+                            <field name="net_weight"/>
+                            <field name="pne_weight"/>
+                        </group>
+                        <group>
+                            <field name="gross_weight"/>
+                            <field name="gross_weight_nu"/>
+                        </group>
+                    </group>
+                    <group>
+                      <group>
+                          <field name="midav_empty_cans_id" attrs="{'required':[('is_codif', '=', True)]}"/>
+                          <field name="midav_fish_id" attrs="{'required':[('is_codif', '=', True)]}"/>
+                          <field name="midav_jutage_id" attrs="{'required':[('is_codif', '=', True)]}"/>
+                          <field name="midav_preparation_id" attrs="{'required':[('is_codif', '=', True)]}"/>
+                      </group>
+                      <!--group>
+                          <field name="midav_cartons_id"/>
+                          <field name="midav_tag_id"/>
+                          <field name="midav_brand_id"/>
+                          <field name="brand"/>
+                      </group-->
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

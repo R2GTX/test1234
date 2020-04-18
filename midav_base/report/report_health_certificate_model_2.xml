@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+        <template id="health_certificate_document_model2">
+            <t t-call="web.basic_layout" >
+                <!--t t-set="o" t-value="o.with_context({'lang':o.sale_order_id.partner_id.lang})"/-->
+                <div t-if="o.state == 'improper_quality'" class="page">
+                    <t t-call="midav_base.midav_non_conforme_page"/>
+                </div>
+                <div t-if="o.state != 'improper_quality'" class="page">
+                     <style>
+                       body{
+                        font-size:1,2em;
+                        }
+                        table{
+                        font-size:1,1em;
+                        }
+                        th{
+                        font-size:1,1em;
+                        }
+                        td{
+                        font-size:1,1em;
+                        }
+
+                    </style>
+                    <div class="text-center header">
+                        ROYAUME DU MAROC
+                        <br/>
+                        OFFICE NATIONAL DE LA SECURITE SANITAIRE DES PRODUITS ALIMENTAIRE
+                        <br/>
+                          SERVICE VETERINAIRE PROVINCIAL DE SAFI
+                        <br/>
+                        <center>
+                            <div style="width:30%;height:1px;background-color:black;border:dotted 1px black;"/>
+                        </center>
+
+                    </div>
+                    <div class="page" style="font-size:0.9em;">
+                        <h2 class="text-center font-weight-bold">
+                            <u><span>HEALTH CERTIFICATE</span></u>
+                        </h2>
+                        <br/>
+                        <h2 class="text-center font-weight-bold">
+                            MA &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/52
+                            <!--span t-esc="o.num_certificate"/-->
+                        </h2>
+                        <p>
+                            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                            I, undersigned, ............................... , veterinary inspector in charge of the
+                            border post of safi declare that canned fish under-mentionned, correspond to the standard
+                            required for export, have been checked up as follows :
+                        </p>
+                        <br/>
+                        <p>
+                            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                            1°)
+                            <u>PREPARATION ACCORDING TO FOOD REGULATIONS:</u>
+                            <br/>
+                            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                            "The tins have been processed in a canning factory regularly visited by the veterinary
+                            services, they
+                            judged in a good state of preservation and fitted to human consumption as no chemical or
+                            coloring product has been added to them".
+                            <br/>
+                            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                            2°)
+                            <u>THE SELLING OF THIS PRODUCT HAS BEEN AUTHORIZED IN MOROCCO:</u>
+                            <br/>
+                            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                            "This product has been maid from irreprochable raw material,
+                            <u>It has been processed and sterilized
+                                under good sanitary conditions and suited for human consumption".
+                            </u>
+                            <br/>
+                            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                            <u>NATURE OF CANS</u>
+                            (canned products and canning methods):
+                            <br/>
+                            <t t-foreach="o.get_unique_desc_commodity()[0]" t-as="comod">
+                                <t t-set="comod"
+                                   t-value="comod.replace('MACKEREL IN','').replace('MACKEREL IN'.lower(),'').replace('MACKEREL IN'.lower().capitalize(),'')"/>
+                                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                                <span style="font-weight:bold;font-size:0.9em;" t-esc="comod.lower().capitalize()"/>
+                                <br/>
+
+                            </t>
+                            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<strong style="font-weight:bold;font-size:0.9em;">Conserved by appertisation</strong>
+
+                        </p>
+                        <p>
+                            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                            <u>MANUFACTURER/PRODUCER</u>
+                            :
+                            <strong>
+                                <span t-esc="o.sale_order_id.company_id.name"/>
+                                <span t-esc="o.sale_order_id.company_id.street"/>
+                                <span t-esc="o.sale_order_id.company_id.street2"/>
+                                <span t-esc="o.sale_order_id.company_id.city"/>-
+                                AG &#160;<span t-esc="o.sale_order_id.company_id.approval"/>
+                            </strong>
+                        </p>
+                        <table style="width:100%">
+                            <tr>
+                                <td style="margin-right:10px">
+                                    <strong style="font-size:0.8em;"><u>TOTAL QUANTITY :</u></strong>
+                                </td>
+                                <td>&#160;&#160;
+                                    <span t-esc="o.nb_colis"/>
+                                    cartons
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="margin-right:10px">
+                                    <strong style="font-size:0.8em;"><u>TOTAL GROSS WEIGHT :</u></strong>
+                                </td>
+                                <td>&#160;&#160;
+                                    <span t-esc="'{:.2f}'.format(o.gross_weight)"/>
+                                    Kgs
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="margin-right:10px">
+                                    <strong style="font-size:0.8em;"><u>TOTAL NET WEIGHT :</u></strong>
+                                </td>
+                                <td>&#160;&#160;
+                                    <span t-esc="'{:.2f}'.format(o.net_weight)"/>
+                                    Kgs
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="margin-right:10px">
+                                    <strong style="font-size:0.8em;"><u>BRAND :</u></strong>
+                                </td>
+                                <td>&#160;&#160;
+                                    <span t-esc="o.brand_certificate.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="margin-right:10px">
+                                    <strong style="font-size:0.8em;"><u>BUYER :</u></strong>
+                                </td>
+                                <td>&#160;&#160;
+                                    <t t-foreach="o.contact_ids" t-as="c">
+                                        <t t-if="c.name"><strong><span t-esc="c.name"/></strong>, </t>
+                                        <t t-if="c.street"><span t-esc="c.street"> </span> </t>
+                                        <t t-if="c.street2"><span t-esc="c.street2"> </span>, </t>
+                                        <t t-if="c.city"><span t-esc="c.city"/> ,</t>
+                                        <t t-if="c.country_id"><span t-esc="c.country_id"/> ,</t>
+                                        <t t-if="c.mobile"> <span t-esc="c.mobile"/></t>
+                                        <br/>
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="margin-right:10px">
+                                    <strong style="font-size:0.8em;"><u>GOING TO :</u></strong>
+                                </td>
+                                <td>&#160;&#160;
+                                    <span t-esc="o.sale_order_id.nb_port"/>/<span t-esc="o.sale_order_id.partner_id.country_id.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="margin-right:10px,width:150px">
+                                    <strong style="font-size:0.8em;"><u>MEANS OF TRANSPORT </u></strong>
+                                </td>
+                                <td>&#160;&#160;
+                                    <span t-esc="o.means_of_conveyance"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="margin-right:10px">
+                                    <strong style="font-size:0.8em;"><u>SENDING SPOT :</u></strong>
+                                </td>
+                                <td>&#160;&#160;
+                                    <span t-esc="o.sale_order_id.company_id.name"/>
+                                    <span t-esc="o.sale_order_id.company_id.city"/>
+                                    <span t-esc="o.sale_order_id.company_id.country_id.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="margin-right:10px">
+                                    <strong style="font-size:0.8em;"><u>SENDERS :</u></strong>
+                                </td>
+                                <td style="width:80%">&#160;&#160;
+                                    <span t-esc="o.sale_order_id.company_id.name"/>
+                                    <span t-esc="o.sale_order_id.company_id.street"/>
+                                    <span t-esc="o.sale_order_id.company_id.city"/>
+                                    <span t-esc="o.with_context({'lang': u'en_EN'}).sale_order_id.company_id.country_id.name"/>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                        <br/>
+                        <div>
+                            <u>PACKING LIST</u>
+                            :
+                        </div>
+                        <table class="table table-bordered">
+
+                            <tbody>
+                                <tr>
+                                    <th>Lots</th>
+                                    <th><span>Products</span></th>
+                                    <th><span>Brand</span></th>
+                                    <th>Format</th>
+                                    <th>Quantities</th>
+                                    <th>Approval Nbr</th>
+                                </tr>
+                                <!--<t t-foreach="o.sort_sale_picking_line_ids()" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <span t-esc="line.lot"/>
+                                        </td>
+
+                                        <td>
+                                             <span t-esc="line.product_id.description_commodity_id.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="o.brand_certificate.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-if="line.product_id.default_code"
+                                                  t-esc="line.product_id.default_code.split(' ')[0]"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="str(line.nbr_carton or 0) +' x '+str(int(line.uom_packing_id.factor_inv))"/>
+                                            cans
+                                        </td>
+                                        <td>
+                                            <span t-esc="o.sale_order_id.company_id.approval"/>
+                                        </td>
+                                    </tr>
+                                </t>
+
+                                <tr>
+                                    <td>&#160;</td>
+                                    <td>&#160;</td>
+                                    <td>&#160;</td>
+                                    <td>&#160;<strong>TOTAL</strong></td>
+                                    <td>&#160;
+                                        <strong>
+                                            <span t-esc="o.nb_colis"/>
+                                            BOXES
+                                        </strong>
+                                    </td>
+                                    <td>&#160;</td>
+                                </tr>
+                                -->
+                                <t t-foreach="o.group_by_shcode3()" t-as="lines">
+                                <t t-set="nb_tot" t-value="0"/>
+                                <tr t-foreach="lines" t-as="line">
+                                    <t t-if="int(line[4].split()[0]) > 0">
+
+
+                                        <td class="text-center">
+                                            <span  t-esc="line[0]"/>
+                                        </td>
+
+
+                                        <td >
+                                            <!--span t-field="line.product_id.midav_jutage_id.name"/-->
+                                            <span t-esc="line[1]"/>
+                                        </td>
+
+
+                                        <td >
+                                            <span t-esc="line[2]"/>
+                                        </td>
+
+
+                                        <td >
+                                            <t >
+                                                <span t-esc="line[3]"/>
+                                            </t>
+                                        </td>
+
+                                        <td class="text-center">
+                                            <!--span t-field="line.nbr_carton"/-->
+                                            <span t-esc="line[4]"/>
+
+                                        </td>
+                                        <td>
+                                            <span t-esc="o.sale_order_id.company_id.approval"/>
+                                        </td>
+                                    </t>
+                                </tr>
+
+
+                            </t>
+                                <tr>
+                                    <td>&#160;</td>
+                                    <td>&#160;</td>
+                                    <td>&#160;</td>
+                                    <td>&#160;<strong>TOTAL</strong></td>
+                                    <td>&#160;
+                                        <strong>
+                                            <span t-esc="o.nb_colis"/>
+                                            BOXES
+                                        </strong>
+                                    </td>
+                                    <td>&#160;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <div class="row">
+                            <div class="col-xs-5"><span>OFFICIAL STAMP</span></div>
+                            <div class="col-xs-7">
+                                <p class="text-right">THE VETERINARY INSPECTOR OF THE BORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <template id="health_certificate_report_model2">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="midav_base.health_certificate_document_model2" />
+                </t>
+            </t>
+        </template>
+        <report id="action_report_health_certificate_model2"
+                model="midav.sale.picking"
+                name="midav_base.health_certificate_report_model2"
+                file="midav_base.health_certificate_report_model2"
+                string="health certificate Model 2"
+                report_type="qweb-pdf"
+                print_report_name="'CERTIFICAT_SANITAIRE_ - %s' % (object.name)"/>
+
+    </data>
+</odoo>
