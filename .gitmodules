@@ -7,3 +7,8 @@
 	path = R2GTX/kzm_accounting
 	url = git@github.com:R2GTX/kzm_accounting.git
 	branch = master
+
+[submodule "R2GTX/karizma_tools"]
+	path = R2GTX/karizma_tools
+	url = git@github.com:R2GTX/karizma_tools.git
+	branch = master
